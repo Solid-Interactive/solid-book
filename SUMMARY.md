@@ -18,7 +18,7 @@
 * [Project Development](/book/project/development/README.md)
     * [Node](/book/project/development/node/README.md)
         * [What "good" node apps should have](/book/project/development/node/app/README.md)
-        * [Using npm](/book/project/development/node/app/README.md)
+        * [Using npm](/book/project/development/node/npm/README.md)
 * [Project Deployment](/book/project/deployment/README.md)
     * [Deploying a project with gitlab](/book/project/deployment/gitlab/README.md)
     * [Deploying a project with git](/book/project/deployment/git/README.md)
