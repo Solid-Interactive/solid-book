@@ -21,6 +21,7 @@
         * [Using npm](/book/project/development/node/npm/README.md)
 * [Project Deployment](/book/project/deployment/README.md)
     * [Deploying a project with gitlab](/book/project/deployment/gitlab/README.md)
+    * [Deploying a project with github](/book/project/deployment/github/README.md)
     * [Deploying a project with git](/book/project/deployment/git/README.md)
     * [Deployment build script for static webpage](/book/project/deployment/build/README.md)
 * [Misc](/general/misc/README.md)
