@@ -6,6 +6,8 @@ Github also has webhooks. Webhooks are urls that github hits with a POST
 request. Webhooks can also be used to trigger builds or do any number of
 other things.
 
+## Securing webhooks
+
 When you use webhooks, you want to make sure you [secure your webhooks](https://developer.github.com/webhooks/securing/).
 This means setting a secret on github, and using that secret in your webhook
 on the server to verify. In node you would do it as follows:
