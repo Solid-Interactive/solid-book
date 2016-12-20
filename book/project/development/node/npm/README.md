@@ -27,3 +27,16 @@ cp -R /path/to/test-module/local_modules node_modules/test-module/local_modules
 
 This is because `npm install` only write to `node_modules` after it succeeds,
 so during the install it would not be able to find an local modules.
+
+## package.json
+
+The scripts in package.json can access the locally install `.bin` files.
+For example after `npm install --save-dev jshint` you can run jshint via
+npm test using the following addition to your package.json even if you do not
+have jshint installed globally:
+
+```
+  "scripts": {
+    "test": "jshint app",
+  },
+```
