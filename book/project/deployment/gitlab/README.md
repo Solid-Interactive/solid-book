@@ -48,3 +48,27 @@ The cwd of the script is the root of the project, so in the case above the confi
 [PM2 deploy](http://pm2.keymetrics.io/docs/usage/deployment/) is convenient for node deploys, but it can also be used for any other type of deploy. There are hooks to support
 doing work both on either the runner or the deployed to server. It allows all these hooks to be stored in the repo as 
 opposed to in a git hook outside the repo.
+
+Below is how a PM2 config file could be setup for a PHP deploy. Sample for node deploys can be found in the PM2 docs.
+
+```
+'use strict';
+module.exports = {
+    apps : [ ],
+    /**
+     * Deployment section
+     * http://pm2.keymetrics.io/docs/usage/deployment/
+     */
+    deploy : {
+        staging : {
+            user : "ubuntu",
+            host : "sample.staging.com",
+            ref : "origin/develop",
+            repo : "git@git.sample.com:group/project.git",
+            path : "/var/www/vhosts/project",
+            "pre-deploy-local": "pm2 deploy deploy/sample.staging.config.js staging setup || echo 'already setup'",
+            "post-deploy" : "echo 'done. do not run default.'"
+        }
+    }
+};
+```
