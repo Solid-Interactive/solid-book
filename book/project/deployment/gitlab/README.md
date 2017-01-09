@@ -18,11 +18,10 @@ The runner will run under the user `gitlab-runner`.
 
 ## Setting up gitlab deploys with pipelines
 
-Here is how to setup deploys via pipelines to a staging server:
+Here is how to setup deploys via pipelines to a staging server if you already have a gitlab runner setup.
 
-1. Add a deploy key to the server
-1. git clone the repo on the server using `--single-branch`
-1. add a `.gitlab-ci.yml` to define your stages and environments. below is an example that will jshint and deploy is jshint passes:
+1. Add a deploy key to the server your project code will live on. This allows the repo to be read from that server.
+1. add a `.gitlab-ci.yml` at the root of your project to define your stages and environments. below is an example that will run `npm test` with dependencies in the deploy dir, and then use pm2 deploy.
 
     ```
     stages:
@@ -31,17 +30,21 @@ Here is how to setup deploys via pipelines to a staging server:
     test_staging:
       stage: test
       script:
-        - npm install -g jshint
+        - npm install deploy
         - npm test
     deploy_staging:
       stage: deploy
       script:
-        - git push user@server.com:/home/user/project HEAD:develop
+        - pm2 deploy deploy/sample.staging.config.js staging
       environment:
         name: staging
-        url: https://server.com/#/
+        url: https://sample.staging.com/
       only:
       - develop
     ```  
-
-You have to use a [gitlab-runner](https://docs.gitlab.com/runner/install/) to have gitlab run the above.
+    
+The cwd of the script is the root of the project, so in the case above the config file for the deploy are in a deploy dir a the root of the project.
+    
+[PM2 deploy](http://pm2.keymetrics.io/docs/usage/deployment/) is convenient for node deploys, but it can also be used for any other type of deploy. There are hooks to support
+doing work both on either the runner or the deployed to server. It allows all these hooks to be stored in the repo as 
+opposed to in a git hook outside the repo.
