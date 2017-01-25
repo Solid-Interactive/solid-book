@@ -72,3 +72,7 @@ module.exports = {
     }
 };
 ```
+
+### Trouble Shooting
+
+You will get a 403 when trying to run a build if you are not a member of the project. This can happen to admins who can access the build panel for projects they do not belong to.
