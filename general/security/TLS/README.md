@@ -17,4 +17,11 @@ More info [here](https://serverfault.com/questions/638691/how-can-i-verify-if-tl
 nmap --script ssl-enum-ciphers -p 443 <domain.com>
 ```
 
-This will tell you the available ciphers for the server and their strength. 
+This will tell you the available ciphers for the server and their strength.
+ 
+ ### Test with SSL Labs
+ SSL labs offers an online tool for verifying SSL/TLS. It's nice because you don't have to install any
+ packages or memorize any commands.
+ 
+ - Go here [https://www.ssllabs.com/ssltest/index.html](https://www.ssllabs.com/ssltest/index.html)
+ - Enter the full domain https://<domain.com> and hit submit
