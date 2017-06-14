@@ -1,0 +1,20 @@
+# TLS
+
+### Confirm a secure connection via openssl
+```bash
+openssl s_client -connect <domain.com>:443 -tls1_2
+```
+
+If you get the certificate chain and the handshake you know the system in question 
+supports TLS 1.2. If you see don't see the certificate chain, and something similar to 
+"handshake error" you know it does not support TLS 1.2. You can also test for TLS 1 or 
+TLS 1.1 with -tls1 or tls1_1 respectively.
+
+More info [here](https://serverfault.com/questions/638691/how-can-i-verify-if-tls-1-2-is-supported-on-a-remote-web-server-from-the-rhel-ce)
+
+### Use nmap for cipher information
+```bash
+nmap --script ssl-enum-ciphers -p 443 <domain.com>
+```
+
+This will tell you the available ciphers for the server and their strength. 
