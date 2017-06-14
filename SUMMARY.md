@@ -41,7 +41,7 @@
         * [File Upload](/general/file-upload/README.md)
         * [Restrict File Types](/detail/form/README.md)
     * SASS
-* HTTP / S
+* HTTP /S
     * File Upload
     * HSTS
 * Languages
@@ -64,7 +64,9 @@
         * [Mysql extension](/detail/php/mysql-extension/README.md)
 * Performance
     * [Profiling](/general/profiling/README.md)
-* [Security](/general/security/README.md)
+* Security
+    * [General](/general/security/README.md)
+    * [TLS](/general/security/TLS/README.md)
 * SEO
 * Servers
     * [FastCgi](/detail/fastcgi/README.md)
