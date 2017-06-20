@@ -2,25 +2,26 @@
 
 
 * DB
+    * NoSQL
+        * [Elasticsearch](/db/nosql/elasticsearch/README.md)
+        * [Mongo](/db/nosql/mongo/README.md)
+            * [Users](/db/nosql/mongo/users/README.md)
     * SQL
         * MySQL
-            * [Users](/detail/mysql/users/README.md)
-            * [Profiling](/detail/mysql/profiling/README.md)
-    * NoSQL
-        * [Elasticsearch](/detail/elasticsearch/README.md)
-        * [Mongo](/book/project/development/mongo/README.md)
-            * [Users](/book/project/development/mongo/users/README.md)
+            * [Users](/db/sql/mysql/users/README.md)
+            * [Profiling](/db/sql/mysql/profiling/README.md)
+
 * Design / Architectural Patterns
     * Composition
     * Finite State Machine
     * Inheritance
     * MVC
 * Devops    
-    * [Deployments](/book/project/deployment/README.md)
-        * [Deploying a project with gitlab](/book/project/deployment/gitlab/README.md)
-        * [Deploying a project with github](/book/project/deployment/github/README.md)
-        * [Deploying a project with git](/book/project/deployment/git/README.md)
-        * [Deployment build script for static webpage](/book/project/deployment/build/README.md)
+    * [Deployment](/devops/deployment/README.md)
+        * [Deploying a project with gitlab](/devops/deployment/gitlab/README.md)
+        * [Deploying a project with github](/devops/deployment/github/README.md)
+        * [Deploying a project with git](/devops/deployment/git/README.md)
+        * [Deployment build script for static webpage](/devops/deployment/build/README.md)
     * Provisioning 
     * Scaffolding
     * [Setting up a project](/book/project/setup/README.md)
