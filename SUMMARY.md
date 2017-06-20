@@ -5,6 +5,7 @@
     * NoSQL
         * [Elasticsearch](/db/nosql/elasticsearch/README.md)
         * [Mongo](/db/nosql/mongo/README.md)
+            * [Mongoose](/db/nosql/mongo/mongoose/README.md)
             * [Users](/db/nosql/mongo/users/README.md)
     * SQL
         * MySQL
