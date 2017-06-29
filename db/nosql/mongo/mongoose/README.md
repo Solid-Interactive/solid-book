@@ -11,6 +11,19 @@ Using [`mongoose.createConnection`](http://mongoosejs.com/docs/connections.html#
 To [check the state of the default connection](https://stackoverflow.com/a/19606067/186636)
 
 ```javascript
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 console.log(mongoose.connection.readyState);
+```
+
+## Debugging
+
+If your commands are just not doing anything, make sure you are connected!
+
+http://mongoosejs.com/docs/api.html#connection_Connection-readyState
+
+```javascript
+setInterval(() => {
+    // 1 = connected, 2 = connecting
+    console.log(mongoose.connection.readyState); 
+});
 ```
