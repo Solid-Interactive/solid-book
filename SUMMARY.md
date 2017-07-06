@@ -33,7 +33,7 @@
         * [Restrict File Types](/_detail/form/README.md)
 * Languages:
     * JavaScript:
-        * [es6](/_detail/javascript/es6/README.md)
+        * [es6](/languages/javascript/es6/README.md)
         * [Error Handling](/_general/error-handling/javascript/README.md)
         * [Node](/__book/project/development/node/README.md)
             * [What "good" node apps should have](/__book/project/development/node/app/README.md)
@@ -67,4 +67,4 @@
    * Git:
         * [Gitflow](/version-control/git/gitflow/README.md)
         * [Hooks](/version-control/git/hooks/README.md)
-* v2
+* v3
