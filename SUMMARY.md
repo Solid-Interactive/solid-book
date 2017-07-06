@@ -36,6 +36,7 @@
         * [es6](/languages/javascript/es6/README.md)
         * [Error Handling](/_general/error-handling/javascript/README.md)
         * [Node](/__book/project/development/node/README.md)
+            * [Education](/languages/javascript/node/training/README.md)
             * [What "good" node apps should have](/__book/project/development/node/app/README.md)
             * npm:
                 * [Using npm](/__book/project/development/node/npm/README.md)
@@ -67,4 +68,4 @@
    * Git:
         * [Gitflow](/version-control/git/gitflow/README.md)
         * [Hooks](/version-control/git/hooks/README.md)
-* v3
+* v4
