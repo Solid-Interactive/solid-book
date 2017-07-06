@@ -16,4 +16,4 @@ gitbook install
 
 `npm run dev` will do the last line from the above
 
-To deploy, `grunt deploy`
+To deploy simple push a commit to the `master` branch.
