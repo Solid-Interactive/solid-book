@@ -1,6 +1,6 @@
 # The Big Incomplete Book of Dev
 
-The latest "published" version can be accessed at http://solid-interactive.github.io/solid-book/ ...
+The latest "published" version can be accessed at http://solid-interactive.github.io/solid-book/ .
 
 To edit the book go to: https://github.com/Solid-Interactive/solid-book .
 
