@@ -50,10 +50,10 @@
         * [Debugging PHP](/__book/project/workflow/debugging/php/README.md)
         * [Mysql extension](/_detail/php/mysql-extension/README.md)
 * Performance:
-    * [Profiling](/_general/profiling/README.md)
+    * [Profiling](/profiling/README.md)
 * Security:
-    * [General](/_general/security/README.md)
-    * [TLS](/_general/security/TLS/README.md)
+    * [General](/security/README.md)
+    * [TLS](/security/TLS/README.md)
 * Servers:
     * [FastCgi](/_detail/fastcgi/README.md)
     * Nginx:
@@ -63,8 +63,8 @@
    * [Beta Testing](/__book/project/beta-testing/README.md)
        * [TestFlight-iOS](/__book/project/beta-testing/ios/testflight/README.md)
        * [TestFairy-Android](/__book/project/beta-testing/android/testfairy/README.md)
-* [Version Control](/_general/version-control/README.md)
+* [Version Control](/version-control/README.md)
    * Git:
-        * [Gitflow](/_detail/git/gitflow/README.md)
-        * [Hooks](/_detail/git/hooks/README.md)
-* v1
+        * [Gitflow](/version-control/git/gitflow/README.md)
+        * [Hooks](/version-control/git/hooks/README.md)
+* v2
