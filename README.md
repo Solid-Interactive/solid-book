@@ -29,7 +29,7 @@ fit into more than one topic. This is why we also tag each page.
 Add tags as a line on a given page:
 
 ```
-tags: tag1, tag2, tag3
+ tags: tag1, tag2, tag3
 ```
 
 ## Links
