@@ -1,7 +1,7 @@
 # Table of Contents
 
-* [DB](/tags.md#db):
-    * [NoSQL](/tags.md#nosql):
+* [DB](/tags.md#db)
+    * [NoSQL](/tags.md#nosql)
         * [Elasticsearch](/db/nosql/elasticsearch/README.md)
         * [Mongo](/db/nosql/mongo/README.md)
             * [Debugging](/db/nosql/mongo/debugging/README.md)
