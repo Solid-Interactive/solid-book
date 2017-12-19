@@ -26,11 +26,7 @@ fit into more than one topic. This is why we also tag each page.
 
 ## Tags
 
-Add tags as a line on a given page:
-
-```
- tags: tag1, tag2, tag3
-```
+[Add tags as a line on a given page](https://github.com/billryan/gitbook-plugin-tags#add-tags-in-page)
 
 ## Links
 
