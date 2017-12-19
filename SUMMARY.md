@@ -45,7 +45,7 @@
         * [Debugging PHP](/languages/php/debugging/README.md)
 * [Performance](/tags.md#performance)
     * [Profiling](/profiling/README.md)
-* [Security](/security/README.md):
+* [Security](/security/README.md)
     * [HTTPS](/security/HTTPS/README.md)
 * Servers:
     * [Nginx](/tags.md#nginx)
