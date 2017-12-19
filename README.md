@@ -30,4 +30,4 @@ fit into more than one topic. This is why we also tag each page.
 
 ## Links
 
-For linkg PhpStorm has good auto-completion.
+For links PhpStorm has good auto-completion.
