@@ -26,46 +26,36 @@
             * [Initial setup](/devops/setting-up-a-project/provisioning/ansible/playbooks/README.md)
             * [Creating roles](/devops/setting-up-a-project/provisioning/ansible/roles/README.md)
 * Error Handling:     
-    * [Exponential Back Off](/_general/error-handling/exponential-backoff/README.md)
-* HTML / CSS:
+    * [Exponential Back Off](/error-handling/exponential-backoff/README.md)
+* HTML:
     * Forms:
-        * [File Upload](/_general/file-upload/README.md)
-        * [Restrict File Types](/_detail/form/README.md)
+        * [File Upload](/html/forms/file-upload/README.md)
+        * [Restrict File Types](/html/forms/restrict-file-types/README.md)
 * Languages:
     * JavaScript:
         * [es6](/languages/javascript/es6/README.md)
-        * [Error Handling](/_general/error-handling/javascript/README.md)
-        * [Node](/__book/project/development/node/README.md)
+        * [Error Handling](/languages/javascript/error-handling/README.md)
+        * [Node](/languages/javascript/node/README.md)
             * [Education](/languages/javascript/node/training/README.md)
-            * [What "good" node apps should have](/__book/project/development/node/app/README.md)
-            * npm:
-                * [Using npm](/__book/project/development/node/npm/README.md)
-                * Good npms:
-            * [Debugging Node](/__book/project/workflow/debugging/node/README.md)
-            * [Working with promises](/__book/project/workflow/concepts/README.md)
+            * [npm](/languages/javascript/node/npm/README.md):
+            * [Debugging Node](/languages/javascript/node/debugging/README.md)
+            * [Working with promises](/languages/javascript/promises/README.md)
     * Linux:
-        * [CLI](/_detail/shell/cli/README.md)
-        * [Commands](/_detail/shell/commands/README.md)
-        * Try / Catch with line number:
+        * [CLI](/languages/linux/cli/README.md)
+        * [Commands](/languages/linux/commands/README.md)
     * PHP:    
-        * [Debugging PHP](/__book/project/workflow/debugging/php/README.md)
-        * [Mysql extension](/_detail/php/mysql-extension/README.md)
+        * [Debugging PHP](/languages/php/debugging/README.md)
 * Performance:
     * [Profiling](/profiling/README.md)
-* Security:
-    * [General](/security/README.md)
+* [Security](/security/README.md):
     * [TLS](/security/TLS/README.md)
 * Servers:
-    * [FastCgi](/_detail/fastcgi/README.md)
+    * [FastCgi](/servers/fastcgi/README.md)
     * Nginx:
-        * [Config](/_detail/nginx/config/README.md)
-        * [Fastcgi cache](/_detail/nginx/fastcgi-cache/README.md)
-* Testing:
-   * [Beta Testing](/__book/project/beta-testing/README.md)
-       * [TestFlight-iOS](/__book/project/beta-testing/ios/testflight/README.md)
-       * [TestFairy-Android](/__book/project/beta-testing/android/testfairy/README.md)
+        * [Config](/servers/nginx/config/README.md)
+        * [Fastcgi cache](/servers/nginx/fastcgi-cache/README.md)
 * [Version Control](/version-control/README.md)
    * Git:
         * [Gitflow](/version-control/git/gitflow/README.md)
         * [Hooks](/version-control/git/hooks/README.md)
-* v4
+* [Tags](tags.md)

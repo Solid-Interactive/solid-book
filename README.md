@@ -16,4 +16,22 @@ gitbook install
 
 `npm run dev` will do the last line from the above
 
-To deploy push a commit to the `master` branch...
+To deploy push a commit to the `master` branch.
+
+## Organization
+
+Topics are roughly organized into a hierarchy by subjects. Of course
+this organization doesn't always work completely. Sometimes a page could
+fit into more than one topic. This is why we also tag each page.
+
+## Tags
+
+Add tags as a line on a given page:
+
+```
+tags: tag1, tag2, tag3
+```
+
+## Links
+
+For linkg PhpStorm has good auto-completion.

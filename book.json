@@ -1,6 +1,6 @@
 {
     "gitbook": "3.2.2",
-    "plugins": [ "jsfiddle"],
+    "plugins": [ "jsfiddle", "tags"],
     "pluginsConfig": {
           "jsfiddle":{
             "tabs":["result","js","css", "html"],

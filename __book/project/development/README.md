@@ -1,1 +1,0 @@
-Project are developed with many different technologies, what follows is a summary of just a few.
