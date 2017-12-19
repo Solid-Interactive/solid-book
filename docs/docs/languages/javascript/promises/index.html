@@ -1,0 +1,1239 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Promises · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tags/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../node/" />
+    
+    
+    <link rel="prev" href="../es6/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../tags.html">
+            
+                <a href="../../../tags.html#db">
+            
+                    
+                    DB
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../../tags.html">
+            
+                <a href="../../../tags.html#nosql">
+            
+                    
+                    NoSQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../../db/nosql/elasticsearch/">
+            
+                <a href="../../../db/nosql/elasticsearch/">
+            
+                    
+                    Elasticsearch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../../db/nosql/mongo/README.md">
+            
+                <span>
+            
+                    
+                    Mongo
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.2.1" data-path="../../../db/nosql/mongo/debugging/">
+            
+                <a href="../../../db/nosql/mongo/debugging/">
+            
+                    
+                    Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2.2" data-path="../../../db/nosql/mongo/mongoose/">
+            
+                <a href="../../../db/nosql/mongo/mongoose/">
+            
+                    
+                    Mongoose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2.3" data-path="../../../db/nosql/mongo/users/">
+            
+                <a href="../../../db/nosql/mongo/users/">
+            
+                    
+                    Users
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../../tags.html">
+            
+                <a href="../../../tags.html#sql">
+            
+                    
+                    SQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../../tags.html">
+            
+                <a href="../../../tags.html#mysql">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1.1" data-path="../../../db/sql/mysql/profiling/">
+            
+                <a href="../../../db/sql/mysql/profiling/">
+            
+                    
+                    Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.2" data-path="../../../db/sql/mysql/users/">
+            
+                <a href="../../../db/sql/mysql/users/">
+            
+                    
+                    Users
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../../tags.html">
+            
+                <a href="../../../tags.html#devops">
+            
+                    
+                    Devops
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../../devops/deployment/">
+            
+                <a href="../../../devops/deployment/">
+            
+                    
+                    Deployment
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../../devops/deployment/gitlab/">
+            
+                <a href="../../../devops/deployment/gitlab/">
+            
+                    
+                    Deploying a project with gitlab
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../../devops/deployment/github/">
+            
+                <a href="../../../devops/deployment/github/">
+            
+                    
+                    Deploying a project with github
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../../devops/deployment/git/">
+            
+                <a href="../../../devops/deployment/git/">
+            
+                    
+                    Deploying a project with git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../../../devops/deployment/build/">
+            
+                <a href="../../../devops/deployment/build/">
+            
+                    
+                    Deployment build script for static webpage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../../tags.html">
+            
+                <a href="../../../tags.html#scaffolding">
+            
+                    
+                    Scaffolding
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../../devops/scaffolding/project-setup/">
+            
+                <a href="../../../devops/scaffolding/project-setup/">
+            
+                    
+                    Setting up a project
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1.1" data-path="../../../devops/scaffolding/project-setup/architecture/">
+            
+                <a href="../../../devops/scaffolding/project-setup/architecture/">
+            
+                    
+                    Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.1.2" data-path="../../../devops/scaffolding/project-setup/provisioning/">
+            
+                <a href="../../../devops/scaffolding/project-setup/provisioning/">
+            
+                    
+                    Provisioning
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1.2.1" data-path="../../../devops/scaffolding/project-setup/provisioning/ansible/">
+            
+                <a href="../../../devops/scaffolding/project-setup/provisioning/ansible/">
+            
+                    
+                    Ansible Intro
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.1.2.2" data-path="../../../devops/scaffolding/project-setup/provisioning/ansible/playbooks/">
+            
+                <a href="../../../devops/scaffolding/project-setup/provisioning/ansible/playbooks/">
+            
+                    
+                    Ansible Playbooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.1.2.3" data-path="../../../devops/scaffolding/project-setup/provisioning/ansible/roles/">
+            
+                <a href="../../../devops/scaffolding/project-setup/provisioning/ansible/roles/">
+            
+                    
+                    Creating Roles
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../../tags.html">
+            
+                <a href="../../../tags.html#error-handling">
+            
+                    
+                    Error Handling
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../../error-handling/exponential-backoff/">
+            
+                <a href="../../../error-handling/exponential-backoff/">
+            
+                    
+                    Exponential Back Off
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../../tags.html">
+            
+                <a href="../../../tags.html#html">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../../tags.html">
+            
+                <a href="../../../tags.html#forms">
+            
+                    
+                    Forms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../../../html/forms/file-upload/">
+            
+                <a href="../../../html/forms/file-upload/">
+            
+                    
+                    File Upload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../../../html/forms/restrict-file-types/">
+            
+                <a href="../../../html/forms/restrict-file-types/">
+            
+                    
+                    Restrict File Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    Languages:
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../../tags.html">
+            
+                <a href="../../../tags.html#javascript">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../error-handling/">
+            
+                <a href="../error-handling/">
+            
+                    
+                    Error Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../es6/">
+            
+                <a href="../es6/">
+            
+                    
+                    es6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Promises
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="../node/">
+            
+                <a href="../node/">
+            
+                    
+                    Node
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.4.1" data-path="../node/debugging/">
+            
+                <a href="../node/debugging/">
+            
+                    
+                    Debugging Node
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4.2" data-path="../node/npm/">
+            
+                <a href="../node/npm/">
+            
+                    
+                    npm
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../../tags.html">
+            
+                <a href="../../../tags.html#linux">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../../linux/cli/">
+            
+                <a href="../../linux/cli/">
+            
+                    
+                    CLI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../../linux/commands/">
+            
+                <a href="../../linux/commands/">
+            
+                    
+                    Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../../tags.html">
+            
+                <a href="../../../tags.html#php">
+            
+                    
+                    PHP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../../php/debugging/">
+            
+                <a href="../../php/debugging/">
+            
+                    
+                    Debugging PHP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../../tags.html">
+            
+                <a href="../../../tags.html#performance">
+            
+                    
+                    Performance
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../../profiling/">
+            
+                <a href="../../../profiling/">
+            
+                    
+                    Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../../security/">
+            
+                <a href="../../../security/">
+            
+                    
+                    Security
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../../security/HTTPS/">
+            
+                <a href="../../../security/HTTPS/">
+            
+                    
+                    HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    Servers:
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../../tags.html">
+            
+                <a href="../../../tags.html#nginx">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1.1" data-path="../../../servers/nginx/config/">
+            
+                <a href="../../../servers/nginx/config/">
+            
+                    
+                    Config
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.1.2" data-path="../../../servers/fastcgi/README.md">
+            
+                <span>
+            
+                    
+                    FastCgi
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../../version-control/">
+            
+                <a href="../../../version-control/">
+            
+                    
+                    Version Control
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../../tags.html">
+            
+                <a href="../../../tags.html#git">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.1" data-path="../../../version-control/git/gitflow/">
+            
+                <a href="../../../version-control/git/gitflow/">
+            
+                    
+                    Gitflow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.2" data-path="../../../version-control/git/hooks/">
+            
+                <a href="../../../version-control/git/hooks/">
+            
+                    
+                    Hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../../tags.html">
+            
+                <a href="../../../tags.html">
+            
+                    
+                    Tags
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >Promises</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="working-with-promises">Working with promises</h1><!-- tags --><div id="tags" class="tags"><p><i class="fa fa-tags" aria-hidden="true"></i> <a href="../../../tags.html#javascript">javascript</a> <a href="../../../tags.html#promises">promises</a></p></div><!-- tagsstop --><p>Bluebird has a good section on anti patterns.</p>
+<p>In general your then blocks should be small. Functions should return promises vs
+passing promise chains in to functions, and the modification of the context should
+always be at the same level of visibility as the bind. Specifics below:</p>
+<h2 id="return-a-promise">Return a promise</h2>
+<p>If your functions return a promise, it is easy to reuse them.</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">doWork</span>(<span class="hljs-params">work</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> BB(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve</span>)) </span>{
+    setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      resolve(<span class="hljs-string">&apos;done with &apos;</span> + work);
+    }, <span class="hljs-number">500</span>);
+  }
+}
+</code></pre>
+<p>Now you can create more async functions out of this:</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">doMuchWork</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> BB.all([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>].map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">work</span>) </span>{
+    <span class="hljs-keyword">return</span> doWork(work);
+  }));
+}
+</code></pre>
+<p>This enables a clear control flow:</p>
+<pre><code class="lang-javascript">BB
+  .try(doMuchWork)
+  .then(doMuchMoreWork);
+</code></pre>
+<p>The antipattern to this is passing in promise chains that get added to:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// this is brittle and hard to modularize</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">doWork</span>(<span class="hljs-params">work, promises</span>) </span>{
+  promises.push(doSomething(work));
+  <span class="hljs-keyword">return</span> promises;
+}
+</code></pre>
+<h2 id="modify-the-context-at-one-level-of-visibility">Modify the context at one level of visibility</h2>
+<p>BB has a very useful method called bind:</p>
+<pre><code class="lang-javascript">BB
+  .bind({
+    name : <span class="hljs-string">&apos;ratatat&apos;</span>
+  })
+  .then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.name); <span class="hljs-comment">// ratatat</span>
+  });
+</code></pre>
+<p>The context is useful for building up a complex compound result, but the context
+can become difficult to manage. To ease in its management, do not hide it&apos;s modification,
+but modify it at the same level of visibility as it is bound:</p>
+<pre><code class="lang-javascript">BB
+    .bind({
+      id : <span class="hljs-string">&apos;abc&apos;</span>,
+      name : <span class="hljs-literal">null</span>
+    })
+    .then(getName)
+    .then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">name</span>) </span>{
+      <span class="hljs-keyword">this</span>.name = name;
+    })
+    .then(returnResult);
+</code></pre>
+<p>The above is much easier to debug than having <code>this.name = name</code> inside the <code>getName</code>
+function.</p>
+<p>It is important to keep in mind that newly create chains are unbound so you have to rebind them:</p>
+<pre><code class="lang-javascript">BB
+  .bind({
+    name:<span class="hljs-string">&apos;jane&apos;</span>
+  })
+  .then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+
+      <span class="hljs-comment">// Creating a new chain, so you have to bind it</span>
+      <span class="hljs-keyword">return</span> BB
+        .bind(<span class="hljs-keyword">this</span>)
+        .then(doSomething);
+  });
+</code></pre>
+<h2 id="start-chains-with-a-function-reference">Start chains with a function reference</h2>
+<p>If you start a chain with a function call, then synchronous errors in that function
+are not caugh by the promise, so use a function reference:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// errors from functionReference will be caught by BB</span>
+BB
+    .try(functionReference)
+    .then(...)
+
+<span class="hljs-comment">// functionReference will through synchronous errors</span>
+functionReference()
+    .then()
+</code></pre>
+<h2 id="use-join-if-you-know-how-many-promises-you-have">Use join if you know how many promises you have:</h2>
+<p>Note that the last function is the callback:</p>
+<pre><code class="lang-javascript">BB.join(getNames(), getNumbers(), <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">name, numbers</span>) </span>{
+
+  });
+</code></pre>
+<p>Combining BB with array / lodash methods can be very expressive:</p>
+<h2 id="try-to-keep-the-control-flow-as-unified-as-possible-and-break-out-the-async-work">Try to keep the control flow as unified as possible, and break out the async work</h2>
+<p>This often make future modifications and debugging easier. It keeps function logic separate
+from control flow.</p>
+<pre><code class="lang-javascript">BB.try(getPartOne)
+  .then(getPartTwo)
+  .then(getPartThree)
+  .then(assembleParts);
+</code></pre>
+<p>vs making a method call called <code>getParts</code> which chains the different get part calls.</p>
+<h2 id="try-to-have-as-few-catches-as-possible-with-specific-throws">Try to have as few catches as possible with specific throws</h2>
+<pre><code class="lang-javascript">BB.try(getPartOne)
+  .then(getPartTwo)
+  .then(getPartThree)
+  .catch();
+</code></pre>
+<p>vs having a catch in each get part. Remember if you do have a catch in each part, the
+chain will keep going on an error and not terminate:</p>
+<pre><code class="lang-javascript">BB.try(getPartOne)
+  .then(getPartTwo)
+  .then(getPartThree)
+  .catch();
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getPartOne</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> BB.try(...)
+      .catch();
+  }
+</code></pre>
+<p>is equal to:</p>
+<pre><code class="lang-javascript">BB.try(getPartOne)
+  .catch(...)
+  .then(getPartTwo)
+  .then(getPartThree)
+  .catch();
+</code></pre>
+<p>so, you&apos;ll always get to getPartTwo.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../es6/" class="navigation navigation-prev " aria-label="Previous page: es6">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../node/" class="navigation navigation-next " aria-label="Next page: Node">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Promises","level":"1.6.1.3","depth":3,"next":{"title":"Node","level":"1.6.1.4","depth":3,"path":"languages/javascript/node/README.md","ref":"languages/javascript/node/README.md","articles":[{"title":"Debugging Node","level":"1.6.1.4.1","depth":4,"path":"languages/javascript/node/debugging/README.md","ref":"languages/javascript/node/debugging/README.md","articles":[]},{"title":"npm","level":"1.6.1.4.2","depth":4,"path":"languages/javascript/node/npm/README.md","ref":"languages/javascript/node/npm/README.md","articles":[]}]},"previous":{"title":"es6","level":"1.6.1.2","depth":3,"path":"languages/javascript/es6/README.md","ref":"languages/javascript/es6/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"3.2.2","theme":"default","variables":{},"plugins":["jsfiddle","tags","livereload"],"pluginsConfig":{"livereload":{},"jsfiddle":{"tabs":["result","js","css","html"],"height":500,"width":500},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"tags":{"placement":"top"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"languages/javascript/promises/README.md","mtime":"2017-12-19T13:46:40.016Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-12-19T16:21:31.155Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-jsfiddle/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
