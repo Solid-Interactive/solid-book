@@ -1,5 +1,7 @@
 # Deploying with Gitlab
 
+tags: devops, deployment, gitlab, ci
+
 Gitlab now has the concept of [pipelines](https://docs.gitlab.com/ee/ci/pipelines.html).
 You can use pipelines to setup a series of stages. Stages are things like
 test and deploy.

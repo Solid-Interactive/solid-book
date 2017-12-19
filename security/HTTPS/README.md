@@ -1,6 +1,13 @@
-# TLS
+# HTTPS
+
+tags: security, https, certs
+
+## Certs
+
+There are 3 main types of certs: DV, OV, and EV. [DV and EV certs are most common](https://www.ssl.com/article/dv-ov-and-ev-certificates/).
 
 ### Confirm a secure connection via openssl
+
 ```bash
 openssl s_client -connect <domain.com>:443 -tls1_2
 ```
@@ -13,6 +20,7 @@ TLS 1.1 with -tls1 or tls1_1 respectively.
 More info [here](https://serverfault.com/questions/638691/how-can-i-verify-if-tls-1-2-is-supported-on-a-remote-web-server-from-the-rhel-ce)
 
 ### Use nmap for cipher information
+
 ```bash
 nmap --script ssl-enum-ciphers -p 443 <domain.com>
 ```
@@ -20,6 +28,7 @@ nmap --script ssl-enum-ciphers -p 443 <domain.com>
 This will tell you the available ciphers for the server and their strength.
  
  ### Test with SSL Labs
+ 
  SSL labs offers an online tool for verifying SSL/TLS. It's nice because you don't have to install any
  packages or memorize any commands.
  

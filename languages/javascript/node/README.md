@@ -1,5 +1,7 @@
 # node
 
+tags: javascript, node
+
 Here is a way to run an array of shell commands in order:
 
 ```javascript

@@ -1,5 +1,7 @@
 # Gitflow
 
+tags: git, gitflow
+
 Gitflow is a way of organizing your workflow through branches.
 
 The way branches are named and created is a statement of intent.

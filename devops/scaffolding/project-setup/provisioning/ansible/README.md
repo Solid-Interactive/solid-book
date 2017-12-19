@@ -1,5 +1,7 @@
 # Ansible
 
+tags: devops, provisioning, ansible
+
 Ansible allows you to guarantee an environment on one or many servers. At a high
 level you run a playbook that has roles made up of tasks. Each role is a functional
 chunck. For example there can be a "git" role that ensures git 2.3+ is available.

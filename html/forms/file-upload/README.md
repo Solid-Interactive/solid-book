@@ -1,5 +1,7 @@
 # File Upload
 
+tags: html, forms, files
+
 ## Files api
 
 Sending files via html/js can be done using the file api.

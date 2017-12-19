@@ -1,5 +1,7 @@
 # Mongoose
 
+tags: db, mongo, orm, nosql
+
 [Docs](http://mongoosejs.com/docs/)
 
 ## Creating a connection

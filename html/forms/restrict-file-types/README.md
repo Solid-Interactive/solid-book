@@ -1,5 +1,7 @@
 # Forms
 
+tags: html, forms
+
 To restrict the type of files available in modern browsers, use `accept`:
 
 ```html

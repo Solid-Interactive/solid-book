@@ -1,5 +1,7 @@
 # Build Process for Webpages
 
+tags: devops, deployment, web
+
 This describes some general concepts for creating a build for an HTML page.
 The HTML itself can be served as a file or via other methods (e.g. express & a
     jade template).

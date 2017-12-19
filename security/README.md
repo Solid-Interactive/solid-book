@@ -1,5 +1,7 @@
 # Security
 
+tags: security
+
 This is a very incomplete and partial look at security.
 
 ## Binding to localhost

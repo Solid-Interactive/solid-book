@@ -1,5 +1,7 @@
 # Deploying with Github
 
+tags: devops, deployment, github, webhooks
+
 Github has many service that you can use for deployments.
 
 Github also has webhooks. Webhooks are urls that github hits with a POST

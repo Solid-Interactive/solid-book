@@ -1,5 +1,7 @@
 # Error Handling in JavaScript
 
+tags: javascript, error-handling
+
 Error handling is tricky in JavaScript because JavaScript is single threaded.
 For example
 the following code will not alert, "error caught":

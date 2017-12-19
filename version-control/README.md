@@ -1,5 +1,6 @@
-
 # Version Control
+
+tags: version-control
 
 While there are multiple options for version control, no matter your choice, there
 are a few things you must be able to accomplish:

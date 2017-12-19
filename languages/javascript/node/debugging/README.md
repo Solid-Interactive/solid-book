@@ -1,5 +1,7 @@
 # Debugging Node running on a remote server
 
+tags: javascript, node, debugging
+
 Node uses a [TCP interface](https://nodejs.org/api/debugger.html) for debugging, so if you can get a handle on the right port, you can debug apps running remotely. This means you can run through code on staging, Vagrant, etc. The following shows you how to start node with the debug flag and use an SSH tunnel to access the right port.
 
 Things you need:

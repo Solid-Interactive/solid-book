@@ -1,5 +1,7 @@
 # Creating Users
 
+tags: db, sql, mysql, auth
+
 ```
 # show all users
 select User from mysql.user;

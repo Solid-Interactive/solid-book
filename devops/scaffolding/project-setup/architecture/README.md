@@ -1,5 +1,7 @@
 # Application Architecture
 
+tags: devops, scaffolding, project-setup, directories
+
 ## Directory structure
 
 The directory structure of an application has a surprisingly large effect on the
@@ -45,12 +47,4 @@ footer
   template
 ```
 
-We have tried both of these methods, and in general it appears to be easier to
-find files in a pod organization. This is especially true when the project starts
-getting bigger, and there are 30+ views. Additionally a pod architecture makes it
-very fast to copy paste a pod and with a few minor changes get a working view.
 
-If you find yourself setting up many projects with almost identical inital directory
-structures, it is a good idea to setup some sort of project scaffolding builder.
-
-Grunt-init is a good tool for this.

@@ -1,5 +1,7 @@
 # Deploying to a Server
 
+tags: devops, deployment, git-push
+
 There are several types of deployments. A deployment workflow should always be
 easy to remember, reliable, and repeatable. This section will cover how to deploy
 from a work box to a staging or production server using `git push`.

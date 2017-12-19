@@ -1,5 +1,7 @@
 # Mongo
 
+tags: db, mongo, debugging, nosql
+
 ## Debugging
 
 If the service doesn't start you can often get useful output trying to manually start or fix mongo

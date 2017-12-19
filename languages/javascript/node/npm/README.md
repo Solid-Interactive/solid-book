@@ -1,5 +1,7 @@
 # npm
 
+tags: javascript, node, npm
+
 When developing an npm module, you often want to test thing out before publishing.
 There are two main ways to do this.
 

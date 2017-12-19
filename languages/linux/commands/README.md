@@ -1,5 +1,7 @@
 # Common Shell Commands
 
+tags: linux, commands
+
 ## Check if command exists from script
 
 ```

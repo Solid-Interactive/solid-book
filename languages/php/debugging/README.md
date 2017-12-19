@@ -1,5 +1,7 @@
 # Setting up xdebug with Vagrant
 
+tags: php, debugging
+
 This assumes a setup of `php5-fpm`, `vagrant`, `nginx`, and `phpstorm`.
 
 ## Installing xdebug

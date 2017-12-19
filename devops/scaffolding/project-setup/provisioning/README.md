@@ -1,5 +1,7 @@
 # Provisioning
 
+tags: devops, scaffolding, provisioning
+
 For each project you have to setup local, staging, and production environments.
 
 It is almost always useful to have a Vagrant environment ready to go for local dev.

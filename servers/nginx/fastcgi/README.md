@@ -1,12 +1,13 @@
 # FastCgi
 
+tags: fastcgi, nginx
+
 ## Environmental variables
 
 It's often convenient to define environemental variables as they are passed in.
 The allows per vhost setting for things like php's `$_SERVER['foo']`.
 
 ```
-# not sure if this is quite right
 fastcgi_param foo "bar"
 ```
 

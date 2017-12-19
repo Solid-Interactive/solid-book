@@ -1,5 +1,7 @@
 # ES6
 
+tags: javascript, es6
+
 ## Let keyword
 
 `var` is the old way of defining variables. It has function scope.

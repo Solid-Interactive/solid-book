@@ -1,5 +1,7 @@
 # Working with promises
 
+tags: javascript, promises
+
 Bluebird has a good section on anti patterns.
 
 In general your then blocks should be small. Functions should return promises vs

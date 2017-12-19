@@ -1,5 +1,7 @@
 # Creating users in Mongo
 
+tags: mongo, users, nosql, auth
+
 1. Authorize with the admin user, usually on the admin db.
 1. Switch to the db of interest.
 1. Create the user with appropriate roles.

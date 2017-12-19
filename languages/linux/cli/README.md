@@ -1,5 +1,6 @@
 # Creating cli commands
 
+tags: linux, cli
 
 ## Example
 

@@ -1,5 +1,7 @@
 # Creating an Ansible playbook
 
+tags: devops, provisioning, ansible
+
 You can create an Ansible playbook with a set of roles. You will usually run roles
 based on the host groups. You will probably end up running similar - though slightly different -
 roles for your different host groups (local, staging, production).

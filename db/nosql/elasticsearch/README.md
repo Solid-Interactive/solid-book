@@ -1,6 +1,6 @@
 # Elasticsearch
 
-tags: tag1, tag2, tag3
+tags: db, elasticsearch, nosql
 
 ## Binding to localhost
 

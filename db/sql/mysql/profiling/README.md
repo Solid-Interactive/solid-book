@@ -1,5 +1,7 @@
 # Profiling MySQL
 
+tags: db, sql, mysql
+
 To list queries that take one or more seconds use `my.cnf`, often located at:
 `/etc/mysql/my.cnf`.
 

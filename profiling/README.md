@@ -1,5 +1,7 @@
 # Profiling Websites / APIs
 
+tags: profiling, ab, stress-testing
+
 To do some rough profiling around response time, you can use `ab` - apache benchmark.
 
 This will send a total of 1000 requests, 10 at a time to `http://www.something.com/`.

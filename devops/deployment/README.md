@@ -1,5 +1,7 @@
 # Deployment
 
+tags: devops, deployment
+
 There are multiple strategies for deployment.
 
 One of the simplest is to use the dev's machine to deploy to a server directly.

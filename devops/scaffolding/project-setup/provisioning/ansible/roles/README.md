@@ -1,5 +1,7 @@
 # Roles
 
+tags: devops, provisioning, ansible
+
 Roles are pod organized. The directory structure of each is essentially the same.
 The following directories are often found in a role:
 
