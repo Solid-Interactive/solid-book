@@ -9,8 +9,8 @@
             * [Users](/db/nosql/mongo/users/README.md)
     * [SQL](/tags.md#sql):
         * [MySQL](tags.md#mysql):
-            * [Debugging](/db/sql/mysql/debugging/README.md)
             * [Profiling](/db/sql/mysql/profiling/README.md)
+            * [Users](/db/sql/mysql/users/README.md)
 * [Devops](/tags.md#devops):    
     * [Deployment](/devops/deployment/README.md)
         * [Deploying a project with gitlab](/devops/deployment/gitlab/README.md)
