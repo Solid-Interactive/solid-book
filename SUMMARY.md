@@ -7,11 +7,11 @@
             * [Debugging](/db/nosql/mongo/debugging/README.md)
             * [Mongoose](/db/nosql/mongo/mongoose/README.md)
             * [Users](/db/nosql/mongo/users/README.md)
-    * [SQL](/tags.md#sql):
-        * [MySQL](tags.md#mysql):
+    * [SQL](/tags.md#sql)
+        * [MySQL](tags.md#mysql)
             * [Profiling](/db/sql/mysql/profiling/README.md)
             * [Users](/db/sql/mysql/users/README.md)
-* [Devops](/tags.md#devops):    
+* [Devops](/tags.md#devops)    
     * [Deployment](/devops/deployment/README.md)
         * [Deploying a project with gitlab](/devops/deployment/gitlab/README.md)
         * [Deploying a project with github](/devops/deployment/github/README.md)
