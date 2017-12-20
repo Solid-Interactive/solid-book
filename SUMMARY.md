@@ -1,60 +1,60 @@
 # Table of Contents
 
-* [DB](/tags.md#db)
-    * [NoSQL](/tags.md#nosql)
+* DB
+    * NoSQL
         * [Elasticsearch](/db/nosql/elasticsearch/README.md)
         * [Mongo](/db/nosql/mongo/README.md)
             * [Debugging](/db/nosql/mongo/debugging/README.md)
             * [Mongoose](/db/nosql/mongo/mongoose/README.md)
             * [Users](/db/nosql/mongo/users/README.md)
-    * [SQL](/tags.md#sql)
+    * SQL
         * [MySQL](tags.md#mysql)
             * [Profiling](/db/sql/mysql/profiling/README.md)
             * [Users](/db/sql/mysql/users/README.md)
-* [Devops](/tags.md#devops)    
+* Devops    
     * [Deployment](/devops/deployment/README.md)
         * [Deploying a project with gitlab](/devops/deployment/gitlab/README.md)
         * [Deploying a project with github](/devops/deployment/github/README.md)
         * [Deploying a project with git](/devops/deployment/git/README.md)
         * [Deployment build script for static webpage](/devops/deployment/build/README.md)
-    * [Scaffolding](/tags.md#scaffolding)
+    * Scaffolding
         * [Setting up a project](/devops/scaffolding/project-setup/README.md)
             * [Architecture](/devops/scaffolding/project-setup/architecture/README.md)
             * [Provisioning](/devops/scaffolding/project-setup/provisioning/README.md)
                 * [Ansible Intro](/devops/scaffolding/project-setup/provisioning/ansible/README.md)
                 * [Ansible Playbooks](/devops/scaffolding/project-setup/provisioning/ansible/playbooks/README.md)
                 * [Creating Roles](/devops/scaffolding/project-setup/provisioning/ansible/roles/README.md)
-* [Error Handling](tags.md#error-handling) 
+* Error Handling
     * [Exponential Back Off](/error-handling/exponential-backoff/README.md)
-* [HTML](/tags.md#html)
-    * [Forms](/tags.md#forms)
+* HTML
+    * Forms
         * [File Upload](/html/forms/file-upload/README.md)
         * [Restrict File Types](/html/forms/restrict-file-types/README.md)
 * Languages:
-    * [JavaScript](/tags.md#javascript)
+    * JavaScript
         * [Error Handling](/languages/javascript/error-handling/README.md)
         * [es6](/languages/javascript/es6/README.md)
         * [Promises](/languages/javascript/promises/README.md)
         * [Node](/languages/javascript/node/README.md)
             * [Debugging Node](/languages/javascript/node/debugging/README.md)
             * [npm](/languages/javascript/node/npm/README.md):
-    * [Linux](/tags.md#linux)
+    * Linux
         * [CLI](/languages/linux/cli/README.md)
         * [Commands](/languages/linux/commands/README.md)
-    * [PHP](/tags.md#php)    
+    * PHP    
         * [Debugging PHP](/languages/php/debugging/README.md)
-* [Performance](/tags.md#performance)
+* Performance
     * [Profiling](/profiling/README.md)
 * [Security](/security/README.md)
     * [HTTPS](/security/HTTPS/README.md)
 * Servers:
-    * [Nginx](/tags.md#nginx)
+    * Nginx
         * [Config](/servers/nginx/config/README.md)
         * [FastCgi](/servers/fastcgi/README.md)
 * [Version Control](/version-control/README.md)
-   * [Git](/tags.md#git)
+   * Git
         * [Gitflow](/version-control/git/gitflow/README.md)
         * [Hooks](/version-control/git/hooks/README.md)
-* [Tags](tags.md)
+* [zzzz](zzzz.md)
 
 
