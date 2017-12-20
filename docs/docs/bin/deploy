@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-#gitbook build
-#rm -r docs
-#cp -R _book docs
