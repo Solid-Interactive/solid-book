@@ -24,9 +24,11 @@ Topics are roughly organized into a hierarchy by subjects. Of course
 this organization doesn't always work completely. Sometimes a page could
 fit into more than one topic. This is why we also tag each page.
 
-## [Tags](/zzzz.md)
+## [Tags](/tags.md)
 
 [Add tags as a line on a given page](https://github.com/billryan/gitbook-plugin-tags#add-tags-in-page)
+
+[Do not add any links to the tags page in SUMMARY.md](https://github.com/billryan/gitbook-plugin-tags/issues/5)
 
 ## Links
 

@@ -8,7 +8,7 @@
             * [Mongoose](/db/nosql/mongo/mongoose/README.md)
             * [Users](/db/nosql/mongo/users/README.md)
     * SQL
-        * [MySQL](tags.md#mysql)
+        * MySQL
             * [Profiling](/db/sql/mysql/profiling/README.md)
             * [Users](/db/sql/mysql/users/README.md)
 * Devops    
@@ -55,6 +55,6 @@
    * Git
         * [Gitflow](/version-control/git/gitflow/README.md)
         * [Hooks](/version-control/git/hooks/README.md)
-* [zzzz](zzzz.md)
+* [tags](tags.md)
 
 
