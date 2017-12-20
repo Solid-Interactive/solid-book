@@ -4,7 +4,7 @@ The latest "published" version can be accessed at http://solid-interactive.githu
 
 ## Contributing
 
-To edit the book go to: https://github.com/Solid-Interactive/solid-book , and edit the markdown pages. CI will publish
+To edit the book go to https://github.com/Solid-Interactive/solid-book and edit the markdown pages. CI will publish
 the new version.
 
 ## Organization
