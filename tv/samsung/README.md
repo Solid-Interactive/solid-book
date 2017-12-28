@@ -1,6 +1,6 @@
-tags: samsung, smart-tv, ott
-
 # Samsung SmartTV Dev
+
+tags: samsung, smart-tv, ott
 
 ## Steps
   * Download [tizen studio](http://developer.samsung.com/tv/develop/tools/tizen-studio/)
