@@ -9,6 +9,7 @@
             * [Users](/db/nosql/mongo/users/README.md)
     * SQL
         * MySQL
+            * [Debugging](/db/sql/mysql/debugging/README.md)
             * [Profiling](/db/sql/mysql/profiling/README.md)
             * [Users](/db/sql/mysql/users/README.md)
 * Devops    
