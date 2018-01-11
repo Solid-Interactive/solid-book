@@ -2,7 +2,7 @@
 
 tags: nginx, redirects
 
-You can use the nginx map function to do these redirects:
+You can use the nginx [map module](http://nginx.org/en/docs/http/ngx_http_map_module.html) to do these redirects:
 
 ```
 # load the variables
