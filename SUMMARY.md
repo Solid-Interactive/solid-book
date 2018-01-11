@@ -51,7 +51,8 @@
 * Servers:
     * Nginx
         * [Config](/servers/nginx/config/README.md)
-        * [FastCgi](/servers/fastcgi/README.md)
+        * [FastCgi](/servers/nginx/fastcgi/README.md)
+        * [Redirects](/servers/nginx/redirects/README.md)
 * [Version Control](/version-control/README.md)
    * Git
         * [Gitflow](/version-control/git/gitflow/README.md)
