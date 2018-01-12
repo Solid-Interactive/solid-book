@@ -103,17 +103,19 @@ tags: samsung, smart-tv, ott, tizen
   * Logs do not appear until you acknowledge the prompt on the tv first
   * Logs are logged to console in ide, but it’s better to view them in the dev tools opened by the ide
 
-## CLI workflow:
+## CLI workflow (incomplete)
 The entire project creation, tv connection, cert installation, packaging, signing, and installation process can theoretically be achieved with the tizen cli instead of using the tizen studio ide (Under the hood the studio is just using the cli commands anyway), but there seems to be a disconnect in the docs and all the steps don’t seem to work as expected. Good goal would be to get this setup to eliminate the need for the ide.
 
 * [More info here](http://stackoverflow.com/questions/38308306/how-to-install-apps-on-samsung-tizen-tv-from-command-line)
 * [Cli docs](https://developer.tizen.org/development/tizen-studio/web-tools/cli)
 * [Installation](https://developer.tizen.org/development/tizen-studio/download/installing-tizen-studio#cli_installer)
 * Example commands known to work:
-  * Install app: `~/tizen-studio/tools/ide/bin/tizen install -n <package-name>.wgt -s <tv-ip>:26101`
-  * Device capability: `~/tizen-studio/tools/sdb capability`
   * Connect to device: `~/tizen-studio/tools/sdb connect <tv-ip>:26101`
+  * Device capability: `~/tizen-studio/tools/sdb capability`
+  * Create cert profile: tbd
   * Permit to install applications: `~/tizen-studio/tools/sdb push ~/SamsungCertificate/<certificate-profile-name>/device-profile.xml /home/developer`
+  * Build and sign app package: tbd
+  * Install app: `~/tizen-studio/tools/ide/bin/tizen install -n <package-name>.wgt -s <tv-ip>:26101`
 
 ## Good References
 * [Samsung tv api docs](http://developer.samsung.com/tv/develop/api-references/samsung-product-api-references)
