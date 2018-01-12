@@ -53,6 +53,8 @@
         * [Config](/servers/nginx/config/README.md)
         * [FastCgi](/servers/nginx/fastcgi/README.md)
         * [Redirects](/servers/nginx/redirects/README.md)
+* TV
+    * [Samsung](/tv/samsung/README.md)
 * [Version Control](/version-control/README.md)
    * Git
         * [Gitflow](/version-control/git/gitflow/README.md)
