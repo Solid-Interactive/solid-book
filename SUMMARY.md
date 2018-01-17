@@ -12,7 +12,7 @@
             * [Debugging](/db/sql/mysql/debugging/README.md)
             * [Profiling](/db/sql/mysql/profiling/README.md)
             * [Users](/db/sql/mysql/users/README.md)
-* Devops    
+* Devops
     * [Deployment](/devops/deployment/README.md)
         * [Deploying a project with gitlab](/devops/deployment/gitlab/README.md)
         * [Deploying a project with github](/devops/deployment/github/README.md)
@@ -42,7 +42,7 @@
     * Linux
         * [CLI](/languages/linux/cli/README.md)
         * [Commands](/languages/linux/commands/README.md)
-    * PHP    
+    * PHP
         * [Debugging PHP](/languages/php/debugging/README.md)
 * Performance
     * [Profiling](/profiling/README.md)
@@ -53,7 +53,7 @@
         * [Config](/servers/nginx/config/README.md)
         * [FastCgi](/servers/nginx/fastcgi/README.md)
         * [Redirects](/servers/nginx/redirects/README.md)
-* TV
+* [TV](/tv/)
     * [Samsung](/tv/samsung/README.md)
 * [Version Control](/version-control/README.md)
    * Git
