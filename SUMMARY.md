@@ -58,7 +58,7 @@
 * UWP
     * [Web-based](/uwp/web-based/README.md)
 * [Version Control](/version-control/README.md)
-   * Git
+   * [Git](/version-control/git/README.md)
         * [Gitflow](/version-control/git/gitflow/README.md)
         * [Hooks](/version-control/git/hooks/README.md)
 * [tags](tags.md)
