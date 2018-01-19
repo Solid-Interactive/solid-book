@@ -1,5 +1,7 @@
 # Git
 
+tags: git
+
 ## Pro tips
 Change case of file or directory:
 ```

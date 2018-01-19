@@ -1,6 +1,6 @@
 # Samsung Smart TV (Tizen) Dev
 
-tags: samsung, smart-tv, ott, tizen
+tags: samsung, tizen
 
 ## Prereqs
 * TV
