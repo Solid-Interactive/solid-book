@@ -71,7 +71,7 @@ tags: samsung, smart-tv, ott, tizen
   * Profiles are stored in ~/SamsungCertificate
   * profiles.xml
     * Location: tizen-studio-data/profiles/profiles.xml
-    * Lists certificate profiles 
+    * Lists certificate profiles
     * `active` attribute on root profiles node is where active profile is set
     * This is how tizen studio knows which profile to sign the packages with
 * SDB
@@ -81,15 +81,15 @@ tags: samsung, smart-tv, ott, tizen
     * Transfer files to devices (primarily the device-profile.xml)
   * Location: ~/tizen-studio/tools/sdb
 * Privilege
-  * You are required to declare use of certain tizen apis in your `config.xml`. 
+  * You are required to declare use of certain tizen apis in your `config.xml`.
   * Certain apis are only available to "Partner"s. Ensure your certificate profile is set as Partner if you need to use these apis.
 * Partner
   * A privilege level required by certain tizen apis. See Privilege Term.
 * Please add more...
 
 ## Development
-* When you update code (js, csss, html), right click the project in Tizen Studio and select Refresh. This will load the new code changes and check the device connectivity. 
-* Ensure the device is connected. 
+* When you update code (js, csss, html), right click the project in Tizen Studio and select Refresh. This will load the new code changes and check the device connectivity.
+* Ensure the device is connected.
 * Right click project and select run. This will push the app to the tv. You should get some output on what’s happening in the tizen studio log.
 * If deploy fails, up the log level, Preferences > Tizen Studio > Logging, and move slider to DEBUG. Then investigate logs in ~/tizen-studio-data/ide/logs/ for more info on what might be going wrong
 
@@ -117,7 +117,12 @@ The entire project creation, tv connection, cert installation, packaging, signin
   * Build and sign app package: tbd
   * Install app: `~/tizen-studio/tools/ide/bin/tizen install -n <package-name>.wgt -s <tv-ip>:26101`
 
-## Good References
+## Publish
+* Sign in to the [online portal](https://seller.samsungapps.com/tv/portal/main) with your Samsung account.
+* Partner level membership requires commercial agreement.
+* Seller portal includes helpful checklist for certification requirements.
+
+## Reference
 * [Samsung tv api docs](http://developer.samsung.com/tv/develop/api-references/samsung-product-api-references)
   * always add the required privilege to `config.xml` before attempting to use a specific api
 * [Tizen Cli Tutorial](https://developer.tizen.org/community/tip-tech/sample-web-application-development-using-command-line-interface)
