@@ -22,6 +22,8 @@ If on macOS, microsoft provides a virtual machine with visual studio installed a
     * `Javascript` > `Windows Universal` > `Blank App (Universal Windows)`
 
 ## Xbox Development
+[Overview](https://docs.microsoft.com/en-us/windows/uwp/xbox-apps/getting-started)
+
 ### Activate Dev Mode on Xbox
 * Prereq - Microsoft dev account - one-time $99 fee for organization ($19 for individual)
 * Download the Dev Mode Activation app on the xbox app store
@@ -37,6 +39,7 @@ If on macOS, microsoft provides a virtual machine with visual studio installed a
 * `Machine Name` > Enter Xbox IP
 * `Require Authentication` > `Universal (Unecrypted Protocol)`
 * Click `Apply` or `OK`
+* In the top menu bar, select `x64` from the platform dropdown
 * Click green arrow to debug > Enter pin from Xbox
 * App will launch on Xbox
 
