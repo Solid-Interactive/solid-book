@@ -22,6 +22,7 @@ If on macOS, microsoft provides a virtual machine with visual studio installed a
 * Sign in to Microsoft account
 * `File` > `New` > `Project`
     * `Javascript` > `Windows Universal` > `Blank App (Universal Windows)`
+* Mount shared folder from host to guest according to [this stackoverflow answer](https://stackoverflow.com/a/32534378/4713163)
 
 ## Xbox Development
 [Overview](https://docs.microsoft.com/en-us/windows/uwp/xbox-apps/getting-started)
@@ -35,7 +36,7 @@ If on macOS, microsoft provides a virtual machine with visual studio installed a
 * Sign in to Microsoft account
 * Note Xbox IP address
 
-### Run UWP on Xbox
+### Run UWP app on Xbox
 * In Visual Studio, right click project in `Solution Explorer` > `Properties` > `Debugging`
 * `Debugger to launch:` > `Remote Machine`
 * `Machine Name` > Enter Xbox IP
