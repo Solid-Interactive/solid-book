@@ -22,6 +22,8 @@ If on macOS, microsoft provides a virtual machine with visual studio installed a
 * Sign in to Microsoft account
 * `File` > `New` > `Project`
     * `Javascript` > `Windows Universal` > `Blank App (Universal Windows)`
+    * Enter name and click create
+    * In dialog, leave target, but for `Minimum` > `Build 14393`
 * Mount shared folder from host to guest according to [this stackoverflow answer](https://stackoverflow.com/a/32534378/4713163)
 
 ## Xbox Development
@@ -75,6 +77,9 @@ By default, UWP apps (HTML) are scaled by 150%.
 
 ### Accessibility
 Use default focusable HTML elements for out-of-the-box screen reader support. The system reader, Narrator, will read button content and role when focus is gained.
+
+### Troubleshooting
+* You will be logged out of Xbox when systems reboots. Always log into your Microsoft account before attempting to deploy.
 
 ### Links
 * [Best practices](https://docs.microsoft.com/en-us/windows/uwp/xbox-apps/tailoring-for-xbox)
