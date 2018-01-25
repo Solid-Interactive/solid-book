@@ -8,14 +8,43 @@ Things you need:
 * ssh access to the server
 * ability to restart node app with `--debug` flag or `node-inspector` installed on server
 
+## Debugging using Visual Studio Code
+
+1. Click on the Debug icon
+1. In the upper dropdown, click "Add Configuration"
+1. Select Node if needed
+1. In the launch.json, pick "Attach by Process"
+1. Start your app with the `--inspect` flag
+1. Select "Attach by Process ID" right of the green play button
+1. Click play button
+
+Your launch.json should look something like:
+
+```json
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "Attach by Process ID",
+            "processId": "${command:PickProcess}"
+        }
+    ]
+}
+```
+
 ## Debugging using Webstorm
 
 1. Stop the app
-1. Restart with `--debug` flag (and include any necessary env flags) (could setup a name pm2 for this)
+1. Restart with `--inspect` flag (and include any necessary env flags) (could setup a name pm2 for this)
 
     ```bash
     # example with an env variable sent int
-    NODE_ENV=staging node --debug /home/node_user/my-app
+    NODE_ENV=staging node --inspect /home/node_user/my-app
     ```
 
 1. When it starts you should see something like `debugger listening on 5858`
