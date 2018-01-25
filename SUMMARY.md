@@ -55,6 +55,7 @@
         * [Redirects](/servers/nginx/redirects/README.md)
 * [TV](/tv/README.md)
     * [Samsung](/tv/samsung/README.md)
+    * [Vizio](/tv/vizio/README.md)
 * UWP
     * [Web-based](/uwp/web-based/README.md)
 * [Version Control](/version-control/README.md)
