@@ -51,7 +51,19 @@ If on macOS, microsoft provides a virtual machine with visual studio installed a
 
 ### Debug
 #### Visual Studio
-When you launch the app from visual studio the javascript console will we opened so you can debug js errors.
+##### Logging
+When you debug the app from visual studio, the javascript console will we opened in visual studio. `console.log`s in your js will print here.
+
+##### Breakpoint
+You can also set breakpoints in your js code, and execution will pause there. Open a js file and click to the left of the line number to set a break point.
+
+##### Troubleshooting
+###### Empty DOM explorer and/or console
+* Console might not print logs or errors and DOM explorer is empty.
+* Following messages might show in console:
+    * `Application is not currently attached to a script debug target that supports script diagnostics`
+    * `You are not currently attached to a supported page or app.`
+* Issue will be resolved in upcoming release: [issue](https://developercommunity.visualstudio.com/content/problem/168994/vs2017-dom-explorer-blank-when-deploying-js-projec.html)
 
 #### Windows Device Portal
 From your browser you can access a portal that exposes debug information from the xbox:
