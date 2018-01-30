@@ -35,7 +35,7 @@ If on macOS, microsoft provides a virtual machine with visual studio installed a
 * Input the code displayed in the app in your dev account in the dev center
 * Restart the console in dev mode
 * Connect to network again
-* Sign in to Microsoft account
+* Sign in to Microsoft account. Must sign-in everytime console is power cycled on dev mode. App will not deploy if not signed in on xbox.
 * Note Xbox IP address
 
 ### Run UWP app on Xbox
