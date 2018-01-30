@@ -29,7 +29,8 @@ If on macOS, microsoft provides a virtual machine with visual studio installed a
 ## Xbox Development
 [Overview](https://docs.microsoft.com/en-us/windows/uwp/xbox-apps/getting-started)
 
-### Activate Dev Mode on Xbox
+### Setup
+#### Activate Dev Mode on Xbox
 * Prereq - Microsoft dev account - one-time $99 fee for organization ($19 for individual)
 * Download the Dev Mode Activation app on the xbox app store
 * Input the code displayed in the app in your dev account in the dev center
@@ -38,7 +39,7 @@ If on macOS, microsoft provides a virtual machine with visual studio installed a
 * Sign in to Microsoft account. Must sign-in everytime console is power cycled on dev mode. App will not deploy if not signed in on xbox.
 * Note Xbox IP address
 
-### Run UWP app on Xbox
+#### Run UWP app on Xbox
 * In Visual Studio, right click project in `Solution Explorer` > `Properties` > `Debugging`
 * `Debugger to launch:` > `Remote Machine`
 * `Machine Name` > Enter Xbox IP
@@ -48,6 +49,20 @@ If on macOS, microsoft provides a virtual machine with visual studio installed a
 * Click green arrow to debug > Enter pin from Xbox
 * App will launch on Xbox
 
+### Debug
+#### Visual Studio
+When you launch the app from visual studio the javascript console will we opened so you can debug js errors.
+
+#### Windows Device Portal
+From your browser you can access a portal that exposes debug information from the xbox:
+* From dev home on Xbox, open `Remote Access Settings`
+* Check `Enable Xbox Device Portal`
+* Select `Set username and password`
+* From a browser on the same network, go to `https://<Xbox IP>:11443`
+* Proceed past cert error
+* Enter username and password to enter Xbox device portal
+
+### Dev
 ### Windows APIs
 The core UWP apis are exposed to the global scope in javascript as `Windows`. [Namspace reference](https://docs.microsoft.com/en-us/uwp/api/)
 
