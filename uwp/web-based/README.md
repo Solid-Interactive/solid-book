@@ -52,7 +52,11 @@ If on macOS, microsoft provides a virtual machine with visual studio installed a
 ### Debug
 #### Visual Studio
 ##### Logging
+* [Docs](https://docs.microsoft.com/en-us/visualstudio/debugger/quickstart-debug-javascript-using-the-console)
 When you debug the app from visual studio, the javascript console will we opened in visual studio. `console.log`s in your js will print here.
+
+##### DOM Explorer
+* [Docs](https://docs.microsoft.com/en-us/visualstudio/debugger/quickstart-debug-html-and-css)
 
 ##### Breakpoint
 You can also set breakpoints in your js code, and execution will pause there. Open a js file and click to the left of the line number to set a break point.
