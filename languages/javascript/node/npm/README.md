@@ -32,13 +32,40 @@ so during the install it would not be able to find an local modules.
 
 ## package.json
 
-The scripts in package.json can access the locally install `.bin` files.
+The scripts in ``package.json` can access the locally install `.bin` files.
 For example after `npm install --save-dev jshint` you can run jshint via
-npm test using the following addition to your package.json even if you do not
+`npm test` using the following addition to your `package.json` even if you do not
 have jshint installed globally:
 
-```
+```json
   "scripts": {
     "test": "jshint app",
   },
 ```
+
+## One-liners
+Install package and save to `package.json` `dependecies`
+```sh
+npm install --save package-name
+```
+
+Install package and save to `package.json` `devDependecies`
+```sh
+npm install --save-dev package-name
+```
+
+Get latest version of package
+```sh
+npm view package-name version
+```
+
+Get version of current package, npm, node, etc.
+```sh
+npm version
+```
+
+Bump current package version and commit it
+```sh
+npm version [<newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease | from-git]
+```
+Semver is `major.minor.patch[-pre]`. Each subcommand bumps the corresponding number. The `pre`-variant subcommands bump the corresponding number and append `-0`, if there is currently no `pre` number. If there is a prenumber, use `prerelease` to bump the `pre number. When you go to actually release, use the standard variant to remove the `pre` number.
