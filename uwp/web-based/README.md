@@ -3,6 +3,13 @@
 tags: uwp, web, js, html, xbox
 
 The Universal Windows Platform is Microsoft's unified app platform for desktop, mobile, and Xbox apps.
+## Helpful links
+* [UWP overview](https://docs.microsoft.com/en-us/windows/uwp/)
+* [Xbox dev overview](https://docs.microsoft.com/en-us/windows/uwp/xbox-apps/getting-started)
+* [UWP api namespace reference](https://docs.microsoft.com/en-us/uwp/api/)
+* [Xbox Best practices](https://docs.microsoft.com/en-us/windows/uwp/xbox-apps/tailoring-for-xbox)
+* [Visual Studio debug DOM Explorer](https://docs.microsoft.com/en-us/visualstudio/debugger/quickstart-debug-html-and-css)
+* [Visual Studio debug js console](https://docs.microsoft.com/en-us/visualstudio/debugger/quickstart-debug-javascript-using-the-console)
 
 ## Development
 ### Prereqs
@@ -141,11 +148,3 @@ You will be logged out of Xbox when it power cycles in dev mode. Always log into
 * `Application is not currently attached to a script debug target that supports script diagnostics`
 * `You are not currently attached to a supported page or app.`
 * Issue will be resolved in upcoming release: [issue](https://developercommunity.visualstudio.com/content/problem/168994/vs2017-dom-explorer-blank-when-deploying-js-projec.html)
-
-## Links
-* [UWP overview](https://docs.microsoft.com/en-us/windows/uwp/)
-* [Xbox dev overview](https://docs.microsoft.com/en-us/windows/uwp/xbox-apps/getting-started)
-* [UWP api namespace reference](https://docs.microsoft.com/en-us/uwp/api/)
-* [Xbox Best practices](https://docs.microsoft.com/en-us/windows/uwp/xbox-apps/tailoring-for-xbox)
-* [Visual Studio debug DOM Explorer](https://docs.microsoft.com/en-us/visualstudio/debugger/quickstart-debug-html-and-css)
-* [Visual Studio debug js console](https://docs.microsoft.com/en-us/visualstudio/debugger/quickstart-debug-javascript-using-the-console)
