@@ -44,6 +44,8 @@
         * [Commands](/languages/linux/commands/README.md)
     * PHP
         * [Debugging PHP](/languages/php/debugging/README.md)
+* Media Streaming
+    * [HTML5](/media-streaming/html5/README.md)
 * Performance
     * [Profiling](/profiling/README.md)
 * [Security](/security/README.md)
@@ -53,7 +55,7 @@
         * [Config](/servers/nginx/config/README.md)
         * [FastCgi](/servers/nginx/fastcgi/README.md)
         * [Redirects](/servers/nginx/redirects/README.md)
-* [TV](/tv/README.md)
+* TV
     * [Samsung](/tv/samsung/README.md)
     * [Vizio](/tv/vizio/README.md)
 * UWP

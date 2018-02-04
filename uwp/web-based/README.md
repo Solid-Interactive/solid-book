@@ -138,6 +138,10 @@ This will populate fields from your app in dev center into the package manifest.
 * Upload app package to store submission in dev center
 * Complete the submission and submit
 
+## Hosted web apps
+You can also package an app as a pointer to a hosted web app. You can even use the windows runtime api in your hosted web app code.
+* [Docs](Hosted web apps: https://developer.microsoft.com/en-us/windows/bridges/hosted-web-apps)
+
 ## Troubleshooting
 ### App fails to debug on Xbox
 You will be logged out of Xbox when it power cycles in dev mode. Always log into your Microsoft account before attempting to debug.
