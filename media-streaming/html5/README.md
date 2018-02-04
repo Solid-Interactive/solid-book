@@ -39,8 +39,11 @@ Playready | Microsoft | Edge, IE
 Fairplay | Apple | Safari
 
 ### Playready
+* [Test license server and assets](http://test.playready.microsoft.com/Content/Content4X)
 * [Edge 16 bug](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/14593018/)
 * [Client code samples](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/PlayReady)
+
+Note: Edge 16 in browserstack and virtual machine report support for unprefixed software drm on playready's [tool](http://test.playready.microsoft.com/Tool/Hwdrm)
 
 ## HTML5 javascript player libraries
 Name | Price | Open source
@@ -61,4 +64,7 @@ Name | Price | Open source
 * [Edge](https://developer.microsoft.com/en-us/microsoft-edge/testdrive/demos/eme/)
 * [Azure](https://ampdemo.azureedge.net/azuremediaplayer.html)
 * [Bitmovin](https://bitmovin.com/mpeg-dash-hls-drm-test-player/)
+
+Note: I couldn't get any of the Playready samples to play in Edge 16. Azure and Bitmovin Widevine demos worked for me in Chrome.
+
 
