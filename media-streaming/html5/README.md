@@ -9,7 +9,7 @@ Previously, html was not capable of playing encrypted or adaptive media streams.
 
 ### EME
 * [Google Web Fundamentals overview](https://developers.google.com/web/fundamentals/media/eme)
-* [Edge vs IE support](https://msdn.microsoft.com/en-us/library/mt598601(v=vs.85).aspx)
+* [Edge vs IE support](https://msdn.microsoft.com/en-us/library/mt598601.aspx)
 * [Edge guide](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/multimedia/encrypted-media-extensions)
 * [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Encrypted_Media_Extensions_API)
 * [UWP Playready](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/playready-encrypted-media-extension)
@@ -30,6 +30,7 @@ Based on the current bandwidth, the browser can determine the most appropriate t
 
 ## DRM types
 The adaptive stream manifest file also specifies how/if the content is protected by drm. Each browser uses a different drm system. A manifest can specify multiple drm types, and the client application can use the one its client supports. An open format like DASH will support most drm systems, while a proprietary format, like Smooth streaming, will likely only support playready.
+
 Name | Champion | Browser
 --- | --- | --- | ---
 Clear Key | open standard specified in the EME spec | All EME compliant browsers
