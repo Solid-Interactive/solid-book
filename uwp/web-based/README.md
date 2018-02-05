@@ -92,7 +92,12 @@ Use the helper supplied by Microsoft:
 * [file](https://github.com/Microsoft/TVHelpers/blob/master/tvjs/src/DirectionalNavigation/directionalnavigation-1.0.0.0.js)
 * [Repo](https://github.com/Microsoft/TVHelpers)
 
-Use default focusable HTML elements, e.g. `button`, for out-of-the-box directional navigation. To focus any other element, just use `tabindex="0"` attribute.
+Mouse mode will be enabled by default, but this helper will disable it. With the helper included, just use default focusable HTML elements, e.g. `button`, for out-of-the-box directional navigation. To focus any other element, just use `tabindex="0"` attribute.
+
+Mouse mode can also be disabled manually like so:
+```js
+navigator.gamepadInputEmulation = 'gamepad';
+```
 
 #### Overscan
 Some TVs use overscan, which zooms the content, cutting off the top, bottom, and sides. UWP apps display in TV-safe area by default. But apps should draw to edge of screen, and the developer should keep the app content within in the TV-safe area.
