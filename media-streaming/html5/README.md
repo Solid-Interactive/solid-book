@@ -4,8 +4,11 @@ tags: html5, video, dash, hls, smooth-streaming, drm, clear-key, playready, wide
 
 ## HTML spec extensions
 Previously, html was not capable of playing encrypted or adaptive media streams. People like Netflix desired this functionality so they proposed and standardized extensions to the HTML spec to make it possible. Everybody wins. The extensions are:
+
 * Media source extension (MSE) - adaptive streaming support
 * Encrypted module extension (EME) - drm support
+
+At a high level, these extensions add javascript apis to the browser and `HTMLMediaElement` which enable applications to decrypt protected content and feed video chunks to the `video` element as needed.
 
 ### EME
 * [Google Web Fundamentals overview](https://developers.google.com/web/fundamentals/media/eme)
@@ -65,6 +68,4 @@ Name | Price | Open source
 * [Azure](https://ampdemo.azureedge.net/azuremediaplayer.html)
 * [Bitmovin](https://bitmovin.com/mpeg-dash-hls-drm-test-player/)
 
-Note: I couldn't get any of the Playready samples to play in Edge 16. Azure and Bitmovin Widevine demos worked for me in Chrome.
-
-
+Note: All Playready samples, except Bitmovin, worked in Edge 16. Azure and Bitmovin Widevine samples worked in Chrome.

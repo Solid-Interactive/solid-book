@@ -11,7 +11,7 @@ The Universal Windows Platform is Microsoft's unified app platform for desktop, 
 * [Visual Studio debug DOM Explorer](https://docs.microsoft.com/en-us/visualstudio/debugger/quickstart-debug-html-and-css)
 * [Visual Studio debug js console](https://docs.microsoft.com/en-us/visualstudio/debugger/quickstart-debug-javascript-using-the-console)
 
-## Development
+## UWP development
 ### Prereqs
 * Windows 10
 * Enable developer mode
@@ -38,7 +38,7 @@ If on macOS, microsoft provides a virtual machine with visual studio installed a
     * Enter name and click create
     * In dialog, leave target, but for `Minimum` > `Build 14393`
 
-## Xbox Development
+## UWP on Xbox
 ### Setup
 #### Activate Dev Mode on Xbox
 * Download the Dev Mode Activation app on the xbox app store
@@ -77,6 +77,9 @@ From your browser you can access a portal that exposes debug information from th
 * From a browser on the same network, go to `https://<Xbox IP>:11443`
 * Proceed past cert error
 * Enter username and password to enter Xbox device portal
+
+#### Xbox dev mode companion
+* [Docs and download](https://docs.microsoft.com/en-us/windows/uwp/xbox-apps/xbox-dev-mode-companion)
 
 ### Dev
 #### Windows APIs
