@@ -58,6 +58,7 @@
 * TV
     * [Samsung](/tv/samsung/README.md)
     * [Vizio](/tv/vizio/README.md)
+    * [Yahoo Connected TV](/tv/yctv/README.md)
 * UWP
     * [Web-based](/uwp/web-based/README.md)
 * [Version Control](/version-control/README.md)

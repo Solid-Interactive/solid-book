@@ -2,9 +2,10 @@
 
 tags: vizio, via, smartcast
 
-## VIA (Vizio Internet Apps) development
-VIA is built on the Yahoo Connected TV (YCTV) platform. Apps are xml/javascript based, uploaded to the yahoo network, and downloaded to device with a pin code.
+## VIA+ (Vizio Internet Apps Plus) development
+VIA is built on the Yahoo Connected TV (YCTV) platform. See the [YCTV page](/tv/yctv/README.md) for more details.
 
-See YCTV docs:
-* [Overview](https://developer.yahoo.com/connectedtv/devguide/CTV_DG_Review_the_Sample_TV_App_Files.html)
-* [Testing on Device](https://developer.yahoo.com/connectedtv/installguide/CTV_IG_Testing_on_a_Consumer_Device.html)
+## Smartcast
+SmartCast is some type of html based app but it seems like you need a business relationship with them to test on their platform.
+
+
