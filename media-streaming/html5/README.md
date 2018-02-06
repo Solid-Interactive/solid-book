@@ -68,5 +68,6 @@ Name | Price | Open source
 * [Azure](https://ampdemo.azureedge.net/azuremediaplayer.html)
 * [Bitmovin](https://bitmovin.com/mpeg-dash-hls-drm-test-player/)
 * [dashif.org](http://reference.dashif.org/dash.js/nightly/samples/dash-if-reference-player/index.html)
+* [shaka](https://shaka-player-demo.appspot.com/)
 
 Note: All Playready samples, except Bitmovin, worked in Edge 16. Azure and Bitmovin Widevine samples worked in Chrome.
