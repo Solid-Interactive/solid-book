@@ -8,7 +8,7 @@ Previously, html was not capable of playing encrypted or adaptive media streams.
 * Media source extension (MSE) - adaptive streaming support
 * Encrypted module extension (EME) - drm support
 
-At a high level, these extensions add javascript apis to the browser and `HTMLMediaElement` which enable applications to decrypt protected content and feed video chunks to the `video` element as needed.
+At a high level, these extensions add javascript apis to the browser and `HTMLMediaElement` which enable applications to decrypt protected content and feed video chunks to the `video` element as needed. These were first rolled out in a vendor-prefixed, pre-1.0 version that was specific to each vendor implementation, but the 1.0 release normalized the API across browers.
 
 ### EME
 * [Google Web Fundamentals overview](https://developers.google.com/web/fundamentals/media/eme)
@@ -69,5 +69,6 @@ Name | Price | Open source
 * [Bitmovin](https://bitmovin.com/mpeg-dash-hls-drm-test-player/)
 * [dashif.org](http://reference.dashif.org/dash.js/nightly/samples/dash-if-reference-player/index.html)
 * [shaka](https://shaka-player-demo.appspot.com/)
+* [Youtube](http://yt-dash-mse-test.commondatastorage.googleapis.com/demo-player/dash-player-2018.html)
 
 Note: All Playready samples, except Bitmovin, worked in Edge 16. Azure and Bitmovin Widevine samples worked in Chrome.
