@@ -93,6 +93,23 @@ Add `"dom"` to libs, for DOM api support.
 ## Vue.js
 Vue has pretty solid typescript support. Their cli has a project scaffolder built-in with typescript as a first class option. That said, the typescript experience with the vue, vuex, vue-router stack leaves much to be desired. It is challenging to achieve type safety when integrating Vuex. Maybe future releases will make it so dead-simple and helpful that it would be stupid not to use typescript. But right now there is a lot of overhead involved, and you really have to want it to make it work.
 
+### Type array props
+Vue's api allows developers to type component props with the type constructor in native js, e.g.
+```js
+// in component definition
+props: {
+    id: Number,
+    selectedIds: Array,
+}
+```
+Typescript infers `this.id` as type `number`, but `this.selectedIds` is inferred as type `any[]`. This is not helpful; we need to know the type of the array items, e.g. `number[]`. This can be achieved by asserting the return type of the `Array` constructor:
+```ts
+props: {
+    selectedIds: Array as (() => number[])
+}
+```
+Now `this.selectedIds` will be correctly inferred as type `number[]`.
+
 ## Helpful links
 * [Typescript Deep Dive](https://basarat.gitbooks.io/typescript/content/docs/getting-started.html) - awesome online book that is more readable than the typescript docs
 * [Typescript compiler options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
