@@ -38,6 +38,36 @@ export function someArrayFunction<T>(argName: T[]): T[];
 ```
 Notice the `<T>`? It allows you to type a function return value by the type of its arguments. This is saying, "someArrayFunction takes an array of values and returns another array of the same type of values." This pattern is used all the time in typescript. See [docs](https://www.typescriptlang.org/docs/handbook/generics.html).
 
+## Interfaces
+Say you want to define an object literal with property as an empty array:
+```js
+let obj = {
+    a: [],
+    b: 'text'
+}
+```
+Typescript will think `obj.a` is type `never[]`. To get the type you want, you can create an interface:
+```ts
+interface Obj {
+    a: number[],
+    b: string
+}
+
+let obj: Obj = {
+    a: [],
+    b: 'text
+}
+```
+
+## Type assertion
+From the previous example, if you don't need to reuse the `Obj` interface anywhere else, you can simply annotate the obj literal properties by the using type assertion keyword `as`:
+```ts
+let obj: Obj = {
+    a: [] as number[],
+    b: 'text
+}
+```
+
 ## Polyfills
 Typescript might complain about newer javascript syntax like `Array.from(...)`. In that case add a lib option to your typescript config `compilerOptions` that includes the new features:
 ```json
@@ -45,7 +75,7 @@ Typescript might complain about newer javascript syntax like `Array.from(...)`. 
     "es2017"
 ]
 ```
-Typescript will now compile `Array.from()`.
+Typescript will now compile `Array.from()`. Add `"dom"` for HTML api support.
 
 ## Vue (@INCOMPLETE)
 Vue.js has pretty solid typescript support. Their cli has a project scaffolder built-in with typescript as a first class option.
