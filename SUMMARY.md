@@ -38,7 +38,8 @@
         * [Promises](/languages/javascript/promises/README.md)
         * [Node](/languages/javascript/node/README.md)
             * [Debugging Node](/languages/javascript/node/debugging/README.md)
-            * [npm](/languages/javascript/node/npm/README.md):
+            * [npm](/languages/javascript/node/npm/README.md)
+        * [Transpiling](/languages/javascript/transpiling/README.md)
     * Linux
         * [CLI](/languages/linux/cli/README.md)
         * [Commands](/languages/linux/commands/README.md)

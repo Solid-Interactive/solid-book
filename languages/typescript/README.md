@@ -1,6 +1,6 @@
 # Typescript
 
-tags: typescript
+tags: typescript, javascript
 
 Typescript is a structurally-typed language: Along with typing values as primitive types (string, number, etc.), you can create interfaces that describe the structure of objects. Interfaces are declared in typescript itself.
 
@@ -67,16 +67,32 @@ let obj: Obj = {
     b: 'text
 }
 ```
-
-## Polyfills
-Typescript might complain about newer javascript syntax like `Array.from(...)`. In that case add a lib option to your typescript config `compilerOptions` that includes the new features:
+## Configuration
+Typescript is usually configured with a `tsconfig.json` in the root of the project.
 ```json
-"lib": [
-    "es2017"
-]
+{
+  "compilerOptions": {
+    "...": ...
+  },
+  "include": [
+    "..."
+  ],
+  "exclude": [
+    "..."
+  ]
+}
 ```
-Typescript will now compile `Array.from()`. Add `"dom"` for HTML api support.
 
-## Vue (@INCOMPLETE)
-Vue.js has pretty solid typescript support. Their cli has a project scaffolder built-in with typescript as a first class option.
+## Standard library
+Typescript might complain about newer javascript methods like `Array.from` from es2015. Typescript will compile js based on the target set in `tsconfig.json`, e.g. if you target `es5`, typescript will not compile `es2015` or later. To make typescript compile this, you have several options:
+1. Change the target: `compilerOptions.target: "es2015"` - target es2015 if you want to to compile es2015; this might not be an option if your js needs to run in older browsers
+1. Include the lib: `compilerOptions.lib: ["es2015"]` - this will transpile to es2015 syntax to es5, with es2015 objects and methods intact. **Note: transpilation does not polyfill objects and methods. See [transpiling](/languages/js/transpiling)**.
 
+Add `"dom"` to libs, for DOM api support.
+
+## Vue.js
+Vue has pretty solid typescript support. Their cli has a project scaffolder built-in with typescript as a first class option. That said, the typescript experience with the vue, vuex, vue-router stack leaves much to be desired. It is challenging to achieve type safety when integrating Vuex. Maybe future releases will make it so dead-simple and helpful that it would be stupid not to use typescript. But right now there is a lot of overhead involved, and you really have to want it to make it work.
+
+## Helpful links
+* [Typescript Deep Dive](https://basarat.gitbooks.io/typescript/content/docs/getting-started.html) - awesome online book that is more readable than the typescript docs
+* [Typescript compiler options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
