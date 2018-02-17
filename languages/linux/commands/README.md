@@ -175,3 +175,18 @@ brew instasll gnu-tar
 ```
 cat /proc/cpuinfo | awk '/^processor/{print $3}' | wc -l
 ```
+
+## Permission
+Change permission on a file:
+```
+chmod 0755 <file>
+```
+* positions: user, group, everyone
+* read: 4
+* write: 2
+* execute: 1
+
+## Tail with grep
+```
+tail -f <file> | grep --line-buffered <pattern>
+```
