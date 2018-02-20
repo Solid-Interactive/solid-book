@@ -47,3 +47,8 @@ If so:
 ```sh
 service apache2 restart
 ```
+
+## Version
+```sh
+apache2 -v
+```
