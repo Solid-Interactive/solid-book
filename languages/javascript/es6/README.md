@@ -54,3 +54,49 @@ setInterval(function() {
 
 }, 1000);
 ```
+
+## Destructuring
+
+### Object
+Pull variables out of an object:
+```js
+const obj = {
+    a: 'one',
+    b: 'two'
+}
+
+const { a, b } = obj;
+
+console.log(a) // one
+console.log(b) // two
+```
+
+You can also reassign variables during deconstruction:
+```js
+const { a: testA, b: testB } = obj;
+
+console.log(testA) // one
+console.log(testB) // two
+```
+
+You can even use bracket notation in deconstruction in case the object keys have special characters:
+```js
+const obj = {
+    'Difficult key': 'one',
+    'what-a-pain': 'two'
+}
+
+const { ['Difficult key']: managable, ['what-a-pain']: painless } = obj;
+
+console.log(managable) // one
+console.log(painless) // two
+```
+### Array
+```js
+const [name, email] = ['John', 'john@mail.com'];
+
+console.log(name) // John
+console.log(email) // john@mail.com
+```
+
+* All destructuring examples work in function arguments too.
