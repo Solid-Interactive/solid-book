@@ -15,5 +15,5 @@ mysqldump -h host.name -u db_user_name -p db_name > db_name_backup.sql
 
 ## Import
 ```sh
-mysqldump -h host.name -u db_user_name -p db_name < db_name_backup.sql
+mysql -h host.name -u db_user_name -p db_name < db_name_backup.sql
 ```
