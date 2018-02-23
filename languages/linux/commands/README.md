@@ -10,7 +10,7 @@ command -v foo >/dev/null 2>&1
 
 http://stackoverflow.com/a/677212/186636
 
-## Curl
+## `curl`
 
 To display prettified JSON:
 
@@ -35,7 +35,7 @@ free -h
 du -h / | grep '[0-9\.]\+G'
 ```
 
-## Dpkg
+## `dpkg`
 
 List where apt-get installed something
 
@@ -68,7 +68,7 @@ awk '{ total += $1; count++ } END { print total/count }' nocache.log
 Awk is a program for dealing with files with columns. `$1` means the first column.
 The command `total += $1; count++` runs for each row.
 
-## Open
+## `open`
 
 * Open a url with the default browser:
 
@@ -102,7 +102,7 @@ To kill them:
 kill $(lsof -t -i:4000)
 ```
 
-## Scp
+## `scp`
 
 Scp is for copying content over ssh.
 
@@ -112,7 +112,7 @@ You can use your ssh aliases when defining the to and from locations:
 scp -r exampleStaging:/some/directory ~
 ```
 
-## Ssh
+## `ssh`
 
 Open an SSH tunnel to example.com port 22 and use your local port 27018 to
 map to example.com's 27017.
@@ -144,7 +144,7 @@ You can also store your connections in a sock file for easy closing later:
 ssh -S /tmp/ssh_tunnel_9200_%h.sock  -O exit $SSH_HOST
 ```
 
-## Tar
+## `tar`
 
 There are two very common combination of flags in conjunction with the `tar` command:
 
@@ -176,7 +176,7 @@ brew instasll gnu-tar
 cat /proc/cpuinfo | awk '/^processor/{print $3}' | wc -l
 ```
 
-## Permission
+## `chmod` (Change permissions)
 Change permission on a file:
 ```
 chmod 0755 <file>
@@ -186,7 +186,36 @@ chmod 0755 <file>
 * write: 2
 * execute: 1
 
-## Tail with grep
+## `cat`
+Send file contents to stdout:
 ```
+cat <file>
+```
+
+## `grep`
+Filter text that matches a regular expression pattern:
+```
+cat <file> | grep <pattern>
+
+## -C for context of surrounding `n` lines
+cat <file> | grep -C n <pattern>
+```
+
+## `tail`
+See contents added to end of file in realtime:
+```
+tail -f <file>
+
+## with grep, filter new lines that match
 tail -f <file> | grep --line-buffered <pattern>
+```
+
+## `sed`
+Search and replace text
+```
+# read from in and write to out
+sed 's/search_regex/replacement_string/g' < file_in > file_out
+
+# convert to https in a mysql dump
+sed 's/http:\/\/www\.example\.com\//https:\/\/www.example.com\//g' < example.sql > example.sql
 ```
