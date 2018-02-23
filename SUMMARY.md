@@ -8,7 +8,7 @@
             * [Mongoose](/db/nosql/mongo/mongoose/README.md)
             * [Users](/db/nosql/mongo/users/README.md)
     * SQL
-        * MySQL
+        * [MySQL](/db/sql/mysql/README.md)
             * [Debugging](/db/sql/mysql/debugging/README.md)
             * [Profiling](/db/sql/mysql/profiling/README.md)
             * [Users](/db/sql/mysql/users/README.md)
