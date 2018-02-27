@@ -219,3 +219,9 @@ sed 's/search_regex/replacement_string/g' < file_in > file_out
 # convert to https in a mysql dump
 sed 's/http:\/\/www\.example\.com\//https:\/\/www.example.com\//g' < example.sql > example.sql
 ```
+
+## `date`
+Get current timestamp on server
+```
+date
+```
