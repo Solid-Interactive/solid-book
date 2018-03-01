@@ -26,6 +26,9 @@ du -chs /*
 # disk usage, summary per directory
 du -sh
 
+# disk usage, filter by file size
+find . -size +10k -exec ls -lh {} \+
+
 # free space
 df -h
 
