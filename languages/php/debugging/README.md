@@ -2,33 +2,16 @@
 
 tags: php, debugging
 
-This assumes a setup of `php5-fpm`, `vagrant`, `nginx`, and `phpstorm`.
-
 ## Installing xdebug
 
-Assuming you don't have xdebug in your environment, first install it:
+Assuming you don't have xdebug in your environment, first output phpinfo
 
-```
-sudo pecl install xdebug
-```
-
-Read the output and note the location of the `.so` file, then modify `php.ini`:
-
-```
-zend_extension="/usr/lib/php5/20121212/xdebug.so"
-xdebug.remote_enable=1
-xdebug.remote_connect_back=on
-xdebug.remote_host=localhost
-xdebug.remote_port=9000
-xdebug.remote_autostart=1
-xdebug.idekey="xdebug"
+```php
+<?php
+phpinfo();
 ```
 
-Then assuming you have the following ip in your Vagrantfile:
-
-```
-config.vm.network "private_network", ip: "192.168.12.138"
-```
+Now take that output, paste it into https://xdebug.org/wizard.php, and follow the instructions.
 
 You can setup  PhpStorm as follows:
 
