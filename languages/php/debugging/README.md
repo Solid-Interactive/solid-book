@@ -13,6 +13,19 @@ phpinfo();
 
 Now take that output, paste it into https://xdebug.org/wizard.php, and follow the instructions.
 
+These php.ini settings (in addition to pointing to the so) worked for me:
+
+```
+[XDebug]
+xdebug.remote_enable = 1
+xdebug.remote_autostart = 1
+xdebug.remote_connect_back = 1
+```
+
+Look for you IDE key in `phpinfo()` if you need it.
+
+---
+
 You can setup  PhpStorm as follows:
 
 From the file menu: `Run > Edit Configurations...`.
