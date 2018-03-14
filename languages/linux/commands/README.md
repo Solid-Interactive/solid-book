@@ -228,3 +228,9 @@ Get current timestamp on server
 ```
 date
 ```
+
+## `rsync`
+Sync directories. Useful over ssh.
+```
+rsync -av ~/dir/uploads/ staging-wordpress:/var/www/vhosts/vhost.com/source/httpdocs/wp-content/uploads
+```
