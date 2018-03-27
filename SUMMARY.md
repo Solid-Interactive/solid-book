@@ -63,7 +63,7 @@
         * [Config](/servers/nginx/config/README.md)
         * [FastCgi](/servers/nginx/fastcgi/README.md)
         * [Redirects](/servers/nginx/redirects/README.md)
-* TV
+* [TV](/tv/README.md)
     * [Samsung](/tv/samsung/README.md)
     * [Vizio](/tv/vizio/README.md)
     * [Yahoo Connected TV](/tv/yctv/README.md)
