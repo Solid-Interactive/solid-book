@@ -4,6 +4,7 @@ tags: ec2, aws, volumes, resizing
 
 http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-expand-volume.html
 
+1. Make sure the instance has an elastic IP. If it doesn't, let the client know there's going to be more downtime and assign an elastic IP. Make sure you have access to the DNS before doing any of this. 
 1. Optionally stop ec2 instance if downtime is not a concern
 1. *Note root device* (often `/dev/sda1` )
 1. Note id of instance and look for volume based on that id in volumes (use search)
