@@ -231,6 +231,9 @@ date
 
 ## `rsync`
 Sync directories. Useful over ssh.
+
+If you want to get the content of two dirs to match, put a `/` after each one:
+
 ```
-rsync -av ~/dir/uploads/ staging-wordpress:/var/www/vhosts/vhost.com/source/httpdocs/wp-content/uploads
+rsync -rzP ~/dir/uploads/ staging-wordpress:/var/www/vhosts/vhost.com/source/httpdocs/wp-content/uploads/
 ```
