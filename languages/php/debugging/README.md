@@ -55,6 +55,29 @@ fastcgi_read_timeout 1d;
 
 This is a timeout of one day - hopefully long enoug for your debugging session ;)
 
+## Older PHP
+
+The wizard above only work on php 7 and above. For older versions:
+
+```
+sudo apt-get install php-xdebug`
+```
+
+add the following to your loaded php.ini as retrieved from `phpinfo()`:
+
+```
+[XDebug]
+xdebug.remote_enable = 1
+xdebug.remote_autostart = 1
+xdebug.remote_connect_back = 1
+```
+
+Now restart php: `sudo service php5.6-fpm restart`
+
+If you need to restart send a signal: `sudo nginx -s reload`. Sending a signal will do nothing if there's a syntax error in your cofigs. Restarting the service will first stop the service and then fail to restart if there's an error.
+
+
+
 ## References
 
 http://walkah.net/blog/debugging-php-with-vagrant/
