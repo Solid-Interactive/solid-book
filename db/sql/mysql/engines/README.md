@@ -2,11 +2,21 @@
 
 tags: mysql, innodb, myisam, engines
 
-MySQL has 2 db engines: MyISAM and InnoDB. InnoDB is newer and generally better:
+MySQL has 2 storage engines: MyISAM and InnoDB. InnoDB is newer and generally better (MyISAM can have advantages in specific use cases):
 
 https://kinsta.com/knowledgebase/convert-myisam-to-innodb/
 
-Additionally only InnoDB supports foreign key constraints.
+https://dba.stackexchange.com/questions/1/what-are-the-main-differences-between-innodb-and-myisam
+
+InnoDB has:
+* Transaction (so it is [ACID](https://en.wikipedia.org/wiki/ACID))
+* Row level locking (vs table locking)
+* Foreign key constraints
+* Automatic crash recovery
+* Table compression
+
+
+One thing to watch out for is that InnoDB only has FULLTEXT search indexes starting at v5.6.4
 
 To see which DBs have MyISAM tables:
 
