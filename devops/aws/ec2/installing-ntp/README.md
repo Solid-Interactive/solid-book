@@ -1,3 +1,5 @@
+tags: ec2, aws, time server, ntp, time sync
+
 ## Installing NTP
 
 First, check if you have a timezone set, by running 
