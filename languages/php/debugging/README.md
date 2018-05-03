@@ -26,7 +26,7 @@ Look for you IDE key in `phpinfo()` if you need it.
 
 ---
 
-You can setup  PhpStorm as follows:
+## PhpStorm Setup
 
 From the file menu: `Run > Edit Configurations...`.
 
@@ -45,6 +45,41 @@ on the left and the corresponding vagrant directory on the right. e.g `~/git/pro
 At this point clicking `run debugger` should work after clicking on a breakpoint
 in PhpStorm.
 
+## VS Code Setup
+- Open a project
+- Click the bug icon in the left nav
+- In the dropdown above (near the green arrow), click 'Add Configuration'
+- Select PHP
+
+This will create a `.vscode/launch.json` in your project root. It should look like this:
+
+```
+
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Listen for XDebug",
+            "type": "php",
+            "request": "launch",
+            "port": 9000,
+            "pathMappings": {
+                "/vagrant": "${workspaceRoot}"
+            }
+        },
+    ]
+}
+```
+- Save it and click the green play button.
+- In the 'breakpoints' section on the left, uncheck the 'everything' box
+- Then set a breakpoint by clicking in the line numbers on the left when editing a file.
+- Reload the page and you should see the debugger automatically kick in
+
+## Request Timeout
 The default fastcgi timeout is 1 minute, so to avoid getting 504 errors (which
   are generally not harmful to debugging), you can add the
 following to your nginx config
