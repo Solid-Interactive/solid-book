@@ -54,6 +54,7 @@
         * [Commands](/languages/linux/commands/README.md)
     * PHP
         * [Debugging PHP](/languages/php/debugging/README.md)
+        * [Namespaces](/languages/php/namespaces/README.md)
         * [Wordpress](/languages/php/wordpress/README.md)
     * [Typescript](/languages/typescript/README.md)
 * Media Streaming
