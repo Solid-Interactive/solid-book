@@ -13,6 +13,7 @@
         * [MySQL](/db/sql/mysql/README.md)
             * [Debugging](/db/sql/mysql/debugging/README.md)
             * [Engines](/db/sql/mysql/engines/README.md)
+            * [Foreign Keys](/db/sql/mysql/foreign-keys/README.md)
             * [Profiling](/db/sql/mysql/profiling/README.md)
             * [Users](/db/sql/mysql/users/README.md)
 * Devops
