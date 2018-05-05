@@ -15,7 +15,7 @@ ClassActivityModel::from('class_activity as ca')
 A join without using the from would be:
 
 ```php
-Model::Join
+Model::join(...
 ```
 
 ## Docs
