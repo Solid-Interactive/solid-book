@@ -2,9 +2,19 @@
 
 tags: javascript, vue
 
-Using sass:
+## Reactivity
 
-In you template:
+Things are reactive if a field change triggers a ui change. The way you get things reactive is by having the fields present
+on the object when loaded from `data`.
+
+If you are thinking about reactivity, then adding empty fields on the backend API responses is very helpful for reactivity
+on the front end.
+
+* https://vuejs.org/v2/guide/reactivity.html
+
+## Using sass:
+
+If you template:
 
 ```html
 <style lang="scss" scoped>
