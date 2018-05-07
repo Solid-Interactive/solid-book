@@ -24,7 +24,7 @@ Model::join(...
 
 ```php
 $user_info = DB::table('usermetas')
-                 ->select('browser', DB::raw('count(*) as total'))
+                 ->selectRaw('browser, count(*) as total')
                  ->groupBy('browser')
                  ->get();
 ```
