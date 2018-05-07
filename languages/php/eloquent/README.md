@@ -2,6 +2,8 @@
 
 tags: mysql, db, orm
 
+## Aliasing
+
 Aliasing the models table name, a column name, and only pulling in certain columns:
 
 ```php
@@ -16,6 +18,15 @@ A join without using the from would be:
 
 ```php
 Model::join(...
+```
+
+## Group and Count
+
+```php
+$user_info = DB::table('usermetas')
+                 ->select('browser', DB::raw('count(*) as total'))
+                 ->groupBy('browser')
+                 ->get();
 ```
 
 ## Docs
