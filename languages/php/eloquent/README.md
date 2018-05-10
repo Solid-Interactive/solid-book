@@ -37,10 +37,10 @@ If your value is another column, then you must use `->whereColument`:
 $sessionActivity = new SessionActivityModel();
 $result = $sessionActivity
     ->select('cta.user_id', 'u.display_name')
-    ->from('wp_hhskills_session_activity as sa')
+    ->from('session_activity as sa')
 
-    ->join('wp_hhskills_class_activity as ca', 'ca.id', '=', 'sa.class_activity_id')
-    ->join('wp_hhskills_class_trainee_activity as cta', 'ca.activity_post_id', '=', 'cta.activity_post_id')
+    ->join('class_activity as ca', 'ca.id', '=', 'sa.class_activity_id')
+    ->join('class_trainee_activity as cta', 'ca.activity_post_id', '=', 'cta.activity_post_id')
     ->join('wp_users as u', 'cta.user_id', '=', 'u.ID')
 
     ->where('sa.session_id', '=', $session_id)
