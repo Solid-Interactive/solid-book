@@ -32,3 +32,7 @@ $user_info = DB::table('usermetas')
 ## Docs
 
 * https://laravel.com/docs/5.6/queries
+
+## Debugging
+
+Replace `->get()` with `->toSql()`.
