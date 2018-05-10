@@ -29,10 +29,31 @@ $user_info = DB::table('usermetas')
                  ->get();
 ```
 
-## Docs
+## whereColumn
 
-* https://laravel.com/docs/5.6/queries
+If your value is another column, then you must use `->whereColument`:
+
+```php
+$sessionActivity = new SessionActivityModel();
+$result = $sessionActivity
+    ->select('cta.user_id', 'u.display_name')
+    ->from('wp_hhskills_session_activity as sa')
+
+    ->join('wp_hhskills_class_activity as ca', 'ca.id', '=', 'sa.class_activity_id')
+    ->join('wp_hhskills_class_trainee_activity as cta', 'ca.activity_post_id', '=', 'cta.activity_post_id')
+    ->join('wp_users as u', 'cta.user_id', '=', 'u.ID')
+
+    ->where('sa.session_id', '=', $session_id)
+    ->where('sa.class_activity_id', '=', $class_activity_id)
+    ->whereColumn('cta.class_id', '=', 'ca.class_id')
+
+    ->get();
+```
 
 ## Debugging
 
 Replace `->get()` with `->toSql()`.
+
+## Docs
+
+* https://laravel.com/docs/5.6/queries
