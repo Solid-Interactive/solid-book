@@ -14,6 +14,8 @@ ClassActivityModel::from('class_activity as ca')
     ->get();
 ```
 
+## Joins
+
 A join without using the from would be:
 
 ```php
@@ -27,6 +29,15 @@ $user_info = DB::table('usermetas')
                  ->selectRaw('browser, count(*) as total')
                  ->groupBy('browser')
                  ->get();
+```
+
+Join on multiple columns:
+
+```php
+->join('class_trainee as ct', function($join) {
+    $join->on('ct.class_id', '=', 'ca.class_id');
+    $join->on('ct.user_id', '=', 'u.ID');
+})
 ```
 
 ## whereColumn
