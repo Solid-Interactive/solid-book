@@ -37,3 +37,21 @@ import router from './router';
 Vue.config.productionTip = false;
 ```
 
+## Loops
+
+You can get the index in a loop
+
+```html
+<tr v-for="(trainee, index) in trainees">
+    <td>{{ trainee.display_name }}</td>
+    <td @click="remove(index)"><i class="fa fa-minus-circle"></i></td>
+</tr>
+```
+
+and then remove would look like:
+
+```javascript
+remove(index) {
+    this.trainees.splice(index, 1)
+}
+```
