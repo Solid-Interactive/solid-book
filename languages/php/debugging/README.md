@@ -111,7 +111,15 @@ Now restart php: `sudo service php5.6-fpm restart`
 
 If you need to restart send a signal: `sudo nginx -s reload`. Sending a signal will do nothing if there's a syntax error in your cofigs. Restarting the service will first stop the service and then fail to restart if there's an error.
 
+## Debugging on a Remote Server
 
+Basically you use the instructions above and open an SSH tunnel:
+
+```
+ssh -f my-server -L 9000:127.0.0.1:9000 -N
+```
+
+https://confluence.jetbrains.com/display/PhpStorm/Remote+debugging+in+PhpStorm+via+SSH+tunnel
 
 ## References
 
