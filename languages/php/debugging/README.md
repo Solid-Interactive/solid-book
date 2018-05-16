@@ -119,6 +119,12 @@ Basically you use the instructions above and open an SSH tunnel:
 ssh -f my-server -L 9000:127.0.0.1:9000 -N
 ```
 
+The above will put the tunnel into the background. To kill it:
+
+```
+kill -9 $(lsof -t -i:9000)
+```
+
 https://confluence.jetbrains.com/display/PhpStorm/Remote+debugging+in+PhpStorm+via+SSH+tunnel
 
 ## References
