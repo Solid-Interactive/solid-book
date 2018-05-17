@@ -47,6 +47,7 @@
         * [Node](/languages/javascript/node/README.md)
             * [Debugging Node](/languages/javascript/node/debugging/README.md)
             * [npm](/languages/javascript/node/npm/README.md)
+            * [pm2](/languages/javascript/node/pm2/README.md)
         * [Transpiling](/languages/javascript/transpiling/README.md)
         * [Vue](/languages/javascript/vue/README.md)
         * [Web](/languages/javascript/web/README.md)
