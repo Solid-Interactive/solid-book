@@ -2,6 +2,8 @@
 
 tags: profiling, ab, stress-testing
 
+## Apache AB
+
 To do some rough profiling around response time, you can use `ab` - apache benchmark.
 
 This will send a total of 1000 requests, 10 at a time to `http://www.something.com/`.
@@ -81,3 +83,7 @@ You can place multiple outputs on the same graph. This is useful for comparing
 before and afters, or showing degradation as concurrency increases.
 
 It is possible to send data, headers, and cookies with requests.
+
+## Autocannon
+
+[Autocannon](https://github.com/mcollina/autocannon) is easy to use if you like node, but graphing is harder.
