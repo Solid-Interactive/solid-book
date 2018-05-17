@@ -1,6 +1,6 @@
 # Profiling Websites / APIs
 
-tags: profiling, ab, stress-testing
+tags: profiling, ab, stress-testing, autocannon, performance
 
 ## Apache AB
 
