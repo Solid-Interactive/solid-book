@@ -79,6 +79,8 @@ Percentage of the requests served within a certain time (ms)
 
 You can use gnuplot to visualize:
 
+http://www.bradlanders.com/2013/04/15/apache-bench-and-gnuplot-youre-probably-doing-it-wrong/
+
 You can place multiple outputs on the same graph. This is useful for comparing
 before and afters, or showing degradation as concurrency increases.
 
