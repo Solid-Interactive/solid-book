@@ -61,6 +61,24 @@ $result = $sessionActivity
     ->get();
 ```
 
+## Relationships
+
+With namespaces it is simplest to not use string references, but to import
+classes and use `::class`. For example:
+
+```php
+class ClassModel extends ClassBaseModel {
+    protected $table = 'wp_hhskills_class';
+
+	public function activities() {
+		return $this->hasMany(ClassActivityModel::class, 'class_id');
+	}
+}
+```
+
+Make sure you read the section about eager / lazy loading, since it
+affects the number of queries created.
+
 ## Debugging
 
 Replace `->get()` with `->toSql()`.
