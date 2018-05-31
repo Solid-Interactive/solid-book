@@ -79,6 +79,13 @@ class ClassModel extends ClassBaseModel {
 Make sure you read the section about eager / lazy loading, since it
 affects the number of queries created.
 
+For example if you will be looping through many activities and showing the `->title`, lazy loading would create
+a query for each, but eager loading would not. Eager load using `with`:
+
+```php
+ClassModel::find(5)->with(
+```
+
 ## Debugging
 
 Replace `->get()` with `->toSql()`.
