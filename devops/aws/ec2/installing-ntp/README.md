@@ -1,4 +1,4 @@
-tags: ec2, aws, time server, ntp, time sync
+tags: ec2, aws, time server, ntp, time sync, ubuntu
 
 ## Installing NTP
 

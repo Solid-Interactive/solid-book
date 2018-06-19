@@ -21,6 +21,7 @@
         * EC2
             * [Increasing volume size](/devops/aws/ec2/increasing-volume-size/README.md)
             * [Installing NTP](/devops/aws/ec2/installing-ntp/README.md)
+            * [Keys](/devops/aws/ec2/keys/README.md)
     * [Deployment](/devops/deployment/README.md)
         * [Deploying a project with gitlab](/devops/deployment/gitlab/README.md)
         * [Deploying a project with github](/devops/deployment/github/README.md)
