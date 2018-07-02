@@ -52,6 +52,7 @@ tags: samsung, tizen
 ### Create or Import project into tizen studio
 * [docs](http://developer.samsung.com/tv/develop/getting-started/creating-tv-applications)
 * In tizen studio File > Import
+* Select Tizen > Tizen Project
 * Select Root directory
 * Select the directory that contains your `config.xml`
 * You probably installed the latest samsung tv extensions (4.0) which is fine even if you are targeting a device that runs lower e.g. 2.4. Select the version that will allow you to import and you should be good to go.
