@@ -58,8 +58,12 @@ tags: samsung, tizen
 * You probably installed the latest samsung tv extensions (4.0) which is fine even if you are targeting a device that runs lower e.g. 2.4. Select the version that will allow you to import and you should be good to go.
 
 ### Run application
-* Right click project in project explorer and click "Run”
+* Right click project in project explorer and click "Run as tizen web application”
 * This will build, sign, and install the app to the tv and run it.
+
+### Debug application
+* Right click project in project explorer and click "Debug as tizen web application
+* This will build, sign, and install the app to the tv and run it, and open an instance of chrome devtools connected to the remote app.
 
 ## Terminology
 * Certificate Profile
