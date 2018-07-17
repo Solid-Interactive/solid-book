@@ -11,3 +11,48 @@ function cc_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'cc_mime_types');
 ```
+
+## Create admin user directly in mysql
+Replace the dummy data with your info:
+```sql
+INSERT INTO `wp_users` (
+	`user_login`,
+	`user_pass`,
+	`user_nicename`,
+	`user_email`,
+	`user_url`,
+	`user_registered`,
+	`user_activation_key`,
+	`user_status`,
+	`display_name`
+) VALUES (
+	'username',
+	MD5('password'),
+	'nice-name',
+	'email_address',
+	'website',
+	NOW(),
+	'',
+	'0',
+	'Full Name'
+);
+```
+
+Then grab the `$user_id` of your new user to use in the next insert:
+```sql
+INSERT INTO `wp_usermeta` (
+	`user_id`,
+	`meta_key`,
+	`meta_value`
+) VALUES (
+	$user_id,
+	'wp_capabilities',
+	'a:1:{s:13:"administrator";s:1:"1";}'
+), (
+	$user_id,
+	'wp_user_level',
+	'10'
+);
+```
+---
+###### Source: http://www.wpbeginner.com/wp-tutorials/how-to-add-an-admin-user-to-the-wordpress-database-via-mysql/
