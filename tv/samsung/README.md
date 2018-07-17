@@ -13,12 +13,24 @@ tags: samsung, tizen
 * Ensure dev machine and tv are on same network
 
 ## Tizen studio installation
+* This process known to work on macOS and Windows 10
 * [docs](http://developer.samsung.com/tv/develop/getting-started/setting-up-sdk/installing-tv-sdk)
-* Install latest tizen studio (2.1 known to work)
-* Open package manager (installation process will prompt this when finished)
+* Install latest tizen studio (2.4 known to work): [Download page](https://developer.tizen.org/development/tizen-studio/download)
+* Tizen studio cannot build to samsung tvs without the necessary extensions installed
+* Unfortunately, the latest tv extension (4.1) is buggy and fails to build to tvs, so we have to download an old version (4.0.1)
+* Download 4.0.1 from the [archive page](https://developer.samsung.com/tv/develop/tools/tv-extension/archive)
+* Open package manager (studio installation process will prompt this when finished)
+  * Click the configuration gear icon in the top right
+    * Turn off auto-update to prevent the latest broken version from being auto installed
+    * Click Extensions dropdown
+    * Deactivate all extension except samsung certificate manager
+    * Click the plus icon to add an extension
+    * Set the label to "tv extension 4.0.1" (doesn't really matter, just for your reference)
+    * Browse to the downloaded `.zip` of 4.0.1 and select it
+* Close configuration and restart package manager
   * Click extensions tab and install
     * samsung certificate extension
-    * samsung tv extension (4.0 known to work, even for targeting previous tizen versions)
+    * samsung tv extension (will be labeled "TV Extensions-4.0", but it is the 4.0.1 you just added)
 
 ## Tizen studio workflow
 ### Connect to device
