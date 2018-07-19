@@ -1,6 +1,6 @@
 # HTTPS
 
-tags: security, https, certs
+tags: security, https, certs, tls
 
 ## Certs
 
@@ -34,3 +34,15 @@ This will tell you the available ciphers for the server and their strength.
  
  - Go here [https://www.ssllabs.com/ssltest/index.html](https://www.ssllabs.com/ssltest/index.html)
  - Enter the full domain https://<domain.com> and hit submit
+ 
+ ## TLS versions
+ 
+ TLS 1.0 is no longer considered secure. Therefore PCI compliance states that it must be disabled.
+ 
+ IE 10 has support for TLS 1.1 and 1.2, but it is disabled by default, so disabling TLS 1.0 can block the typical IE10 user.
+ 
+ https://caniuse.com/#search=tls
+ 
+ https://help.salesforce.com/articleView?id=000220586&language=en_US&type=1
+ 
+ https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/insecure-transportation-security-protocol-supported-tls-10/
