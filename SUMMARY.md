@@ -66,6 +66,7 @@
     * [HTML5](/media-streaming/html5/README.md)
 * Performance
     * [Profiling](/profiling/README.md)
+        * [Lighthouse](/profiling/lighthouse/README.md)
 * [Security](/security/README.md)
     * [HTTPS](/security/HTTPS/README.md)
 * Servers:
