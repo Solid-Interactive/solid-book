@@ -79,8 +79,8 @@ function auditUrl(url, flags) {
 function launchChromeAndRunLighthouse(url, flags = {}, config = null) {
     return chromeLauncher.launch(flags).then(chrome => {
         flags.port = chrome.port;
-        return lighthouse(url, flags, config).then(results =>
-            return chrome.kill().then(() => results));
+        return lighthouse(url, flags, config)
+            .then(results => chrome.kill().then(() => results));
     });
 }
 ```
