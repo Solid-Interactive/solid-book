@@ -38,6 +38,14 @@ free -h
 du -h / | grep '[0-9\.]\+G'
 ```
 
+## files
+
+Delete all files older than 90 days in a directory:
+
+```
+find ~/backups -type f -mtime +90 -delete
+```
+
 ## `dpkg`
 
 List where apt-get installed something
