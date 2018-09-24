@@ -37,3 +37,7 @@ e.g.:
     ansible.verbose = "v"
   end
   ```
+  
+  ## Debugging: Weird ansible related errors
+  
+  Make sure Ansbile works. Run `ansible --version`. If it doesn't work, debug that first.
