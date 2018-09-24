@@ -19,3 +19,5 @@ In you `Vagrantfile`
 ## Debugging: Exports files is invalid
 
 If you move directories in which you've up vagrant instances, you'll end up getting an error related to the export file is invalid. Inspect and fix `/etc/exports` and then rerun the provisioning.
+
+Sometimes it's easiest to delete the `/etc/exports` entry and shutoff and completely delete the Vagrant box and start from `vagrant up` again.
