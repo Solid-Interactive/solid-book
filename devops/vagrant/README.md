@@ -21,3 +21,19 @@ In you `Vagrantfile`
 If you move directories in which you've up vagrant instances, you'll end up getting an error related to the export file is invalid. Inspect and fix `/etc/exports` and then rerun the provisioning.
 
 Sometimes it's easiest to delete the `/etc/exports` entry and shutoff and completely delete the Vagrant box and start from `vagrant up` again.
+
+## Debugging: Vagrant gathered an unknown Ansible version
+
+Add a [compatibility_mode](https://www.vagrantup.com/docs/provisioning/ansible_common.html#compatibility_mode) to the ansible config in your Vagrantfile.
+
+e.g.:
+
+```
+  config.vm.provision :ansible do |ansible|
+    ansible.compatibility_mode = "2.0"
+    ansible.playbook = "ansible/site.yml"
+    ansible.inventory_path = "ansible/hosts"
+    ansible.limit = "vagrant"
+    ansible.verbose = "v"
+  end
+  ```
