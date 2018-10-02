@@ -56,3 +56,14 @@ INSERT INTO `wp_usermeta` (
 ```
 ---
 ###### Source: http://www.wpbeginner.com/wp-tutorials/how-to-add-an-admin-user-to-the-wordpress-database-via-mysql/
+
+## Wp cron preference
+Prefer calling `wp-cron.php` manually with server crontab, rather than default wp cron behavior, which checks if it needs to run on every page load, and then runs if needed, extending that user's page load. To implement:
+* disable default wp cron behavior in `wp-config.php`
+  ```
+  define('DISABLE_WP_CRON', true);
+  ```
+* then add call to `wp-cron.php` at desired frequency in your server's crontab (using `wget` here but you can use whatever to make the request):
+  ```
+  0 * * * * wget http://www.example.com/wp-cron.php
+  ```
