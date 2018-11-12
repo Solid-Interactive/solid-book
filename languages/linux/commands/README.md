@@ -155,6 +155,20 @@ You can also store your connections in a sock file for easy closing later:
 ssh -S /tmp/ssh_tunnel_9200_%h.sock  -O exit $SSH_HOST
 ```
 
+## `sftp`
+
+```sh
+sftp -oPort=<port> <user>@<host>
+# Enter password if prompted.
+
+# E.g. upload wordpress theme directory
+# Switch to themes directory on remote.
+sftp> cd wp-content/themes
+# Run put command with recursive flag to upload your local theme directory
+# to the current remote directory.
+sftp> put -r local/path/to/wp-content/themes/my-theme
+```
+
 ## `tar`
 
 There are two very common combination of flags in conjunction with the `tar` command:
