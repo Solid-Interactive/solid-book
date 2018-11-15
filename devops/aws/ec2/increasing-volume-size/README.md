@@ -1,6 +1,8 @@
-# Increasing Volume Size
+# Increasing Volume Size or Instance Size
 
 tags: ec2, aws, volumes, resizing
+
+## Increasing Volume Size
 
 http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-expand-volume.html
 
@@ -18,3 +20,13 @@ http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-expand-volume.html
 1. Attach new volume
     1. Attach to same root
 1. Restart instance
+
+## Increasing Instance Size
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-resize.html
+
+1. Create a snapshot just in case
+1. Make sure you have an elastic ip
+1. Stop instance
+1. Increase size
+1. Start Instance
