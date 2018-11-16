@@ -19,6 +19,8 @@
 * Devops
     * AWS
         * EC2
+            * [Encrypting EBS](/devops/aws/ec2/encrypting-ebs/README.md)
+            * [Increasing instance size](/devops/aws/ec2/increasing-instance-size/README.md)
             * [Increasing volume size](/devops/aws/ec2/increasing-volume-size/README.md)
             * [Installing NTP](/devops/aws/ec2/installing-ntp/README.md)
             * [Keys](/devops/aws/ec2/keys/README.md)
