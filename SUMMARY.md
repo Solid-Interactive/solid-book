@@ -88,5 +88,3 @@
         * [Gitflow](/version-control/git/gitflow/README.md)
         * [Hooks](/version-control/git/hooks/README.md)
 * [tags](tags.md)
-
-
