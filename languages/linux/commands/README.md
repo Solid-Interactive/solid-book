@@ -261,3 +261,6 @@ rsync -rzP ~/dir/uploads/ staging-wordpress:/var/www/vhosts/vhost.com/source/htt
 ```
 
 If using ec2 (or any other network), within network rsyncs are much faster than transferring out and back into a network. For example ec2 to your computer back up to ec2 can be multiple times slower than ec2 to ec2. Using forward agent is a good way to do ec2 to ec2.
+
+## `findmnt
+`
