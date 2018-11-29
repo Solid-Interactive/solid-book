@@ -23,7 +23,7 @@ Examples:
 
 ## Including `.brs` files
 
-xml files can include Bright Script directly. If you want to separate out your Bright Script files, do it with `script`
+xml files can include BrightScript directly. If you want to separate out your BrightScript files, do it with `script`
 tags:
 
 ```xml
