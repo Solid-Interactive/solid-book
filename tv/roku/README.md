@@ -48,7 +48,7 @@ Sample AppState XML:
 <component name="AppState">
     <script uri="AppState.brs" type="text/brightscript"/>
 	<interface>
-        <field id="isLoggedIn" type="boolean" value="true" onChange="onChangeIsLoggedIn"/>
+        <field id="isLoggedIn" type="boolean" value="true"/>
     </interface>
 </component>
 ```
