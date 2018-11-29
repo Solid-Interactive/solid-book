@@ -34,3 +34,25 @@ tags:
 
 ```
 
+## AppState
+
+[Global scope](https://sdkdocs.roku.com/display/sdkdoc/SceneGraph+Data+Scoping#SceneGraphDataScoping-GlobalScope) can be used 
+to store transient App State.
+
+### Example AppState Implementation
+
+* Manage global app state with the `appState` node on the global node.
+* Update the global state with assignment from components
+    ```brs
+    m.global.appState.myStringField = "Hello"
+    ```
+* Observe the state fields in your components to update the ui based on state changes.
+    ```brs
+    m.global.appState.observeField("myStringField", "handler")
+    ```
+* Add fields to the app state interface in `AppState.xml`.
+    * Add change listeners if you need to update other fields based on field changes.
+    ```xml
+    <field id="myStringField" type="string" onChange="changeHandler"/>
+    ```
+
