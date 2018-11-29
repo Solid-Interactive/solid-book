@@ -78,4 +78,9 @@ m.global.addFields({
     ```xml
     <field id="myStringField" type="string" onChange="changeHandler"/>
     ```
+    
+ ## Focus
+ 
+ To query [node focus](https://sdkdocs.roku.com/display/sdkdoc/ifSGNodeFocus), use [`hasFocus`](https://sdkdocs.roku.com/display/sdkdoc/ifSGNodeFocus#ifSGNodeFocus-hasFocus()asBoolean) to determine if the node
+ itself has focus. Use [`isInFocusChain`](https://sdkdocs.roku.com/display/sdkdoc/ifSGNodeFocus#ifSGNodeFocus-isInFocusChain()asBoolean) to determine if the node or a child has focus. 
 
