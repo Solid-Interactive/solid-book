@@ -41,6 +41,29 @@ to store transient App State.
 
 ### Example AppState Implementation
 
+Sample AppState XML:
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="AppState">
+    <script uri="AppState.brs" type="text/brightscript"/>
+	<interface>
+        <field id="isLoggedIn" type="boolean" value="true" onChange="onChangeIsLoggedIn"/>
+    </interface>
+</component>
+```
+
+Adding app state to `m.global`:
+
+```brs
+' Add AppState to m.global - do this in a Scene's BrightScript
+m.global.addFields({ 
+        appState: createObject("roSGNode", "AppState") 
+})
+```
+
+
+
 * Manage global app state with the `appState` node on the global node.
 * Update the global state with assignment from components
     ```brs
