@@ -14,3 +14,16 @@ screens within an Roku app.
 
 * [Init function](https://sdkdocs.roku.com/pages/viewpage.action?pageId=1608546) - called after XML parsed
 * [onKeyEvent](https://sdkdocs.roku.com/pages/viewpage.action?pageId=1608547) - receives remote control key events
+
+## Including `.brs` files
+
+xml files can include Bright Script directly. If you want to separate out your Bright Script files, do it with `script`
+tags:
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="LogOutDialog" extends="Dialog">
+	<script uri="LogOutDialog.brs" type="text/brightscript"></script>
+</component>
+
+```
