@@ -10,6 +10,12 @@ screens within an Roku app.
 * [SceneGraph Core Concepts](https://sdkdocs.roku.com/display/sdkdoc/SceneGraph+Core+Concepts)
 * [SceneGraph API Reference](https://sdkdocs.roku.com/display/sdkdoc/SceneGraph+API+Reference)
 
+Examples:
+
+* [Dialogs](https://sdkdocs.roku.com/display/sdkdoc/Dialogs+Markup)
+
+
+
 ## Entry Points
 
 * [Init function](https://sdkdocs.roku.com/pages/viewpage.action?pageId=1608546) - called after XML parsed
@@ -27,3 +33,4 @@ tags:
 </component>
 
 ```
+
