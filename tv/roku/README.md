@@ -94,3 +94,6 @@ m.global.addFields({
 * Get ui resolution from your root scene object
   * Docs: https://sdkdocs.roku.com/display/sdkdoc/Scene
   * ex: `resAssocArray = rootScene.currentDesignResolution()` 
+
+## Open Questions
+* How to render border on element?
