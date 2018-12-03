@@ -2,6 +2,19 @@
 
 tags: nginx
 
+Nginx is a light weight web server that is designed for speed and high concurrency.
+
+Nginx is a good reverse proxy. For example it can pass http requests to node or php-fpm.
+
+Nginx serves static content very quickly.
+
+Nginx is also load balancer.
+
+Many people find configuring Nginx easier than configuring Apache. Clearly this is a matter of opinion.
+
+Nginx has a free and paid version. The free version lags behind in feature to the paid version, but the free
+version is definitely production ready.
+
 * [Nginx beginner guide](http://nginx.org/en/docs/beginners_guide.html)
 * [Nginx vs Apache opnion](https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations)
 * [Nginx context](https://www.digitalocean.com/community/tutorials/understanding-the-nginx-configuration-file-structure-and-configuration-contexts)
