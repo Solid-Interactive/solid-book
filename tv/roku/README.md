@@ -107,6 +107,7 @@ m.global.addFields({
 
       ' If this node does not have focus, delegate focus to child
       ' based on state/business rules.
+      myDefaultFocusedChild.setFocus(true)
   end sub
   ```
 
