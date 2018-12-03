@@ -62,8 +62,6 @@ m.global.addFields({
 })
 ```
 
-
-
 * Manage global app state with the `appState` node on the global node.
 * Update the global state with assignment from components
     ```brs
@@ -84,3 +82,21 @@ m.global.addFields({
  To query [node focus](https://sdkdocs.roku.com/display/sdkdoc/ifSGNodeFocus), use [`hasFocus`](https://sdkdocs.roku.com/display/sdkdoc/ifSGNodeFocus#ifSGNodeFocus-hasFocus()asBoolean) to determine if the node
  itself has focus. Use [`isInFocusChain`](https://sdkdocs.roku.com/display/sdkdoc/ifSGNodeFocus#ifSGNodeFocus-isInFocusChain()asBoolean) to determine if the node or a child has focus. 
 
+## Resolution
+* Docs: https://sdkdocs.roku.com/display/sdkdoc/Specifying+Display+Resolution
+* Roku's recommendation:
+  * In `manifest`, declare `ui_resolutions=fhd`
+  * Size ui elements for fhd (1080p), in values divisible by 3.
+  * Roku will autoscale the ui when the display is 720p, and values divisible by 3 will produce integer sizes.
+  * Use images that match the final scaled down size the image will display at.
+  * ex: size elemet width 276; width will autoscale to 184 on 720p
+  
+* Get ui resolution from your root scene object
+  * Docs: https://sdkdocs.roku.com/display/sdkdoc/Scene
+  * ex: `resAssocArray = rootScene.currentDesignResolution()` 
+
+## Colors
+* Colors are specified with a string formatted like so: `0xRRGGBBAA`, where RRGGBB is the standard 6-digit hex code, and AA specifies the alpha channel, `FF` fully opaque, and `00` fully transparent.
+
+## Open Questions
+* How to render border on element?
