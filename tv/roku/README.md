@@ -36,7 +36,7 @@ tags:
 
 ## AppState
 
-[Global scope](https://sdkdocs.roku.com/display/sdkdoc/SceneGraph+Data+Scoping#SceneGraphDataScoping-GlobalScope) can be used 
+[Global scope](https://sdkdocs.roku.com/display/sdkdoc/SceneGraph+Data+Scoping#SceneGraphDataScoping-GlobalScope) can be used
 to store transient App State.
 
 ### Example AppState Implementation
@@ -57,8 +57,8 @@ Adding app state to `m.global`:
 
 ```brs
 ' Add AppState to m.global - do this in a Scene's BrightScript
-m.global.addFields({ 
-        appState: createObject("roSGNode", "AppState") 
+m.global.addFields({
+        appState: createObject("roSGNode", "AppState")
 })
 ```
 
@@ -76,11 +76,40 @@ m.global.addFields({
     ```xml
     <field id="myStringField" type="string" onChange="changeHandler"/>
     ```
-    
- ## Focus
- 
- To query [node focus](https://sdkdocs.roku.com/display/sdkdoc/ifSGNodeFocus), use [`hasFocus`](https://sdkdocs.roku.com/display/sdkdoc/ifSGNodeFocus#ifSGNodeFocus-hasFocus()asBoolean) to determine if the node
- itself has focus. Use [`isInFocusChain`](https://sdkdocs.roku.com/display/sdkdoc/ifSGNodeFocus#ifSGNodeFocus-isInFocusChain()asBoolean) to determine if the node or a child has focus. 
+
+## Focus
+### Set focus
+* Docs: https://sdkdocs.roku.com/display/sdkdoc/ifSGNodeFocus
+* Call `node.setFocus(true)` on a node to focus it.
+* example:
+  ```brs
+  myNode.setFocus(true)
+  ```
+
+### Respond to focus events
+* Docs: https://sdkdocs.roku.com/display/sdkdoc/Node
+* Observe field `focusedChild`
+* `focusedChild` is set everytime itself or one of its children gains **OR** loses focus.
+* Use `node.hasFocus()` to determine if node is focused.
+* General pattern is to focus a component, and let the component delagate focus to one of its children.
+* example:
+  ```brs
+  sub init()
+      m.top.observeField("focusedChild", "onFocusedChild")
+  end sub
+
+  sub onFocusedChild()
+      ' Generally, we don't need to handle this focus if
+      ' this node does not have focus.
+      if (NOT m.top.hasFocus())
+          return
+      end if
+
+      ' If this node does not have focus, delegate focus to child
+      ' based on state/business rules.
+      myDefaultFocusedChild.setFocus(true)
+  end sub
+  ```
 
 ## Resolution
 * Docs: https://sdkdocs.roku.com/display/sdkdoc/Specifying+Display+Resolution
@@ -89,14 +118,14 @@ m.global.addFields({
   * Size ui elements for fhd (1080p), in values divisible by 3.
   * Roku will autoscale the ui when the display is 720p, and values divisible by 3 will produce integer sizes.
   * Use images that match the final scaled down size the image will display at.
-  * ex: size elemet width 276; width will autoscale to 184 on 720p
-  
+  * ex: size element width 276; width will autoscale to 184 on 720p; if image, use image with width of 276 on 1080p, and image with width of 184 on 720p; see below for getting the current resolution.
 * Get ui resolution from your root scene object
   * Docs: https://sdkdocs.roku.com/display/sdkdoc/Scene
-  * ex: `resAssocArray = rootScene.currentDesignResolution()` 
+  * ex: `resAssocArray = rootScene.currentDesignResolution()`
 
 ## Colors
 * Colors are specified with a string formatted like so: `0xRRGGBBAA`, where RRGGBB is the standard 6-digit hex code, and AA specifies the alpha channel, `FF` fully opaque, and `00` fully transparent.
+* Use this chart to convert decimal opacity to hexidecimal: https://css-tricks.com/8-digit-hex-codes/
 
 ## Syntax Highlighting
 
@@ -105,3 +134,31 @@ Via [Vundle](https://github.com/VundleVim/Vundle.vim): Add `Plugin 'chooh/bright
 
 ## Open Questions
 * How to render border on element?
+
+## Positioning
+* Use field `translation` to position an element relative to its parent
+* example:
+  ```xml
+  <Rectangle
+    translation="[0, 100]">
+    <Rectangle
+      id="rec2"
+      translation="[0, 100]">>
+    </Rectangle>
+  </Rectangle>
+  ```
+  `rec2` will start 200px down the page.
+
+## Fonts
+* Define the font settings on a `Font` node inside a `Label` node.
+* example:
+  ```xml
+  <Label
+    text="Hello, Roboto">
+    <Font
+      role="font"
+      uri="pkg:/fonts/Roboto.otf"
+      size="28"/>
+  </Label>
+  ```
+  `role` attribute is required.
