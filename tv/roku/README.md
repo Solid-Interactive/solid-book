@@ -162,3 +162,7 @@ Via [Vundle](https://github.com/VundleVim/Vundle.vim): Add `Plugin 'chooh/bright
   </Label>
   ```
   `role` attribute is required.
+  
+## Gradients
+
+Use a [Poster](https://sdkdocs.roku.com/display/sdkdoc/Poster) node with an image background. Images should fit Posters as close as possible.
