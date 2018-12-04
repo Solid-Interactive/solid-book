@@ -125,6 +125,35 @@ m.global.addFields({
 
 ## Colors
 * Colors are specified with a string formatted like so: `0xRRGGBBAA`, where RRGGBB is the standard 6-digit hex code, and AA specifies the alpha channel, `FF` fully opaque, and `00` fully transparent.
+* Use this chart to convert decimal opacity to hexidecimal: https://css-tricks.com/8-digit-hex-codes/
 
 ## Open Questions
 * How to render border on element?
+
+## Positioning
+* Use field `translation` to position an element relative to its parent
+* example:
+  ```xml
+  <Rectangle
+    translation="[0, 100]">
+    <Rectangle
+      id="rec2"
+      translation="[0, 100]">>
+    </Rectangle>
+  </Rectangle>
+  ```
+  `rec2` will start 200px down the page.
+
+## Fonts
+* Define the font settings on a `Font` node inside a `Label` node.
+* example:
+  ```xml
+  <Label
+    text="Hello, Roboto">
+    <Font
+      role="font"
+      uri="pkg:/fonts/Roboto.otf"
+      size="28"/>
+  </Label>
+  ```
+  `role` attribute is required.
