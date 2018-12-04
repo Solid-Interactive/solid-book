@@ -98,5 +98,10 @@ m.global.addFields({
 ## Colors
 * Colors are specified with a string formatted like so: `0xRRGGBBAA`, where RRGGBB is the standard 6-digit hex code, and AA specifies the alpha channel, `FF` fully opaque, and `00` fully transparent.
 
+## Syntax Highlighting
+
+Via [Vundle](https://github.com/VundleVim/Vundle.vim): Add `Plugin 'chooh/brightscript.vim'` to your `.vimrc` and run `:PluginInstall`
+
+
 ## Open Questions
 * How to render border on element?
