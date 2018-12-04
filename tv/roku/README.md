@@ -127,11 +127,6 @@ m.global.addFields({
 * Colors are specified with a string formatted like so: `0xRRGGBBAA`, where RRGGBB is the standard 6-digit hex code, and AA specifies the alpha channel, `FF` fully opaque, and `00` fully transparent.
 * Use this chart to convert decimal opacity to hexidecimal: http://online.sfsu.edu/chrism/hexval.html
 
-## Syntax Highlighting
-
-Via [Vundle](https://github.com/VundleVim/Vundle.vim): Add `Plugin 'chooh/brightscript.vim'` to your `.vimrc` and run `:PluginInstall`
-
-
 ## Open Questions
 * How to render border on element?
 
@@ -166,3 +161,17 @@ Via [Vundle](https://github.com/VundleVim/Vundle.vim): Add `Plugin 'chooh/bright
 ## Gradients
 
 Use a [Poster](https://sdkdocs.roku.com/display/sdkdoc/Poster) node with an image background. Images should fit Posters as close as possible.
+
+## Development and Deploying
+
+There are several options for deploying:
+
+* [roku-deploy npm](https://www.npmjs.com/package/roku-deploy)
+* [Roku Development VS Package](https://marketplace.visualstudio.com/items?itemName=fuzecc.roku-development)
+  * Setup configs per readme and the `Cmd-Shift-P` to issue commands
+* [BrightScript VS package](https://marketplace.visualstudio.com/items?itemName=celsoaf.brightscript)
+  * Note that `v1.3.0` does not work for deploying. The highlight does work.
+
+### VIM
+
+Via [Vundle](https://github.com/VundleVim/Vundle.vim): Add `Plugin 'chooh/brightscript.vim'` to your `.vimrc` and run `:PluginInstall`
