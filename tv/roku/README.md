@@ -128,10 +128,14 @@ m.global.addFields({
 * Use this chart to convert decimal opacity to hexidecimal: http://online.sfsu.edu/chrism/hexval.html
 
 ## Open Questions
-* How to render border on element?
+* Add open questions here.
+
+## Borders
+* No border functionality built in. Use a `Rectangle` node for each side of your node.
 
 ## Positioning
-* Use field `translation` to position an element relative to its parent
+* Use field `translation` to position an element relative to its parent.
+* Every node defines its own new coordinate system.
 * example:
   ```xml
   <Rectangle
@@ -157,7 +161,7 @@ m.global.addFields({
   </Label>
   ```
   `role` attribute is required.
-  
+
 ## Gradients
 
 Use a [Poster](https://sdkdocs.roku.com/display/sdkdoc/Poster) node with an image background. Images should fit Posters as close as possible.
@@ -175,3 +179,20 @@ There are several options for deploying:
 ### VIM
 
 Via [Vundle](https://github.com/VundleVim/Vundle.vim): Add `Plugin 'chooh/brightscript.vim'` to your `.vimrc` and run `:PluginInstall`
+
+## Debugging
+* Roku device exposes info on three ports. See ports, and commands available on each, here: https://sdkdocs.roku.com/display/sdkdoc/Debugging+Your+Application
+* Connect to the device with a telnet client, e.g. `nc` on macOS
+  ```bash
+  $ nc <roku_ip> <port>
+  ```
+  Once connected, issue commands to get info:
+  ```bash
+  > loaded_textures
+  ```
+* Use the brightscript console to get info about brightscript variables, pause execution, and step through code.
+  * The VSCode extension is great for setting breakpoints and stepping though code.
+    * [BrightScript VS package](https://marketplace.visualstudio.com/items?itemName=celsoaf.brightscript)
+    * Note that `v1.3.0` broke deploying. Hopefully open issue will be resolved soon. Use Previous version.
+    * Set breakpoints in your code and execution will stop on those lines. Hover expressions to view their current value.
+* Use the debug server to get non-brightscript info, like memory usage.
