@@ -173,6 +173,7 @@ There are several options for deploying:
 * [roku-deploy npm](https://www.npmjs.com/package/roku-deploy)
 * [Roku Development VS Package](https://marketplace.visualstudio.com/items?itemName=fuzecc.roku-development)
   * Setup configs per readme and the `Cmd-Shift-P` to issue commands
+  * Note that you have to open your projects directory that contains only the Roku files, since this Package bundles up the currently root directory
 * [BrightScript VS package](https://marketplace.visualstudio.com/items?itemName=celsoaf.brightscript)
   * Note that `v1.3.0` does not work for deploying. The highlight does work.
 
