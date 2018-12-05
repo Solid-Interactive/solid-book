@@ -124,8 +124,9 @@ m.global.addFields({
   * ex: `resAssocArray = rootScene.currentDesignResolution()`
 
 ## Colors
-* Colors are specified with a string formatted like so: `0xRRGGBBAA`, where RRGGBB is the standard 6-digit hex code, and AA specifies the alpha channel, `FF` fully opaque, and `00` fully transparent.
+* Colors are specified with a string formatted like so: `"0xRRGGBBAA"`, where RRGGBB is the standard 6-digit hex code, and AA specifies the alpha channel, `FF` fully opaque, and `00` fully transparent.
 * Use this chart to convert decimal opacity to hexidecimal: http://online.sfsu.edu/chrism/hexval.html
+* Colors can also be declared without strings by prefixing the hex code with `&h`, e.g. `&h0a0b0d`
 
 ## Open Questions
 * Add open questions here.
