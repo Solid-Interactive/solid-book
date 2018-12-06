@@ -181,6 +181,8 @@ m.global.addFields({
 
 Use a [Poster](https://sdkdocs.roku.com/display/sdkdoc/Poster) node with an image background. Images should fit Posters as close as possible.
 
+[Mask Groups](https://sdkdocs.roku.com/display/sdkdoc/MaskGroup) have some promise, but we've found cross device support lacking and their implementation tricky.
+
 ## Development and Deploying
 
 There are several options for deploying:
@@ -198,7 +200,7 @@ Via [Vundle](https://github.com/VundleVim/Vundle.vim): Add `Plugin 'chooh/bright
 
 ## Debugging
 * Roku device exposes info on three ports. See ports, and commands available on each, here: https://sdkdocs.roku.com/display/sdkdoc/Debugging+Your+Application
-* Connect to the device with a telnet client, e.g. `nc` on macOS
+* Connect to the device with a telnet client, e.g. `nc` on macOS ( or `brew install telnet` )
   ```bash
   $ nc <roku_ip> <port>
   ```
