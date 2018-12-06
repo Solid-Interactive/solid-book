@@ -77,6 +77,16 @@ m.global.addFields({
     <field id="myStringField" type="string" onChange="changeHandler"/>
     ```
 
+## Key Press
+
+Key press events start at the most nested element and are bubbled up.
+
+[`onKeyEvent`](https://sdkdocs.roku.com/pages/viewpage.action?pageId=1608547) is called up the
+entire chain. The second argument is used to pass to the next element up the chain what the previous element returned.
+By convention, returning true means the keypress was handled, and returning false means it was not.
+
+
+
 ## Focus
 ### Set focus
 * Docs: https://sdkdocs.roku.com/display/sdkdoc/ifSGNodeFocus
