@@ -133,6 +133,7 @@ m.global.addFields({
 
 ## Images
 * Use the `Poster` node, with the `uri` field. `<Poster uri="/image.jpg" />`
+* If you want to use a packaged image use the format: `uri="pkg:/images/image.jpg`
 * Roku can resize images on the fly so that they use less texture memory (though the original image size should be close to the target size, because the original size has to be loaded into memory in order to be scaled down.)
 * example
   ```xml
