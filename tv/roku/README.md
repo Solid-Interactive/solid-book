@@ -100,7 +100,8 @@ By convention, returning true means the keypress was handled, and returning fals
 * Docs: https://sdkdocs.roku.com/display/sdkdoc/Node
 * Observe field `focusedChild`
 * observing field is generally needed for initial and final focus. Once focus is within an element, key presses on that element generally handle focus changes on child elements.
-* `focusedChild` is set every time itself or one of its children gains **OR** loses focus.
+* `focusedChild` is set every time it gains **OR** loses focus
+  * focus changes within an element are not captured
 * Use `node.hasFocus()` to determine if node is focused.
 * General pattern is to focus a component, and let the component delagate focus to one of its children.
 * example:
