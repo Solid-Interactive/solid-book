@@ -131,6 +131,20 @@ m.global.addFields({
 ## Open Questions
 * Add open questions here.
 
+## Images
+* Use the `Poster` node, with the `uri` field. `<Poster uri="/image.jpg" />`
+* Roku can resize images on the fly so that they use less texture memory (though the original image size should be close to the target size, because the original size has to be loaded into memory in order to be scaled down.)
+* example
+  ```xml
+  <Poster
+    id="thumbnail"
+    loadDisplayMode="limitSize"
+    loadWidth="256"
+    loadHeight="384"
+    uri="http://image.example.com/800x1200.jpg"/>
+  ```
+  * Note: `load...` fields must be set before `uri` for the load scaling to work.
+
 ## Borders
 * No border functionality built in. Use a `Rectangle` node for each side of your node.
 
