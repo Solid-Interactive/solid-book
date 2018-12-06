@@ -104,32 +104,37 @@ By convention, returning true means the keypress was handled, and returning fals
   * focus changes within an element are not captured
 * Use `node.hasFocus()` to determine if node is focused.
 * General pattern is to focus a component, and let the component delagate focus to one of its children.
-* example:
-  ```brs
-  sub init()
-      m.top.observeField("focusedChild", "onFocusedChild")
-  end sub
 
-  sub onFocusedChild()
-      ' Generally, we don't need to handle this focus if
-      ' this node does not have focus.
-      if (NOT m.top.hasFocus())
-          return
-      end if
+Example
 
-      ' If this node does not have focus, delegate focus to child
-      ' based on state/business rules.
-      myDefaultFocusedChild.setFocus(true)
-  end sub
-  ```
+```brs
+sub init()
+    m.top.observeField("focusedChild", "onFocusedChild")
+end sub
+
+sub onFocusedChild()
+
+    print "focus change onto or off of this element"
+    
+    if (m.top.isInFocusChain())
+        print "element is gaining initial focus"
+        setInitialFocus()
+    else
+        print "element is losing focus"
+        removeFocusFromAllChildItems()
+    end if
+end sub
+```
+
+To check whether an element or any of its descendants is focused, use `m.top.isInFocusChain()`
 
 ## Resolution
 * Docs: https://sdkdocs.roku.com/display/sdkdoc/Specifying+Display+Resolution
 * Roku's recommendation:
-  * In `manifest`, declare `ui_resolutions=fhd`
-  * Size ui elements for fhd (1080p), in values divisible by 3.
-  * Roku will autoscale the ui when the display is 720p, and values divisible by 3 will produce integer sizes.
-  * Use images that match the final scaled down size the image will display at.
+* In `manifest`, declare `ui_resolutions=fhd`
+* Size ui elements for fhd (1080p), in values divisible by 3.
+* Roku will autoscale the ui when the display is 720p, and values divisible by 3 will produce integer sizes.
+* Use images that match the final scaled down size the image will display at.
   * ex: size element width 276; width will autoscale to 184 on 720p; if image, use image with width of 276 on 1080p, and image with width of 184 on 720p; see below for getting the current resolution.
 * Get ui resolution from your root scene object
   * Docs: https://sdkdocs.roku.com/display/sdkdoc/Scene
