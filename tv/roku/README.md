@@ -232,3 +232,6 @@ Via [Vundle](https://github.com/VundleVim/Vundle.vim): Add `Plugin 'chooh/bright
     * Note that `v1.3.0` broke deploying. Hopefully open issue will be resolved soon. Use Previous version.
     * Set breakpoints in your code and execution will stop on those lines. Hover expressions to view their current value.
 * Use the debug server to get non-brightscript info, like memory usage.
+
+## Brightscript
+* `sub` vs `function` - sub can only return void; any other value with error on compile.
