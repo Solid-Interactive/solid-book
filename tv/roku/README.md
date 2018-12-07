@@ -82,6 +82,10 @@ m.global.addFields({
     ```brs
     m.global.appState.observeField("myStringField", "handler")
     ```
+* Note that the signature for the handlers must accept an `Object`. The event is passed to the handler, not the field.
+    ```brs
+    sub handler(event as Object)
+    ```
 * Add fields to the app state interface in `AppState.xml`.
     * Add change listeners if you need to update other fields based on field changes.
     ```xml
@@ -245,3 +249,9 @@ Via [Vundle](https://github.com/VundleVim/Vundle.vim): Add `Plugin 'chooh/bright
 
 ## Brightscript
 * `sub` vs `function` - sub can only return void; any other value with error on compile.
+
+## Functions
+
+Functions can be declared with `sub` or `function`. A `sub` can only return `void`. A `function` can return other things.
+
+A `sub` is a `function` without a return type.
