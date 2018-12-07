@@ -34,12 +34,23 @@ tags:
 
 ```
 
-## AppState
+## Events
+
+Roku let's you observe fields on other nodes using `node.observeField("fieldName", callback)`.
+
+`callback` is a function on the component doing the observing.
+
+If the field is on the component itself, then you can add the `onChange` attribute with the callback to the component instead
+of using the `observeField` method. However, do not that [`onChange` is usually executed on the render thread](https://sdkdocs.roku.com/display/sdkdoc/Optimization+Techniques).
+
+The allowed types for reactive fields are listed [here](https://sdkdocs.roku.com/display/sdkdoc/interface#interface-Attributes)
+
+### AppState
 
 [Global scope](https://sdkdocs.roku.com/display/sdkdoc/SceneGraph+Data+Scoping#SceneGraphDataScoping-GlobalScope) can be used
 to store transient App State.
 
-### Example AppState Implementation
+#### Example AppState Implementation
 
 Sample AppState XML:
 
@@ -103,7 +114,7 @@ By convention, returning true means the keypress was handled, and returning fals
 * `focusedChild` is set every time it gains **OR** loses focus
   * focus changes within an element are not captured
 * Use `node.hasFocus()` to determine if node is focused.
-* General pattern is to focus a component, and let the component delagate focus to one of its children.
+* General pattern is to focus a component, and let the component delegate focus to one of its children.
 
 Example
 
@@ -115,8 +126,7 @@ end sub
 sub onFocusedChild()
 
     print "focus change onto or off of this element"
-    
-    if (m.top.isInFocusChain())
+    if (m.top.hasFocus())
         print "element is gaining initial focus"
         setInitialFocus()
     else
