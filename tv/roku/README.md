@@ -129,13 +129,15 @@ end sub
 
 sub onFocusedChild()
 
-    print "focus change onto or off of this element"
+    if (NOT m.top.isInFocusChain())
+        ' handle losing focus
+        removeFocusFromAllChildItems()
+        return
+    end if
+    
     if (m.top.hasFocus())
         print "element is gaining initial focus"
         setInitialFocus()
-    else
-        print "element is losing focus"
-        removeFocusFromAllChildItems()
     end if
 end sub
 ```
