@@ -257,3 +257,12 @@ Via [Vundle](https://github.com/VundleVim/Vundle.vim): Add `Plugin 'chooh/bright
 Functions can be declared with `sub` or `function`. A `sub` can only return `void`. A `function` can return other things.
 
 A `sub` is a `function` without a return type.
+
+## Multi Threading
+
+SceneGraph introduced the concept of [multithreading](https://sdkdocs.roku.com/display/sdkdoc/SceneGraph+Threads).
+
+Render thread execution is limited to 3 seconds on side loaded channels and 10 seconds
+on production channels.
+
+To do something on another thread, use a [Task](https://sdkdocs.roku.com/display/sdkdoc/Task).
