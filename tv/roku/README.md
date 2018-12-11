@@ -266,3 +266,13 @@ Render thread execution is limited to 3 seconds on side loaded channels and 10 s
 on production channels.
 
 To do something on another thread, use a [Task](https://sdkdocs.roku.com/display/sdkdoc/Task).
+
+## Optimization
+
+Keep init methods as small as possible.
+
+Optimization References:
+
+* https://sdkdocs.roku.com/display/sdkdoc/SceneGraph+Performance+Guide
+* https://sdkdocs.roku.com/display/sdkdoc/Optimization+Techniques
+* https://sdkdocs.roku.com/display/sdkdoc/Performance+FAQ
