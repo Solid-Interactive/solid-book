@@ -2,6 +2,46 @@
 
 tags: roku, tv
 
+## Development and Deploying
+
+There are several options for deploying. All options require you to activate developer mode. To enable development mode, 
+enter the remote control sequence: `Home 3x, Up 2x, Right, Left, Right, Left, Right`.  The entire sequence must be entered within 10 seconds.
+
+### Using a packaged zip file
+
+* [Manually at the Roku's IP with a zip file](https://sdkdocs.roku.com/display/sdkdoc/Loading+and+Running+Your+Application)
+
+### Using code
+
+* [roku-deploy npm](https://www.npmjs.com/package/roku-deploy) - IDE Agnostic
+* [Roku Development VisualStudio Code Package](https://marketplace.visualstudio.com/items?itemName=fuzecc.roku-development)
+  * Setup configs per readme and the `Cmd-Shift-P` to issue commands
+  * Note that you have to open your projects directory that contains only the Roku files, since this Package bundles up the currently root directory
+* [BrightScript VisulStudioCode package](https://marketplace.visualstudio.com/items?itemName=celsoaf.brightscript)
+  * Note that `v1.3.0` does not work for deploying. The highlight does work.
+
+### VIM
+
+Via [Vundle](https://github.com/VundleVim/Vundle.vim): Add `Plugin 'chooh/brightscript.vim'` to your `.vimrc` and run `:PluginInstall`
+
+## Debugging
+* Roku device exposes info on three ports. See ports, and commands available on each, here: https://sdkdocs.roku.com/display/sdkdoc/Debugging+Your+Application
+* Connect to the device with a telnet client, e.g. `nc` on macOS ( or `brew install telnet` )
+  ```bash
+  $ nc <roku_ip> <port>
+  ```
+  Once connected, issue commands to get info:
+  ```bash
+  > loaded_textures
+  ```
+* Use the brightscript console to get info about brightscript variables, pause execution, and step through code.
+  * The VSCode extension is great for setting breakpoints and stepping though code.
+    * [BrightScript VS package](https://marketplace.visualstudio.com/items?itemName=celsoaf.brightscript)
+    * Note that `v1.3.0` broke deploying. Hopefully open issue will be resolved soon. Use Previous version.
+    * Set breakpoints in your code and execution will stop on those lines. Hover expressions to view their current value.
+* Use the debug server to get non-brightscript info, like memory usage.
+
+
 ## SceneGraph
 
 [SceneGraph](https://sdkdocs.roku.com/display/sdkdoc/SceneGraph+Core+Concepts) is a framework that can be used to create
@@ -216,38 +256,6 @@ To check whether an element or any of its descendants is focused, use `m.top.isI
 Use a [Poster](https://sdkdocs.roku.com/display/sdkdoc/Poster) node with an image background. Images should fit Posters as close as possible.
 
 [Mask Groups](https://sdkdocs.roku.com/display/sdkdoc/MaskGroup) have some promise, but we've found cross device support lacking and their implementation tricky.
-
-## Development and Deploying
-
-There are several options for deploying:
-
-* [roku-deploy npm](https://www.npmjs.com/package/roku-deploy)
-* [Roku Development VS Package](https://marketplace.visualstudio.com/items?itemName=fuzecc.roku-development)
-  * Setup configs per readme and the `Cmd-Shift-P` to issue commands
-  * Note that you have to open your projects directory that contains only the Roku files, since this Package bundles up the currently root directory
-* [BrightScript VS package](https://marketplace.visualstudio.com/items?itemName=celsoaf.brightscript)
-  * Note that `v1.3.0` does not work for deploying. The highlight does work.
-
-### VIM
-
-Via [Vundle](https://github.com/VundleVim/Vundle.vim): Add `Plugin 'chooh/brightscript.vim'` to your `.vimrc` and run `:PluginInstall`
-
-## Debugging
-* Roku device exposes info on three ports. See ports, and commands available on each, here: https://sdkdocs.roku.com/display/sdkdoc/Debugging+Your+Application
-* Connect to the device with a telnet client, e.g. `nc` on macOS ( or `brew install telnet` )
-  ```bash
-  $ nc <roku_ip> <port>
-  ```
-  Once connected, issue commands to get info:
-  ```bash
-  > loaded_textures
-  ```
-* Use the brightscript console to get info about brightscript variables, pause execution, and step through code.
-  * The VSCode extension is great for setting breakpoints and stepping though code.
-    * [BrightScript VS package](https://marketplace.visualstudio.com/items?itemName=celsoaf.brightscript)
-    * Note that `v1.3.0` broke deploying. Hopefully open issue will be resolved soon. Use Previous version.
-    * Set breakpoints in your code and execution will stop on those lines. Hover expressions to view their current value.
-* Use the debug server to get non-brightscript info, like memory usage.
 
 ## Brightscript
 * `sub` vs `function` - sub can only return void; any other value with error on compile.
