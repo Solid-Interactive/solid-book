@@ -276,3 +276,8 @@ Optimization References:
 * https://sdkdocs.roku.com/display/sdkdoc/SceneGraph+Performance+Guide
 * https://sdkdocs.roku.com/display/sdkdoc/Optimization+Techniques
 * https://sdkdocs.roku.com/display/sdkdoc/Performance+FAQ
+
+## Models
+
+* [Roku Supported models](https://sdkdocs.roku.com/display/sdkdoc/The+Roku+Channel+Developer+Program#TheRokuChannelDeveloperProgram-SupportedModels)
+* [Overview of Roku Modeks](https://en.wikipedia.org/wiki/Roku)
