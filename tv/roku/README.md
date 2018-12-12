@@ -5,7 +5,7 @@ tags: roku, tv
 ## Development and Deploying
 
 There are several options for deploying. All options require you to activate developer mode. To enable development mode, 
-enter the remote control sequence: `Home 3x, Up 2x, Right, Left, Right, Left, Right`.  The entire sequence must be entered within 10 seconds.
+enter the remote control sequence: `🏠🏠🏠 ↑↑ → ← → ← →`.  The entire sequence must be entered within 10 seconds.
 
 ### Using a packaged zip file
 
