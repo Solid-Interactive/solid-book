@@ -2,48 +2,15 @@
 
 tags: roku, tv
 
-## Development and Deploying
-
-There are several options for deploying. All options require you to activate developer mode. To enable development mode, 
-enter the remote control sequence: `🏠🏠🏠 ↑↑ → ← → ← →`.  The entire sequence must be entered within 10 seconds.
-
-### Using a packaged zip file
-
-* [Manually at the Roku's IP with a zip file](https://sdkdocs.roku.com/display/sdkdoc/Loading+and+Running+Your+Application)
-
-### Using code
-
-* [roku-deploy npm](https://www.npmjs.com/package/roku-deploy) - IDE Agnostic
-* [Roku Development VisualStudio Code Package](https://marketplace.visualstudio.com/items?itemName=fuzecc.roku-development)
-  * Setup configs per readme and the `Cmd-Shift-P` to issue commands
-  * Note that you have to open your projects directory that contains only the Roku files, since this Package bundles up the currently root directory
-* [BrightScript VisulStudioCode package](https://marketplace.visualstudio.com/items?itemName=celsoaf.brightscript)
-  * Note that `v1.3.0` does not work for deploying. The highlight does work.
-
-### VIM
-
-Via [Vundle](https://github.com/VundleVim/Vundle.vim): Add `Plugin 'chooh/brightscript.vim'` to your `.vimrc` and run `:PluginInstall`
+* [Development and Deploying](/tv/roku/development)
+* [Debugging](/tv/roku/debugging)
+* [Events](/tv/roku/events)
+* [Focus](/tv/roku/focus)
 
 ## Conditional Compilation
 
 * https://sdkdocs.roku.com/display/sdkdoc/Conditional+Compilation
 
-## Debugging
-* Roku device exposes info on three ports. See ports, and commands available on each, here: https://sdkdocs.roku.com/display/sdkdoc/Debugging+Your+Application
-* Connect to the device with a telnet client, e.g. `nc` on macOS ( or `brew install telnet` )
-  ```bash
-  $ nc <roku_ip> <port>
-  ```
-  Once connected, issue commands to get info:
-  ```bash
-  > loaded_textures
-  ```
-* Use the brightscript console to get info about brightscript variables, pause execution, and step through code.
-  * The VSCode extension is great for setting breakpoints and stepping though code.
-    * [BrightScript VS package](https://marketplace.visualstudio.com/items?itemName=celsoaf.brightscript)
-    * Note that `v1.3.0` broke deploying. Hopefully open issue will be resolved soon. Use Previous version.
-    * Set breakpoints in your code and execution will stop on those lines. Hover expressions to view their current value.
-* Use the debug server to get non-brightscript info, like memory usage.
 
 
 ## SceneGraph
@@ -78,115 +45,6 @@ tags:
 
 ```
 
-## Events
-
-Roku let's you observe fields on other nodes using `node.observeField("fieldName", callback)`.
-
-`callback` is a function on the component doing the observing.
-
-If the field is on the component itself, then you can add the `onChange` attribute with the callback to the component instead
-of using the `observeField` method. However, do not that [`onChange` is usually executed on the render thread](https://sdkdocs.roku.com/display/sdkdoc/Optimization+Techniques).
-
-The allowed types for reactive fields are listed [here](https://sdkdocs.roku.com/display/sdkdoc/interface#interface-Attributes)
-
-### AppState
-
-[Global scope](https://sdkdocs.roku.com/display/sdkdoc/SceneGraph+Data+Scoping#SceneGraphDataScoping-GlobalScope) can be used
-to store transient App State.
-
-#### Example AppState Implementation
-
-Sample AppState XML:
-
-```xml
-<?xml version="1.0" encoding="utf-8" ?>
-<component name="AppState">
-    <script uri="AppState.brs" type="text/brightscript"/>
-	<interface>
-        <field id="isLoggedIn" type="boolean" value="true"/>
-    </interface>
-</component>
-```
-
-Adding app state to `m.global`:
-
-```brs
-' Add AppState to m.global - do this in a Scene's BrightScript
-m.global.addFields({
-        appState: createObject("roSGNode", "AppState")
-})
-```
-
-* Manage global app state with the `appState` node on the global node.
-* Update the global state with assignment from components
-    ```brs
-    m.global.appState.myStringField = "Hello"
-    ```
-* Observe the state fields in your components to update the ui based on state changes.
-    ```brs
-    m.global.appState.observeField("myStringField", "handler")
-    ```
-* Note that the signature for the handlers must accept an `Object`. The event is passed to the handler, not the field.
-    ```brs
-    sub handler(event as Object)
-    ```
-* Add fields to the app state interface in `AppState.xml`.
-    * Add change listeners if you need to update other fields based on field changes.
-    ```xml
-    <field id="myStringField" type="string" onChange="changeHandler"/>
-    ```
-
-## Key Press
-
-Key press events start at the most nested element and are bubbled up.
-
-[`onKeyEvent`](https://sdkdocs.roku.com/pages/viewpage.action?pageId=1608547) is called up the
-entire chain. The second argument is used to pass to the next element up the chain what the previous element returned.
-By convention, returning true means the keypress was handled, and returning false means it was not.
-
-
-
-## Focus
-### Set focus
-* Docs: https://sdkdocs.roku.com/display/sdkdoc/ifSGNodeFocus
-* Call `node.setFocus(true)` on a node to focus it.
-* example:
-  ```brs
-  myNode.setFocus(true)
-  ```
-
-### Respond to focus events
-* Docs: https://sdkdocs.roku.com/display/sdkdoc/Node
-* Observe field `focusedChild`
-* observing field is generally needed for initial and final focus. Once focus is within an element, key presses on that element generally handle focus changes on child elements.
-* `focusedChild` is set every time it gains **OR** loses focus
-  * focus changes within an element are not captured
-* Use `node.hasFocus()` to determine if node is focused.
-* General pattern is to focus a component, and let the component delegate focus to one of its children.
-
-Example
-
-```brs
-sub init()
-    m.top.observeField("focusedChild", "onFocusedChild")
-end sub
-
-sub onFocusedChild()
-
-    if (NOT m.top.isInFocusChain())
-        ' handle losing focus
-        removeFocusFromAllChildItems()
-        return
-    end if
-    
-    if (m.top.hasFocus())
-        print "element is gaining initial focus"
-        setInitialFocus()
-    end if
-end sub
-```
-
-To check whether an element or any of its descendants is focused, use `m.top.isInFocusChain()`
 
 ## Resolution
 * Docs: https://sdkdocs.roku.com/display/sdkdoc/Specifying+Display+Resolution

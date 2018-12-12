@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "(sleep 3; open http://localhost:4000) &; gitbook serve"
+    "dev": "(sleep 3; open http://localhost:4000)& gitbook serve"
   },
   "repository": {
     "type": "git",
