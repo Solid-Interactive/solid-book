@@ -24,6 +24,10 @@ enter the remote control sequence: `Home 3x, Up 2x, Right, Left, Right, Left, Ri
 
 Via [Vundle](https://github.com/VundleVim/Vundle.vim): Add `Plugin 'chooh/brightscript.vim'` to your `.vimrc` and run `:PluginInstall`
 
+## Conditional Compilation
+
+* https://sdkdocs.roku.com/display/sdkdoc/Conditional+Compilation
+
 ## Debugging
 * Roku device exposes info on three ports. See ports, and commands available on each, here: https://sdkdocs.roku.com/display/sdkdoc/Debugging+Your+Application
 * Connect to the device with a telnet client, e.g. `nc` on macOS ( or `brew install telnet` )
