@@ -147,7 +147,12 @@ Optimization References:
 * https://sdkdocs.roku.com/display/sdkdoc/Optimization+Techniques
 * https://sdkdocs.roku.com/display/sdkdoc/Performance+FAQ
 
-## Models
+## Persistent storage
+
+* Use the registry: https://sdkdocs.roku.com/display/sdkdoc/roRegistry
+* Place registry sections in the registry: https://sdkdocs.roku.com/display/sdkdoc/roRegistrySection
+
+## Roku device models
 
 * [Roku Supported models](https://sdkdocs.roku.com/display/sdkdoc/The+Roku+Channel+Developer+Program#TheRokuChannelDeveloperProgram-SupportedModels)
-* [Overview of Roku Modeks](https://en.wikipedia.org/wiki/Roku)
+* [Overview of Roku Models](https://en.wikipedia.org/wiki/Roku)
