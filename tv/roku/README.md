@@ -57,6 +57,20 @@ tags:
 * Get ui resolution from your root scene object
   * Docs: https://sdkdocs.roku.com/display/sdkdoc/Scene
   * ex: `resAssocArray = rootScene.currentDesignResolution()`
+  
+### Image resources based on resolution
+
+In the manifest you can put the variable key and variables to replace the key with for sd, hd, and full hd:
+
+```
+uri_resolution_autosub=$$RES$$,SD,720p,1080p
+```
+
+Then, you can use `$$RES$$` in xml attributes or brs:
+
+```brightscript
+m.SEARCH_BLURRED = "pkg:/images/nav-search-blurred-$$RES$$.png"
+```
 
 ## Colors
 * Colors are specified with a string formatted like so: `"0xRRGGBBAA"`, where RRGGBB is the standard 6-digit hex code, and AA specifies the alpha channel, `FF` fully opaque, and `00` fully transparent.
