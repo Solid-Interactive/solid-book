@@ -30,3 +30,4 @@ to query variables, etc.
 
 To send commands to the currently running app, use port 8080.
 
+To turn on the fps and free-memory display, do `fps_display 1`.
