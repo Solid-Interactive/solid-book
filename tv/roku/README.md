@@ -72,6 +72,11 @@ Then, you can use `$$RES$$` in xml attributes or brs:
 m.SEARCH_BLURRED = "pkg:/images/nav-search-blurred-$$RES$$.png"
 ```
 
+```xml
+<Poster
+  uri="pkg:/images/nav-logo-$$RES$$.png"/>
+```
+
 ## Colors
 * Colors are specified with a string formatted like so: `"0xRRGGBBAA"`, where RRGGBB is the standard 6-digit hex code, and AA specifies the alpha channel, `FF` fully opaque, and `00` fully transparent.
 * Use this chart to convert decimal opacity to hexidecimal: http://online.sfsu.edu/chrism/hexval.html
