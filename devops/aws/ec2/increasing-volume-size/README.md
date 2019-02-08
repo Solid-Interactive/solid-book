@@ -20,3 +20,6 @@ http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-expand-volume.html
 1. Attach new volume
     1. Attach to same root
 1. Restart instance
+
+Note that if you resized a volume with other mounted drives, then you will have to remount them. 
+So whenever you're doing mounting, it's a good idea to keep the history of your commands somewhere. If you're mounting DB sources, then you'll also have to restart the services.
