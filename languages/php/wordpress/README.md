@@ -12,7 +12,13 @@ function cc_mime_types($mimes) {
 add_filter('upload_mimes', 'cc_mime_types');
 ```
 
-## Create admin user directly in mysql
+## Create an admin user via wp cli
+```
+THE_ENV=production wp user create example.user exmple.user@soliddigital.com --role=administrator
+```
+This returns the new user's password.
+
+## Create an admin user via mysql
 Replace the dummy data with your info:
 ```sql
 INSERT INTO `wp_users` (
