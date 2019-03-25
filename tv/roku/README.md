@@ -57,7 +57,7 @@ tags:
 * Get ui resolution from your root scene object
   * Docs: https://sdkdocs.roku.com/display/sdkdoc/Scene
   * ex: `resAssocArray = rootScene.currentDesignResolution()`
-  
+
 ### Image resources based on resolution
 
 In the manifest you can put the variable key and variables to replace the key with for sd, hd, and full hd:
@@ -175,3 +175,31 @@ Optimization References:
 
 * [Roku Supported models](https://sdkdocs.roku.com/display/sdkdoc/The+Roku+Channel+Developer+Program#TheRokuChannelDeveloperProgram-SupportedModels)
 * [Overview of Roku Models](https://en.wikipedia.org/wiki/Roku)
+
+## Packaging and publishing
+* Packaging a channel for publishing is done on the roku device.
+* A packaging key is used to sign the channel package.
+* A packaging key can be generated for the initial channel package.
+* Updates to the channel should be packaged with the initial key. The packaging key is embedded in the packaged channel, and you can rekey the roku device with a key from an existing packaged channel.
+* Each channel should have a unique packaging key.
+
+### generate packaging key
+* Run `telnet <roku-ip> 8080`
+* Then at prompt, enter `genkey`
+* Copy devid and password.
+
+### Package a channel
+* Side load the channel to be packaged.
+* Open <roku-ip> in web browser (user: rokudev, password: set when dev mode activated on roku device)
+* Select Packager from tabs
+* Add channel name, and enter password from genkey.
+
+### Rekey roku device from packaged channel
+* Open <roku-ip> in web browser
+* Select Utilities from tabs.
+* Upload package, enter password, and select rekey.
+* Your device is now ready to package an update to the channel you rekeyed from.
+
+### Publish packaged channel
+* Upload here: https://developer.roku.com/developer-channels/channels
+* Private, non-certified channels don't have to be certified by roku and can be installed with an access code created for you at time of channel creation.
