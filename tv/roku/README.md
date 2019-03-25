@@ -183,19 +183,19 @@ Optimization References:
 * Updates to the channel should be packaged with the initial key. The packaging key is embedded in the packaged channel, and you can rekey the roku device with a key from an existing packaged channel.
 * Each channel should have a unique packaging key.
 
-### generate packaging key
+### Generate packaging key
 * Run `telnet <roku-ip> 8080`
 * Then at prompt, enter `genkey`
-* Copy devid and password.
+* Copy DevId and password.
 
 ### Package a channel
 * Side load the channel to be packaged.
-* Open <roku-ip> in web browser (user: rokudev, password: set when dev mode activated on roku device)
-* Select Packager from tabs
+* Open roku ip (e.g. 192.168.2.3) in web browser (user: rokudev, password: set when dev mode activated on roku device).
+* Select Packager from tabs.
 * Add channel name, and enter password from genkey.
 
 ### Rekey roku device from packaged channel
-* Open <roku-ip> in web browser
+* Open roku ip in web browser.
 * Select Utilities from tabs.
 * Upload package, enter password, and select rekey.
 * Your device is now ready to package an update to the channel you rekeyed from.
