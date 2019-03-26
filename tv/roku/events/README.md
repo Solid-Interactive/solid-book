@@ -3,12 +3,12 @@
 tags: roku, events
 
 
-Roku let's you observe fields on other nodes using `node.observeField("fieldName", callback)`.
+Roku let's you observe fields on other nodes using `node.observeField("fieldName", "onFieldName")`.
 
-`callback` is a function on the component doing the observing.
+`onFieldName` is a function on the component doing the observing.
 
 If the field is on the component itself, then you can add the `onChange` attribute with the callback to the component instead
-of using the `observeField` method. However, do not that [`onChange` is usually executed on the render thread](https://sdkdocs.roku.com/display/sdkdoc/Optimization+Techniques).
+of using the `observeField` method. However, do note that [`onChange` is usually executed on the render thread](https://sdkdocs.roku.com/display/sdkdoc/Optimization+Techniques).
 
 The allowed types for reactive fields are listed [here](https://sdkdocs.roku.com/display/sdkdoc/interface#interface-Attributes)
 

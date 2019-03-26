@@ -203,3 +203,7 @@ Optimization References:
 ### Publish packaged channel
 * Upload here: https://developer.roku.com/developer-channels/channels
 * Private, non-certified channels don't have to be certified by roku and can be installed with an access code created for you at time of channel creation.
+
+
+### Dev mode script flag
+* Check if app is running in dev mode (side-loaded) with the `roAppInfo` object, `createObject("roAppInfo").isDev()`
