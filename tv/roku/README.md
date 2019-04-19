@@ -170,6 +170,7 @@ Optimization References:
 
 * Use the registry: https://sdkdocs.roku.com/display/sdkdoc/roRegistry
 * Place registry sections in the registry: https://sdkdocs.roku.com/display/sdkdoc/roRegistrySection
+* To reset the registry, delete the app and restart the roku.
 
 ## Roku device models
 
