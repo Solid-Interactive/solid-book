@@ -73,3 +73,18 @@ Prefer calling `wp-cron.php` manually with server crontab, rather than default w
   ```
   0 * * * * wget http://www.example.com/wp-cron.php
   ```
+
+## Queries
+
+To see the queries during a page render:
+
+```php
+define('SAVEQUERIES', true);
+```
+
+Then the queries are stored on: 
+
+```php
+$wpdb->queries;
+```
+
