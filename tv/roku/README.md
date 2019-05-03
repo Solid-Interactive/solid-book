@@ -200,7 +200,7 @@ Optimization References:
 * Select Utilities from tabs.
 * Upload package, enter password, and select rekey.
 * Your device is now ready to package an update to the channel you rekeyed from.
-* Note: apps sideloaded in dev mode will now use this dev key, and roku will consider them the "same app" in that they will share a registry. This is helpful for testing how an app update you are developing will interact with the existing live, packaged version.
+* Note: apps sideloaded in dev mode will now use the dev key of the packaged app, and roku will consider them the "same app" in that they will share a registry. This is helpful for testing how an app update you are developing will interact with the existing live, packaged version. However, the channelClientId will be different between the packaged and dev versions.
 
 ### Publish packaged channel
 * Upload here: https://developer.roku.com/developer-channels/channels
