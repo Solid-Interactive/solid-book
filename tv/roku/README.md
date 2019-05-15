@@ -208,3 +208,9 @@ Optimization References:
 
 ## Dev mode script flag
 * Check if app is running in dev mode (side-loaded) with the `roAppInfo` object, `createObject("roAppInfo").isDev()`
+
+
+## Support
+* Roku developer forums: https://forums.roku.com/viewforum.php?f=34
+* Roku developer knowledge center: https://partnersuccess.roku.com/hc/en-us/categories/360000494533-Development
+* Roku developer slack: https://rokudevelopers.slack.com
