@@ -35,9 +35,12 @@ sudo service mysql restart
 ### Error reading communication packets
 
 ```
-2019-05-20T23:26:05.865130Z 362392 [Note] Aborted connection 362392 to db: 'example' user: 'example_user' host: '1.2.3.4' (Got an error reading communication packets)
+2019-05-20T23:26:05.865130Z 362392 [Note] Aborted connection 362392 to 
+db: 'example' user: 'example_user' 
+host: '1.2.3.4' 
+(Got an error reading communication packets)
 ```
 
-Try: `SET GLOBAL max_allowed_packet = 1024 * 1024 * 256` and `256M` for `max_allowed_packets`.
+Try upping `max_allowed_packets`... for example to `256M`: `SET GLOBAL max_allowed_packet = 1024 * 1024 * 256` and `256M` for `max_allowed_packets`.
 
 https://dba.stackexchange.com/a/19139/63946
