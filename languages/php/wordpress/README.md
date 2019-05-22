@@ -82,9 +82,13 @@ To see the queries during a page render:
 define('SAVEQUERIES', true);
 ```
 
-Then the queries are stored on: 
+Then the queries are stored on:
 
 ```php
 $wpdb->queries;
 ```
 
+## Multisite network settings
+* A wordpress multisite network has additional settings in admin at My Sites > Network Admin > Settings, or `/wp-admin/network/settings.php`
+* Notable settings include file upload settings
+  * Max upload file size: default is 1500k
