@@ -86,7 +86,7 @@ Typescript is usually configured with a `tsconfig.json` in the root of the proje
 ## Standard library
 Typescript might complain about newer javascript methods like `Array.from` from es2015. Typescript will compile js based on the target set in `tsconfig.json`, e.g. if you target `es5`, typescript will not compile `es2015` or later. To make typescript compile this, you have several options:
 1. Change the target: `compilerOptions.target: "es2015"` - target es2015 if you want to to compile es2015; this might not be an option if your js needs to run in older browsers
-1. Include the lib: `compilerOptions.lib: ["es2015"]` - this will transpile to es2015 syntax to es5, with es2015 objects and methods intact. **Note: transpilation does not polyfill objects and methods. See [transpiling](/languages/js/transpiling)**.
+1. Include the lib: `compilerOptions.lib: ["es2015"]` - this will transpile to es2015 syntax to es5, with es2015 objects and methods intact. **Note: transpilation does not polyfill objects and methods. See [transpiling](/js/transpiling)**.
 
 Add `"dom"` to libs, for DOM api support.
 

@@ -36,36 +36,35 @@
                 * [Ansible Intro](/devops/scaffolding/project-setup/provisioning/ansible/README.md)
                 * [Ansible Playbooks](/devops/scaffolding/project-setup/provisioning/ansible/playbooks/README.md)
                 * [Creating Roles](/devops/scaffolding/project-setup/provisioning/ansible/roles/README.md)
-    * [Vagrant](/devops/vagrant/README.md)            
+    * [Vagrant](/devops/vagrant/README.md)
 * Error Handling
     * [Exponential Back Off](/error-handling/exponential-backoff/README.md)
 * HTML
     * Forms
         * [File Upload](/html/forms/file-upload/README.md)
         * [Restrict File Types](/html/forms/restrict-file-types/README.md)
-* Languages:
-    * JavaScript
-        * [Error Handling](/languages/javascript/error-handling/README.md)
-        * [es6](/languages/javascript/es6/README.md)
-        * [Promises](/languages/javascript/promises/README.md)
-        * [Node](/languages/javascript/node/README.md)
-            * [Debugging Node](/languages/javascript/node/debugging/README.md)
-            * [npm](/languages/javascript/node/npm/README.md)
-            * [pm2](/languages/javascript/node/pm2/README.md)
-        * [Transpiling](/languages/javascript/transpiling/README.md)
-        * [Vue](/languages/javascript/vue/README.md)
-        * [Web](/languages/javascript/web/README.md)
-    * Linux
-        * [CLI](/languages/linux/cli/README.md)
-        * [Commands](/languages/linux/commands/README.md)
-    * PHP
-        * [Debugging PHP](/languages/php/debugging/README.md)
-        * [Eloquent](/languages/php/eloquent/README.md)
-        * [Namespaces](/languages/php/namespaces/README.md)
-        * [Wordpress](/languages/php/wordpress/README.md)
-    * [Typescript](/languages/typescript/README.md)
+* JavaScript
+    * [Error Handling](/javascript/error-handling/README.md)
+    * [es6](/javascript/es6/README.md)
+    * [Promises](/javascript/promises/README.md)
+    * [Node](/javascript/node/README.md)
+        * [Debugging Node](/javascript/node/debugging/README.md)
+        * [npm](/javascript/node/npm/README.md)
+        * [pm2](/javascript/node/pm2/README.md)
+    * [Transpiling](/javascript/transpiling/README.md)
+    * [Vue](/javascript/vue/README.md)
+    * [Web](/javascript/web/README.md)
+    * [Typescript](/javascript/typescript/README.md)
+* Linux
+    * [CLI](/linux/cli/README.md)
+    * [Commands](/linux/commands/README.md)
 * Media Streaming
     * [HTML5](/media-streaming/html5/README.md)
+* PHP
+    * [Debugging PHP](/php/debugging/README.md)
+    * [Eloquent](/php/eloquent/README.md)
+    * [Namespaces](/php/namespaces/README.md)
+    * [Wordpress](/php/wordpress/README.md)
 * Performance
     * [Profiling](/profiling/README.md)
         * [Lighthouse](/profiling/lighthouse/README.md)
