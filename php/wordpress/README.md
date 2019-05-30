@@ -1,6 +1,6 @@
 # Wordpress
 
-tags: php, wordpress
+tags: php, wordpress, mysql
 
 ## SVG Uploads
 
@@ -63,7 +63,7 @@ INSERT INTO `wp_usermeta` (
 ---
 ###### Source: http://www.wpbeginner.com/wp-tutorials/how-to-add-an-admin-user-to-the-wordpress-database-via-mysql/
 
-## Wp cron preference
+## Wp cron
 Prefer calling `wp-cron.php` manually with server crontab, rather than default wp cron behavior, which checks if it needs to run on every page load, and then runs if needed, extending that user's page load. To implement:
 * disable default wp cron behavior in `wp-config.php`
   ```
@@ -73,6 +73,25 @@ Prefer calling `wp-cron.php` manually with server crontab, rather than default w
   ```
   0 * * * * wget http://www.example.com/wp-cron.php
   ```
+* To actually implement a regular task to be run by `wp-cron.php`, use `wp_schedule_event()`. Full example:
+```php
+add_action('init', 'init');
+add_action('my_hourly_task', 'my_hourly_task');
+
+function init()
+	// Check if your task is already scheduled.
+	if (!wp_next_scheduled('my_hourly_task')) {
+		// Schedule the event, passing the interval, and the name of the action hook to call.
+		// Now when wp-cron.php is called (via crontab, maybe), if my_hourly_task is scheduled,
+		// and the time interval is elapsed, it will run do_action('my_hourly_task');
+		wp_schedule_event(time(), 'hourly', 'my_hourly_task');
+	}
+}
+
+public function my_hourly_task() {
+	// Do the work that needs to run every hour.
+}
+```
 
 ## Queries
 
