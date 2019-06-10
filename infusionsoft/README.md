@@ -20,9 +20,13 @@ $infusionsoft = new \Infusionsoft\Infusionsoft(array(
     // Set to where to plan to handle the oauth callback in your app.
 	'redirectUri'  => 'http://example.com/oauth-callback',
 ));
-//
+
+// Auth url goes to infusionsoft.com, where you can login and authorize this app to have api access.
+// After authorizing, we will be redirected back to redirectUri above, where we can turn in the access code
+// for an access token.
 echo '<a href="' . $infusionsoft->getAuthorizationUrl() . '">Click here to authorize</a>';
 ```
+
 Path: `/oauth-callback` (Just an example to match redirectUri above.)
 ```php
 if (isset($_GET['code']) {
@@ -33,6 +37,7 @@ if (isset($_GET['code']) {
 	save_token_to_storage(serialize($token));
 }
 ```
+
 Path: `/infusionsoft-contacts` (Just an example page that lists contacts from infusionsoft.)
 ```php
 // Get token from storage (whatever that may be).
