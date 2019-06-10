@@ -26,24 +26,24 @@ But it can be ignored. That stuff is mostly intended for the apps used by non-te
 
 ```
 msgid "Change status to moderate"
-msgstr "Cambiar estado a moderado"
+msgstr "Cambiar estado a moderar"
 
 msgid "Trash the post"
-msgstr "Basura el post"
+msgstr "a la Basura"
 
 msgid "Cheating"
-msgstr "Basura el post"
+msgstr "a la Basura"
 ```
 It's basically an object where the keys are the strings you need translated. If there is a value for the key you use, you get the associated translation, if not it just returns the same text. So again, if we were to run `__('Hello!')` against this, `__()` would just return `'Hello!'`. Let us add a line for translating it
 ```
 msgid "Change status to moderate"
-msgstr "Cambiar estado a moderado"
+msgstr "Cambiar estado a moderar"
 
 msgid "Trash the post"
-msgstr "Basura el post"
+msgstr "a la Basura"
 
 msgid "Cheating"
-msgstr "Basura el post"
+msgstr "a la Basura"
 
 msgid "Hello!"
 msgstr "¡Hola!"
