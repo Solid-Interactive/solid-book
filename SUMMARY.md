@@ -66,6 +66,7 @@
     * [Eloquent](/php/eloquent/README.md)
     * [Namespaces](/php/namespaces/README.md)
     * [Wordpress](/php/wordpress/README.md)
+      * [i18n](/php/wordpress/i18n/README.md)
 * Performance
     * [Profiling](/profiling/README.md)
         * [Lighthouse](/profiling/lighthouse/README.md)
