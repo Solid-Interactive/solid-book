@@ -43,6 +43,7 @@
     * Forms
         * [File Upload](/html/forms/file-upload/README.md)
         * [Restrict File Types](/html/forms/restrict-file-types/README.md)
+* [Infusionsoft](/infusionsoft/README.md)
 * JavaScript
     * [Error Handling](/javascript/error-handling/README.md)
     * [es6](/javascript/es6/README.md)
