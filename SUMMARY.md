@@ -74,6 +74,7 @@
     * [HTTPS](/security/HTTPS/README.md)
 * Servers:
     * [Apache](/servers/apache/README.md)
+      * [Apache Redirects](/servers/apache/redirects/README.md)
     * [Nginx](/servers/nginx/README.md)
         * [Config](/servers/nginx/config/README.md)
         * [FastCgi](/servers/nginx/fastcgi/README.md)

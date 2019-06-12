@@ -1,4 +1,7 @@
 # Apache
+
+tags: apache
+
 ## Example
 ```xml
 <VirtualHost *:80>
