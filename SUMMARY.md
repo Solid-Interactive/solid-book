@@ -64,6 +64,8 @@
 * PHP
     * [Debugging PHP](/php/debugging/README.md)
     * [Eloquent](/php/eloquent/README.md)
+    * [Magento 2](/php/magento-2/README.md)
+      * [Create Page](/php/magento-2/create-page/README.md)
     * [Namespaces](/php/namespaces/README.md)
     * [Wordpress](/php/wordpress/README.md)
       * [i18n](/php/wordpress/i18n/README.md)
