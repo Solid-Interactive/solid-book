@@ -68,7 +68,7 @@ uri_resolution_autosub=$$RES$$,SD,720p,1080p
 
 Then, you can use `$$RES$$` in xml attributes or brs:
 
-```brightscript
+```brs
 m.SEARCH_BLURRED = "pkg:/images/nav-search-blurred-$$RES$$.png"
 ```
 
@@ -138,8 +138,17 @@ Use a [Poster](https://sdkdocs.roku.com/display/sdkdoc/Poster) node with an imag
 
 [Mask Groups](https://sdkdocs.roku.com/display/sdkdoc/MaskGroup) have some promise, but we've found cross device support lacking and their implementation tricky.
 
+## Hide overflow
+Use the field `clippingRect` to set the visible area of the component, e.g.
+```xml
+<Group
+  clippingRect="[0, 0, 200, 100]">
+  <!-- Everything in here outside the 200 wide and 100 tall rect will be clipped. -->
+</Group>
+```
+
 ## Brightscript
-* `sub` vs `function` - sub can only return void; any other value with error on compile.
+* `sub` vs `function` - sub can only return void; any other value will error on compile.
 
 ## Functions
 

@@ -74,6 +74,7 @@ Prefer calling `wp-cron.php` manually with server crontab, rather than default w
   0 * * * * wget http://www.example.com/wp-cron.php
   ```
 * To actually implement a regular task to be run by `wp-cron.php`, use `wp_schedule_event()`. Full example:
+
 ```php
 add_action('init', 'init');
 add_action('my_hourly_task', 'my_hourly_task');
