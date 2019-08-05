@@ -53,6 +53,32 @@ bin/magento cache:clean
 bin/magento setup:static-content:deploy
 ```
 
+### Overriding blocks
+
+Looks in the `view/frontend/layout/default.xml` of the module you want to override. Create a `layout/default.xml` in yours and use `referenceBlock` to override just the needed bits.
+
+For example for a custom logo.
+
+The block is found in:  `/vendor/magento/module-theme/view/frontend/layout/default.xml`, so we create: `/app/design/frontend/Solid/LoveAndPromise/Magento_Theme/layout/default.xml`
+
+The contents are something like:
+
+```xml
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/my_logo.svg</argument>
+                <argument name="logo_alt" xsi:type="string">My Logo</argument>
+                <argument name="logo_img_width" xsi:type="number">109</argument>
+                <argument name="logo_img_height" xsi:type="number">85</argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>
+```
+
 ### Modes
 
 1. Developer mode is where you develop your Magento site. Static files are written to pub/ directory every time they are called, as well as displaying exception errors being thrown in the front end.
