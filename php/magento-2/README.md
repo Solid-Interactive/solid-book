@@ -19,6 +19,16 @@ tags: magento, e-commerce
 
 Magento 2 has a great [cli](https://devdocs.magento.com/guides/v2.3/config-guide/cli/config-cli-subcommands.html). [Here](https://www.emiprotechnologies.com/technical_notes/magento-technical-notes-60/post/magento-2-useful-commands-list-391) is a summary of useful commands.
 
+## Caching
+
+```bash
+bin/magento cache:disable
+# or
+bin/magento cache:enable
+
+bin/magento cache:flush
+```
+
 ## Routes
 
 The frontend and admin area each have a merged routes.xml file.
@@ -38,6 +48,67 @@ bin/magento cache:clean
 ## Themes
 
 [Change a theme](https://devdocs.magento.com/guides/v2.3/frontend-dev-guide/themes/theme-apply.html) for a domain in `CONTENT > Design > Configuration`, then clear the cache: `bin/magento cache:clean`.
+
+```bash
+bin/magento setup:static-content:deploy
+```
+
+### Modes
+
+1. Developer mode is where you develop your Magento site. Static files are written to pub/ directory every time they are called, as well as displaying exception errors being thrown in the front end.
+1. Production mode: Static files are deployed and when requested, it is pulled from cache only. These files are located in root install dir/pub/static
+
+Set mode:
+
+```bash
+bin/magento deploy:mode:set developer
+# or
+php bin/magento deploy:mode:set production
+```
+
+### Static theme files 
+
+Static files are the stuff that is not PHP / Less: 
+
+```
+app/design/frontend/<vendor>/<theme>/
+├── web/
+│ ├── css/
+│ │ ├── source/ 
+│ ├── fonts/
+│ ├── images/
+│ ├── js/
+```
+
+### Less files
+
+To extend use `_extend.less` in `web/css/source`
+
+To override use `_theme.less` in `web/css/source` (clobbers parents `_theme.less`)
+
+#### Local Compilation
+
+```bash
+grunt npm install -g grunt-cli
+npm i
+```
+
+Add theme to [`dev/tools/grunt/configs/theme.js`](https://devdocs.magento.com/guides/v2.3/frontend-dev-guide/css-topics/css_debug.html)
+
+```json
+"theme": {
+  "area": "frontend",
+  "name": "Mytheme/default",
+  "locale": "language",
+  "files": [
+    "path_to_file1",
+    "path_to_file2"
+  ],
+  "dsl": "less"
+},
+```
+
+(you could also [use gulp sass](https://devdocs.magento.com/guides/v2.3/frontend-dev-guide/css-topics/gulp-sass.html))
 
 ## Helpful References
 
