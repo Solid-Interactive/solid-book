@@ -68,6 +68,7 @@
       * [Create Page](/php/magento-2/create-page/README.md)
     * [Namespaces](/php/namespaces/README.md)
     * [Wordpress](/php/wordpress/README.md)
+      * [Elementor](/php/wordpress/elementor/README.md)
       * [i18n](/php/wordpress/i18n/README.md)
 * Performance
     * [Profiling](/profiling/README.md)
