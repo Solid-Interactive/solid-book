@@ -79,6 +79,10 @@ The contents are something like:
 </page>
 ```
 
+### Overriding Class Methods
+
+You can use [Interceptors (Plugins)](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/plugins.html) to run stuff before / after / or instead of methods.
+
 ### Modes
 
 1. Developer mode is where you develop your Magento site. Static files are written to pub/ directory every time they are called, as well as displaying exception errors being thrown in the front end.
