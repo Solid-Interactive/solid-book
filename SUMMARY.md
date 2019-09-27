@@ -66,6 +66,7 @@
     * [Eloquent](/php/eloquent/README.md)
     * [Magento 2](/php/magento-2/README.md)
       * [Create Page](/php/magento-2/create-page/README.md)
+      * [Customizations](/php/magento-2/customizations/README.md)
       * [Debugging](/php/magento-2/debugging/README.md)
     * [Namespaces](/php/namespaces/README.md)
     * [Wordpress](/php/wordpress/README.md)
