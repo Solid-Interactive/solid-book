@@ -28,6 +28,19 @@ The contents are something like:
 </page>
 ```
 
+## Overriding Classes
+
+You can override an entire class by setting a preference in di.xml:
+
+```xml
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="MageWorkshop\DetailedReview\Block\Review\Product\View\Rating\ReviewRating" type="Solid\DetailedReviewRatingCustomization\Block\Review\Product\View\Rating\ReviewRating" />
+</config>
+```
+
+You can now create a class the extends the original class.
+
 ## Overriding / Modifying Class Methods
 
 You can use [Interceptors (Plugins)](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/plugins.html) to run stuff before / after / or instead of methods.
