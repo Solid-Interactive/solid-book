@@ -95,3 +95,14 @@ $this->_eventManager->dispatch(
     ['menu' => $this->getMenu(), 'transportObject' => $transportObject]
 );
 ```
+
+## Custom blocks
+* If you need to add some functionality to a template, add a custom block to handle the functionality because then you will have access to the dependency injection system provided by magento 2.
+* Add the block php file to `app/code/{vendor}/{module}/Block`. The class name should match the file name, and should be namespaced under `{vendor}\{module}\Block`. You can place the block class in a deeper folder, just be sure to update the namespace to match the folders.
+* Extend the class from `Magento\Framework\View\Element\Template`.
+* Reference the block class from the layout xml, e.g. `<block class="{vendor}\{module}\Block\CustomBlock" ... />`.
+* Add dependencies as parameters to the block class constructor. Magento will automatically inject the dependencies when the block is instantiated.
+* Access the block in the template as the variable `$block`.
+
+## Customize strings
+* To customize strings from magento core, add `"{source}", "{new}"` as a new line to `app/design/frontend/{vendor}/{theme}/i18n/en_US.csv`.
