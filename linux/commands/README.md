@@ -257,10 +257,27 @@ Sync directories. Useful over ssh.
 If you want to get the content of two dirs to match, put a `/` after each one:
 
 ```
-rsync -rzP ~/dir/uploads/ staging-wordpress:/var/www/vhosts/vhost.com/source/httpdocs/wp-content/uploads/
+rsync -rztP ~/dir/uploads/ staging-wordpress:/var/www/vhosts/vhost.com/source/httpdocs/wp-content/uploads/
 ```
+
+The `t` tag is useful, since that preserves the timestamps, so that syncing is smart.
 
 If using ec2 (or any other network), within network rsyncs are much faster than transferring out and back into a network. For example ec2 to your computer back up to ec2 can be multiple times slower than ec2 to ec2. Using forward agent is a good way to do ec2 to ec2.
 
-## `findmnt
-`
+## `findmnt`
+
+## dns
+
+To check TTL you have to query an authorative server for the zone, or you just get the time remaining.
+
+First get the name servers:
+
+```bash
+dig @8.8.8.8 +short NS example.com
+```
+
+Then get ttl from one of the name servers:
+
+```bash
+dig +nocmd +noall +answer @ns1.nameserverexample.com example.com
+```

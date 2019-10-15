@@ -59,6 +59,7 @@
 * Linux
     * [CLI](/linux/cli/README.md)
     * [Commands](/linux/commands/README.md)
+    * [Reboot](/linux/reboots/README.md)
 * Media Streaming
     * [HTML5](/media-streaming/html5/README.md)
 * PHP
