@@ -281,3 +281,10 @@ Then get ttl from one of the name servers:
 ```bash
 dig +nocmd +noall +answer @ns1.nameserverexample.com example.com
 ```
+
+## Check emails with status sent
+
+```bash
+# can often be simplified to just grep status
+cat /var/log/mail.log |grep -v "relay=local" |grep "relay=" |grep "status=sent"
+```
