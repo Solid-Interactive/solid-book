@@ -73,6 +73,7 @@
     * [Wordpress](/php/wordpress/README.md)
       * [Elementor](/php/wordpress/elementor/README.md)
       * [i18n](/php/wordpress/i18n/README.md)
+      * [WP-Engine](/php/wordpress/wp-engine/README.md)
 * Performance
     * [Profiling](/profiling/README.md)
         * [Lighthouse](/profiling/lighthouse/README.md)
