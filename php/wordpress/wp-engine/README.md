@@ -7,7 +7,7 @@ Ideally hook WP Engine up with Git deploy.
 If you're doing a one time deploy with no Git hookup, here is a quick way to do it:
 
 1. Make a backup point in WP Engine
-1. Do a search and replace with wp cli from the dev environment to the production enviroment
+1. Do a search and replace with wp cli on the dev environment from the dev to production domain
 1. Download the sql file from your dev environment'
 1. rsync the sql file on wp-engine's wp-content directory (it will not be publicly accessible)
 1. rsync the uploads dir onto wp engine
