@@ -14,6 +14,9 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-li
 1. Log on to the instance and do the following (in this example we are increasing from 8 to 30G):
 
     ```
+    # install "cloud-guest-utils" if it is not installed already
+    apt install cloud-guest-utils
+
     # lsblk will show that 30G is available but only 8G is partitioned
     ▶ lsblk
     NAME    MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
