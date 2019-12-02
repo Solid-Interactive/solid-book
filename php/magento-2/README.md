@@ -9,7 +9,7 @@ tags: magento, e-commerce
 * [Block](https://devdocs.magento.com/guides/v2.3/mtf/mtf_entities/mtf_block.html): A PHP class which links layouts and templates
 * Controller: A file that responds to a route
 * [Layout](https://devdocs.magento.com/guides/v2.3/frontend-dev-guide/layouts/layout-overview.html): the way items are arranged on a page. This is defined in an XML file
-* [Module](https://devdocs.magento.com/guides/v2.3/architecture/archi_perspectives/components/modules/mod_intro.html): A logical group. Each module has a defined directory structure with a set of expected files. 
+* [Module](https://devdocs.magento.com/guides/v2.3/architecture/archi_perspectives/components/modules/mod_intro.html): A logical group. Each module has a defined directory structure with a set of expected files.
 * [Page Builder](https://devdocs.magento.com/page-builder/docs/index.html): Magento 2 extension that allows you to create pages without coding. Page Builders comes with Magento 2.
 * Route: a url made of three parts: `frontName-controllerName-actionName`
 * [Template](https://devdocs.magento.com/guides/v2.3/frontend-dev-guide/templates/template-overview.html): Code (PHTML - which is PHP) that adds the features and contents you see
@@ -66,15 +66,15 @@ bin/magento deploy:mode:set developer
 php bin/magento deploy:mode:set production
 ```
 
-### Static theme files 
+### Static theme files
 
-Static files are the stuff that is not PHP / Less: 
+Static files are the stuff that is not PHP / Less:
 
 ```
 app/design/frontend/<vendor>/<theme>/
 ├── web/
 │ ├── css/
-│ │ ├── source/ 
+│ │ ├── source/
 │ ├── fonts/
 │ ├── images/
 │ ├── js/
@@ -109,6 +109,10 @@ Add theme to [`dev/tools/grunt/configs/theme.js`](https://devdocs.magento.com/gu
 ```
 
 (you could also [use gulp sass](https://devdocs.magento.com/guides/v2.3/frontend-dev-guide/css-topics/gulp-sass.html))
+
+## Admin session timeout
+* Stores > Settings > Configuration > Advanced > Admin > Security > Admin Session Lifetime (seconds)
+* Source: https://magento.stackexchange.com/a/101861/83194
 
 ## Helpful References
 
