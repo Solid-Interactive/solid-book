@@ -24,3 +24,12 @@ bin/magento indexer:reindex
 ## Error: `Unable to retrieve deployment version of static files from the file system.`
 * Source: Could get this error on `grunt exec`.
 * Solution: add `'static_content_on_demand_in_production' => 1` to root array of `app/etc/env.php`.
+
+## nginx 502
+Check `/etc/log/nginx/error.log`
+* `upstream sent too big header while reading response header from upstream`
+  * add this to magento main location block in nginx config:
+    ```
+    fastcgi_buffers 128 4096k;
+    fastcgi_buffer_size 4096k;
+    ```
