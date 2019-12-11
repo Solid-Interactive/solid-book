@@ -114,6 +114,13 @@ Add theme to [`dev/tools/grunt/configs/theme.js`](https://devdocs.magento.com/gu
 * Stores > Settings > Configuration > Advanced > Admin > Security > Admin Session Lifetime (seconds)
 * Source: https://magento.stackexchange.com/a/101861/83194
 
+## Search results
+* m1 search type could be configured from three options, like, fulltext, or combined (like and fulltext)
+* m2 search type cannot be configured and is set to fulltext.
+* m2 search is tuned by adjusting the products attributes at Stores > Attribute > Product:
+  * Use in search: set yes/no to search the attribute.
+  * Weight: increase to make the attribute more important to search results, e.g. name should probably have a higher search weight than other attributes.
+
 ## Helpful References
 
 * [Creating a theme](https://devdocs.magento.com/guides/v2.3/frontend-dev-guide/themes/theme-create.html)
