@@ -35,5 +35,5 @@ To deploy push a commit to the `master` branch.
 
 ## Links
 
-For links PhpStorm has good auto-completion....
+For links PhpStorm has good auto-completion.
 
