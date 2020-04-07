@@ -33,7 +33,7 @@ ios
 ## Fonts
 * Use a separate `fontFamily` for each weight needed, e.g. `fontFamily: "OpenSans-Bold"`, not `fontFamily: "OpenSans", fontWeight: "bold"`. The platforms handle it differently, so the first method works consistently on both ios and android.
 * On ios, the fontFamily should match the postscript name of the font. To check this, open the file in Font Book mac app, and select View > Show font info.
-* On android, the fonFamily should match the file name. Ideally, this will match the postscript name, so that the same string can be used on ios and android.
+* On android, the fontFamily should match the file name. Ideally, this will match the postscript name, so that the same string can be used on ios and android.
 
 ## React Native Developer Resources
 * https://www.reactnative.guide/
@@ -44,4 +44,12 @@ Android build error: `Requested internal only, but not enough space`
 * Open android studio > Configure > AVD Manager > (Virtual device dropdown on right) > Wipe data.
 
 iOS build error: `multiple commands produced <file>`
-* TODO: add steps using Xcode.
+This probably happened because you added files to xcode project manually, but react native >= v0.60 auto links files, resulting in duplicate files.
+* Open project in Xcode.
+* Select project in the project navigator left sidebar.
+* Find the files you added manually and delete them.
+* If needed, select Build Phases tab > Copy Bundle Resources, and delete files there too.
+
+## Release
+Android
+* Follow steps here to create release signing key: https://reactnative.dev/docs/signed-apk-android.html
