@@ -81,3 +81,7 @@ If everything looks good restart SSH and test your SFTP access:
 ```bash
 sudo service ssh restart
 ```
+
+## References
+
+* [Setting up an SFTP server and users on Ubuntu 16.04](http://www.inanzzz.com/index.php/post/ef2z/setting-up-a-sftp-server-and-users-on-ubuntu-16-04)
