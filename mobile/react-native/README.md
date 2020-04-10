@@ -40,7 +40,12 @@ tags: react-native, react, native, mobile, ios, android, js, javascript
 ## Navigation
 * For common navigation patterns, e.g. top-level tabs, forward/back within series of screens, use `react-navigation`.
 * Follow the installation intructions to install extra deps, and initialize lib: https://reactnavigation.org/docs/getting-started#installation
-* Tab navigator, to add bottom tab navigation, used to change between top level sections of the app:
+* Navigation container required to wrap your entire app:
+  ```jsx
+  import { NavigationContainer } from '@react-navigation/native';
+  <NavigationContainer>{/* Rest of your app code */}</NavigationContainer>
+  ```
+* Tab navigator, to add bottom tab navigation, which is used to change between top level sections of the app:
   ```jsx
   import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
   const Tab = createBottomTabNavigator()
@@ -67,6 +72,7 @@ tags: react-native, react, native, mobile, ios, android, js, javascript
     <Tab.Screen name="account" component={Account} /> // Account is a user-defined react component.
   </Tab.Navigator>
   ```
+* All components passed as `component` to `Stack.Screen` receive `navigation` as a prop, so then you can navigate with `props.navigation.navigate(/* Screen name. */ "detail")`.
 * `react-navigation` also powers the header, with back button to return to previous screen in stack, title, and other actions. Header can be customized or removed if needed.
 
 ## Debug
