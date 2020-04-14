@@ -1,5 +1,7 @@
 tags: ec2, aws, time server, ntp, time sync, ubuntu
 
+Chrony should be used now: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/set-time.html
+
 ## Installing NTP
 
 First, check if you have a timezone set, by running 
