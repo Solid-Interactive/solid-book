@@ -82,6 +82,14 @@ If everything looks good restart SSH and test your SFTP access:
 sudo service ssh restart
 ```
 
+## Debugging
+
+If you are having trouble connecting, then tail the auth log. You will usually see the cause of the error:
+
+```bash
+tail -f /var/log/auth.log
+```
+
 ## References
 
 * [Setting up an SFTP server and users on Ubuntu 16.04](http://www.inanzzz.com/index.php/post/ef2z/setting-up-a-sftp-server-and-users-on-ubuntu-16-04)
