@@ -66,6 +66,7 @@
 * Mobile
     * [Cordova](/mobile/cordova/README.md)
     * [React native](/mobile/react-native/README.md)
+        * [Libraries](/mobile/react-native/libraries/README.md)
 * PHP
     * [Debugging PHP](/php/debugging/README.md)
     * [Eloquent](/php/eloquent/README.md)
