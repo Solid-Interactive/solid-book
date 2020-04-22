@@ -3,7 +3,7 @@
 tags: react-native, react, native, mobile, ios, android, js, javascript
 
 ## React native libraries
-* See helpful libraries with examples [here](libraries/README.md).
+* See helpful libraries with examples [here](/mobile/react-native/libraries).
 
 ## Images
 * Example:
