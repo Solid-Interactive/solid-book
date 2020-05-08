@@ -51,6 +51,11 @@ Android
 * https://www.reactnative.guide/
 
 ## Troubleshooting
+
+Android app crashes after dev build and launch ("App keeps stopping")
+* Check crash log with `adb logcat`.
+* It usually helps to blow away the build dir and start clean: `rm -rf android/app/build`.
+
 Android build error: `Requested internal only, but not enough space`
 * Close emulator.
 * Open android studio > Configure > AVD Manager > (Virtual device dropdown on right) > Wipe data.
