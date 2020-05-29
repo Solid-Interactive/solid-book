@@ -70,6 +70,7 @@
 * PHP
     * [Debugging PHP](/php/debugging/README.md)
     * [Eloquent](/php/eloquent/README.md)
+    * [Laravel](/php/laravel/README.md)
     * [Magento 2](/php/magento-2/README.md)
       * [Create Page](/php/magento-2/create-page/README.md)
       * [Customizations](/php/magento-2/customizations/README.md)
