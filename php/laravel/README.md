@@ -4,6 +4,11 @@ tags: laravel, php, mysql,
 
 ## Overview
 
+* At a high level, Laravel is an MVC framework:
+  * Models are linked to database tables, and you can read/write to the database via the models.
+  * Views are blade template files.
+  * Controllers handle requests and return a response, e.g. view, redirect, etc.
+* It also handles routing, migrations, events, and much more.
 * The docs are good. Use the search feature. https://laravel.com/docs/7.x
 
 ## CLI
@@ -60,4 +65,115 @@ tags: laravel, php, mysql,
 
 ## js/css
 
-TODO
+* Front end assets are compiled in `webpack.mix.js` via a wrapper called `laravel-mix`. You pretty much just give it the source file and tell it where to put the result:
+  ```js
+  mix.js('resources/js/app.js', 'public/js')
+    .sass('resources/sass/app.scss', 'public/css')
+    .sass('resources/sass/auth.scss', 'public/css');
+  ```
+* This setup greatly simplifies webpack. The tradeoff is it reduces customization as well. But it pretty much does what you want with almost no effort.
+* for dev run: `npm run dev`
+* for minified run: `npm run prod`
+
+## Models
+
+* Create models with artisan (This will add the model file, and the migration file.)
+  ```sh
+  php artisan make:model Topic --migration
+  ```
+* Add the table columns in the migration file. See all column types here: https://laravel.com/docs/7.x/migrations#columns
+* Save model to db:
+  ```php
+  $myModel = new MyModel();
+
+  $myModel->myColumn = 'Hello';
+
+  $myModel->save();
+  ```
+* Load models from db:
+  ```php
+  // All records.
+  $myModels = MyModel::all();
+
+  // Query records.
+  $myModels = MyModel::where('active', 1)->get();
+  ```
+* To update models, just set the fields and save.
+
+## Routing
+
+* Add routes to `routes/web.php`.
+* Hello world:
+  ```php
+  Route::get('home', function() {
+    return 'Hello, world';
+  });
+  ```
+* Typically you pass a controller and method name though:
+  ```php
+  Route::get('home', 'HomeController@index');
+  ```
+* Resource controllers automatically support crud methods, typically for models:
+  ```php
+  Route::resource('posts', 'PostController');
+  ```
+
+## Controllers
+
+* Generate controllers with artisan:
+  ```sh
+  php artisan make:controller HomeController
+  ```
+* Resource controllers have the crud methods prepopulated (also, pass the model when generating to include type hints):
+  ```sh
+  php artisan make:controller PostController --resource --model=Post
+  ```
+* See the resource actions available here: https://laravel.com/docs/7.x/controllers#resource-controllers
+* Each controller method receives the request as the first argument. This has the request params (query string and form data) and many helpful methods:
+  ```php
+  public function index($request)
+  {
+    $myParam = $request->myParam;
+
+    $user = $request->user();
+
+    // return response here...
+  }
+  ```
+
+## Views
+
+* Views are blade template files that allow dynamic data to be rendered in html:
+```php
+<h1>{{ $user->name }}</h1>
+```
+* Views are typically rendered as a responses from controller methods using the `view` helper:
+  ```php
+  public function index($request)
+  {
+    return view('my-view', [
+        'user' => $request->user()
+    ]);
+  }
+  ```
+* Pass the path to the blade template inside `resources/views`, and omit `.blade.php`.
+* Pass data to the view as an array. The keys will be available as variables in the blade template.
+
+## Forms
+
+* Validate forms with the validate method on the request:
+  ```php
+  public function store($request)
+  {
+    $request->validate([
+        'myParam' => ['required'],
+    ])
+
+    // Validation passed! Save form data to db, etc.
+
+    return back() // back helper redirects back to referrer, i.e. the form that posted.
+      ->with('status', 'success') // set session data so we can display a success message.
+  }
+  ```
+* If validation fails, it will automatically redirect back to the form with `$errors` in the session.
+* Also notice above how we redirect back with success in the session if the form submitted successfully.
