@@ -61,6 +61,7 @@
     * [Commands](/linux/commands/README.md)
     * [Reboot](/linux/reboots/README.md)
     * [SFTP](/linux/sftp/README.md)
+    * [UFW](/linux/ufw/README.md)
 * Media Streaming
     * [HTML5](/media-streaming/html5/README.md)
 * Mobile
