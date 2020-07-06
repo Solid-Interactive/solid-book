@@ -1,6 +1,6 @@
 # Laravel
 
-tags: laravel, php, mysql,
+tags: laravel, php, mysql, mvc
 
 ## Overview
 
