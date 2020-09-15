@@ -1,5 +1,6 @@
 /_book/
 .idea/
 .DS_Store
+.vscode
 /node_modules/
 
