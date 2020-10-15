@@ -1,0 +1,317 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Lighthouse - Solid Book</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../../favicon.png">
+        
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../css/index.html"><strong aria-hidden="true">1.</strong> CSS</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> DB</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">2.1.</strong> NoSQL</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../db/nosql/elasticsearch/index.html"><strong aria-hidden="true">2.1.1.</strong> Elasticsearch</a></li><li class="chapter-item expanded "><a href="../../db/nosql/mongo/index.html"><strong aria-hidden="true">2.1.2.</strong> Mongo</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../db/nosql/mongo/aggregation-pipeline/index.html"><strong aria-hidden="true">2.1.2.1.</strong> Aggregation</a></li><li class="chapter-item expanded "><a href="../../db/nosql/mongo/debugging/index.html"><strong aria-hidden="true">2.1.2.2.</strong> Debugging</a></li><li class="chapter-item expanded "><a href="../../db/nosql/mongo/mongoose/index.html"><strong aria-hidden="true">2.1.2.3.</strong> Mongoose</a></li><li class="chapter-item expanded "><a href="../../db/nosql/mongo/users/index.html"><strong aria-hidden="true">2.1.2.4.</strong> Users</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.2.</strong> SQL</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../db/sql/mysql/index.html"><strong aria-hidden="true">2.2.1.</strong> MySQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../db/sql/mysql/debugging/index.html"><strong aria-hidden="true">2.2.1.1.</strong> Debugging</a></li><li class="chapter-item expanded "><a href="../../db/sql/mysql/engines/index.html"><strong aria-hidden="true">2.2.1.2.</strong> Engines</a></li><li class="chapter-item expanded "><a href="../../db/sql/mysql/foreign-keys/index.html"><strong aria-hidden="true">2.2.1.3.</strong> Foreign Keys</a></li><li class="chapter-item expanded "><a href="../../db/sql/mysql/profiling/index.html"><strong aria-hidden="true">2.2.1.4.</strong> Profiling</a></li><li class="chapter-item expanded "><a href="../../db/sql/mysql/users/index.html"><strong aria-hidden="true">2.2.1.5.</strong> Users</a></li></ol></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Devops</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">3.1.</strong> AWS</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">3.1.1.</strong> EC2</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../devops/aws/ec2/encrypting-ebs/index.html"><strong aria-hidden="true">3.1.1.1.</strong> Encrypting EBS</a></li><li class="chapter-item expanded "><a href="../../devops/aws/ec2/increasing-instance-size/index.html"><strong aria-hidden="true">3.1.1.2.</strong> Increasing instance size</a></li><li class="chapter-item expanded "><a href="../../devops/aws/ec2/increasing-volume-size/index.html"><strong aria-hidden="true">3.1.1.3.</strong> Increasing volume size</a></li><li class="chapter-item expanded "><a href="../../devops/aws/ec2/installing-ntp/index.html"><strong aria-hidden="true">3.1.1.4.</strong> Installing NTP</a></li><li class="chapter-item expanded "><a href="../../devops/aws/ec2/keys/index.html"><strong aria-hidden="true">3.1.1.5.</strong> Keys</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../devops/deployment/index.html"><strong aria-hidden="true">3.2.</strong> Deployment</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../devops/deployment/gitlab/index.html"><strong aria-hidden="true">3.2.1.</strong> Deploying a project with gitlab</a></li><li class="chapter-item expanded "><a href="../../devops/deployment/github/index.html"><strong aria-hidden="true">3.2.2.</strong> Deploying a project with github</a></li><li class="chapter-item expanded "><a href="../../devops/deployment/git/index.html"><strong aria-hidden="true">3.2.3.</strong> Deploying a project with git</a></li><li class="chapter-item expanded "><a href="../../devops/deployment/build/index.html"><strong aria-hidden="true">3.2.4.</strong> Deployment build script for static webpage</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.3.</strong> Scaffolding</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../devops/scaffolding/project-setup/index.html"><strong aria-hidden="true">3.3.1.</strong> Setting up a project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../devops/scaffolding/project-setup/architecture/index.html"><strong aria-hidden="true">3.3.1.1.</strong> Architecture</a></li><li class="chapter-item expanded "><a href="../../devops/scaffolding/project-setup/provisioning/index.html"><strong aria-hidden="true">3.3.1.2.</strong> Provisioning</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../devops/scaffolding/project-setup/provisioning/ansible/index.html"><strong aria-hidden="true">3.3.1.2.1.</strong> Ansible Intro</a></li><li class="chapter-item expanded "><a href="../../devops/scaffolding/project-setup/provisioning/ansible/playbooks/index.html"><strong aria-hidden="true">3.3.1.2.2.</strong> Ansible Playbooks</a></li><li class="chapter-item expanded "><a href="../../devops/scaffolding/project-setup/provisioning/ansible/roles/index.html"><strong aria-hidden="true">3.3.1.2.3.</strong> Creating Roles</a></li></ol></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../devops/vagrant/index.html"><strong aria-hidden="true">3.4.</strong> Vagrant</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Error</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../error-handling/exponential-backoff/index.html"><strong aria-hidden="true">4.1.</strong> Exponential Back Off</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> HTML</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.1.</strong> Forms</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../html/forms/file-upload/index.html"><strong aria-hidden="true">5.1.1.</strong> File Upload</a></li><li class="chapter-item expanded "><a href="../../html/forms/restrict-file-types/index.html"><strong aria-hidden="true">5.1.2.</strong> Restrict File Types</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../infusionsoft/index.html"><strong aria-hidden="true">6.</strong> Infusionsoft</a></li><li class="chapter-item expanded "><a href="../../javascript/index.html"><strong aria-hidden="true">7.</strong> JavaScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../javascript/error-handling/index.html"><strong aria-hidden="true">7.1.</strong> Error Handling</a></li><li class="chapter-item expanded "><a href="../../javascript/es6/index.html"><strong aria-hidden="true">7.2.</strong> es6</a></li><li class="chapter-item expanded "><a href="../../javascript/promises/index.html"><strong aria-hidden="true">7.3.</strong> Promises</a></li><li class="chapter-item expanded "><a href="../../javascript/node/index.html"><strong aria-hidden="true">7.4.</strong> Node</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../javascript/node/debugging/index.html"><strong aria-hidden="true">7.4.1.</strong> Debugging Node</a></li><li class="chapter-item expanded "><a href="../../javascript/node/npm/index.html"><strong aria-hidden="true">7.4.2.</strong> npm</a></li><li class="chapter-item expanded "><a href="../../javascript/node/pm2/index.html"><strong aria-hidden="true">7.4.3.</strong> pm2</a></li></ol></li><li class="chapter-item expanded "><a href="../../javascript/transpiling/index.html"><strong aria-hidden="true">7.5.</strong> Transpiling</a></li><li class="chapter-item expanded "><a href="../../javascript/vue/index.html"><strong aria-hidden="true">7.6.</strong> Vue</a></li><li class="chapter-item expanded "><a href="../../javascript/web/index.html"><strong aria-hidden="true">7.7.</strong> Web</a></li><li class="chapter-item expanded "><a href="../../javascript/typescript/index.html"><strong aria-hidden="true">7.8.</strong> Typescript</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Linux</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../linux/cli/index.html"><strong aria-hidden="true">8.1.</strong> CLI</a></li><li class="chapter-item expanded "><a href="../../linux/commands/index.html"><strong aria-hidden="true">8.2.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../linux/reboots/index.html"><strong aria-hidden="true">8.3.</strong> Reboot</a></li><li class="chapter-item expanded "><a href="../../linux/sftp/index.html"><strong aria-hidden="true">8.4.</strong> SFTP</a></li><li class="chapter-item expanded "><a href="../../linux/ufw/index.html"><strong aria-hidden="true">8.5.</strong> UFW</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Media</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../media-streaming/html5/index.html"><strong aria-hidden="true">9.1.</strong> HTML5</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> Mobile</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../mobile/cordova/index.html"><strong aria-hidden="true">10.1.</strong> Cordova</a></li><li class="chapter-item expanded "><a href="../../mobile/react-native/index.html"><strong aria-hidden="true">10.2.</strong> React native</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../mobile/react-native/libraries/index.html"><strong aria-hidden="true">10.2.1.</strong> Libraries</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> PHP</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../php/debugging/index.html"><strong aria-hidden="true">11.1.</strong> Debugging PHP</a></li><li class="chapter-item expanded "><a href="../../php/eloquent/index.html"><strong aria-hidden="true">11.2.</strong> Eloquent</a></li><li class="chapter-item expanded "><a href="../../php/laravel/index.html"><strong aria-hidden="true">11.3.</strong> Laravel</a></li><li class="chapter-item expanded "><a href="../../php/magento-2/index.html"><strong aria-hidden="true">11.4.</strong> Magento 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../php/magento-2/create-page/index.html"><strong aria-hidden="true">11.4.1.</strong> Create Page</a></li><li class="chapter-item expanded "><a href="../../php/magento-2/customizations/index.html"><strong aria-hidden="true">11.4.2.</strong> Customizations</a></li><li class="chapter-item expanded "><a href="../../php/magento-2/debugging/index.html"><strong aria-hidden="true">11.4.3.</strong> Debugging</a></li></ol></li><li class="chapter-item expanded "><a href="../../php/namespaces/index.html"><strong aria-hidden="true">11.5.</strong> Namespaces</a></li><li class="chapter-item expanded "><a href="../../php/wordpress/index.html"><strong aria-hidden="true">11.6.</strong> Wordpress</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../php/wordpress/elementor/index.html"><strong aria-hidden="true">11.6.1.</strong> Elementor</a></li><li class="chapter-item expanded "><a href="../../php/wordpress/i18n/index.html"><strong aria-hidden="true">11.6.2.</strong> i18n</a></li><li class="chapter-item expanded "><a href="../../php/wordpress/wp-engine/index.html"><strong aria-hidden="true">11.6.3.</strong> WP-Engine</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.</strong> Performance</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../profiling/index.html"><strong aria-hidden="true">12.1.</strong> Profiling</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../profiling/lighthouse/index.html" class="active"><strong aria-hidden="true">12.1.1.</strong> Lighthouse</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../security/index.html"><strong aria-hidden="true">13.</strong> Security</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../security/HTTPS/index.html"><strong aria-hidden="true">13.1.</strong> HTTPS</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">14.</strong> Servers</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../servers/apache/index.html"><strong aria-hidden="true">14.1.</strong> Apache</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../servers/apache/redirects/index.html"><strong aria-hidden="true">14.1.1.</strong> Apache Redirects</a></li></ol></li><li class="chapter-item expanded "><a href="../../servers/nginx/index.html"><strong aria-hidden="true">14.2.</strong> Nginx</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../servers/nginx/config/index.html"><strong aria-hidden="true">14.2.1.</strong> Config</a></li><li class="chapter-item expanded "><a href="../../servers/nginx/fastcgi/index.html"><strong aria-hidden="true">14.2.2.</strong> FastCgi</a></li><li class="chapter-item expanded "><a href="../../servers/nginx/redirects/index.html"><strong aria-hidden="true">14.2.3.</strong> Redirects</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../tv/index.html"><strong aria-hidden="true">15.</strong> TV</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tv/roku/index.html"><strong aria-hidden="true">15.1.</strong> Roku</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tv/roku/development/index.html"><strong aria-hidden="true">15.1.1.</strong> Development and Deploying</a></li><li class="chapter-item expanded "><a href="../../tv/roku/debugging/index.html"><strong aria-hidden="true">15.1.2.</strong> Debugging</a></li><li class="chapter-item expanded "><a href="../../tv/roku/events/index.html"><strong aria-hidden="true">15.1.3.</strong> Events</a></li><li class="chapter-item expanded "><a href="../../tv/roku/focus/index.html"><strong aria-hidden="true">15.1.4.</strong> Focus</a></li></ol></li><li class="chapter-item expanded "><a href="../../tv/samsung/index.html"><strong aria-hidden="true">15.2.</strong> Samsung</a></li><li class="chapter-item expanded "><a href="../../tv/vizio/index.html"><strong aria-hidden="true">15.3.</strong> Vizio</a></li><li class="chapter-item expanded "><a href="../../tv/yctv/index.html"><strong aria-hidden="true">15.4.</strong> Yahoo Connected TV</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">16.</strong> UWP</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../uwp/web-based/index.html"><strong aria-hidden="true">16.1.</strong> Web-based</a></li></ol></li><li class="chapter-item expanded "><a href="../../version-control/index.html"><strong aria-hidden="true">17.</strong> Version Control</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../version-control/git/index.html"><strong aria-hidden="true">17.1.</strong> Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../version-control/git/gitflow/index.html"><strong aria-hidden="true">17.1.1.</strong> Gitflow</a></li><li class="chapter-item expanded "><a href="../../version-control/git/hooks/index.html"><strong aria-hidden="true">17.1.2.</strong> Hooks</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Solid Book</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#web-profiling-with-lighthouse" id="web-profiling-with-lighthouse">Web Profiling with Lighthouse</a></h1>
+<p>tags: lighthouse, profiling, chrome, performance</p>
+<p>Chrome now has an <a href="https://developers.google.com/web/updates/2017/05/devtools-release-notes#lighthouse">audit panel</a> in their
+dev tools console. </p>
+<p>The audits are done with <a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse</a>. There is an <a href="https://www.npmjs.com/package/lighthouse">npm</a> 
+with which you can use Lighthouse programmatically both on your local box and on a server.</p>
+<p>Regular chrome is now headless, so you like don't have to install anything aside from npms on your local box.</p>
+<p>On Ubuntu, you can install chromium, to have a headless browser to use with Lighthouse:</p>
+<pre><code class="language-bash">sudo apt install chromium-browser
+</code></pre>
+<p>To use light house programatically you need 2 npms: </p>
+<pre><code class="language-bash">npm i lighthouse chrome-launcher
+</code></pre>
+<p>Here is an example of how to get performance data from an array of urls. In this instance we're running the tests in series
+and not in parallel, so as to put less stress on the server.</p>
+<p>User <code>results.lhr</code> for javascript parseable results. There is a lot more information on the results object to look at.</p>
+<pre><code class="language-javascript">'use strict';
+
+const urls = ['https://www.soliddigital.com', 'https://www.soliddigital.com/insights'];
+const lighthouse = require('lighthouse');
+const chromeLauncher = require('chrome-launcher');
+const flags = {
+    chromeFlags: ['--headless'],
+    onlyCategories: [
+        'performance',
+        'accessibility',
+        'best-practices',
+        'seo'
+    ]
+};
+
+const BB = require('bluebird');
+
+module.exports = performAudit;
+
+function performAudit() {
+    console.log('Starting audit');
+
+    return BB.mapSeries(urls, url =&gt; {
+        return auditUrl(url, flags)
+            .catch(e =&gt; {
+                console.log('lighthouse error', e);
+                console.log('continuing through the rest of the urls....');
+            });
+    });
+}
+
+function auditUrl(url, flags) {
+    return launchChromeAndRunLighthouse(url, flags)
+        .then(results =&gt; {
+            const audit =  {
+                performance: results.lhr.categories.performance.score,
+                accessibility: results.lhr.categories.accessibility.score,
+                bestPractices: results.lhr.categories['best-practices'].score,
+                seo: results.lhr.categories.seo.score
+            };
+
+            console.log(audit);
+
+            return audit;
+        });
+}
+
+function launchChromeAndRunLighthouse(url, flags = {}, config = null) {
+    return chromeLauncher.launch(flags).then(chrome =&gt; {
+        flags.port = chrome.port;
+        return lighthouse(url, flags, config)
+            .then(results =&gt; chrome.kill().then(() =&gt; results));
+    });
+}
+</code></pre>
+<p>For interpretation of Lighthouse scores, see <a href="https://developers.google.com/web/tools/lighthouse/scoring">this page</a>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../profiling/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../security/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../../profiling/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../../security/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

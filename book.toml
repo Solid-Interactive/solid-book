@@ -1,0 +1,6 @@
+[book]
+authors = ["Peter Ajtai"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Solid Book"

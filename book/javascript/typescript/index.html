@@ -1,0 +1,339 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Typescript - Solid Book</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../../favicon.png">
+        
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../css/index.html"><strong aria-hidden="true">1.</strong> CSS</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> DB</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">2.1.</strong> NoSQL</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../db/nosql/elasticsearch/index.html"><strong aria-hidden="true">2.1.1.</strong> Elasticsearch</a></li><li class="chapter-item expanded "><a href="../../db/nosql/mongo/index.html"><strong aria-hidden="true">2.1.2.</strong> Mongo</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../db/nosql/mongo/aggregation-pipeline/index.html"><strong aria-hidden="true">2.1.2.1.</strong> Aggregation</a></li><li class="chapter-item expanded "><a href="../../db/nosql/mongo/debugging/index.html"><strong aria-hidden="true">2.1.2.2.</strong> Debugging</a></li><li class="chapter-item expanded "><a href="../../db/nosql/mongo/mongoose/index.html"><strong aria-hidden="true">2.1.2.3.</strong> Mongoose</a></li><li class="chapter-item expanded "><a href="../../db/nosql/mongo/users/index.html"><strong aria-hidden="true">2.1.2.4.</strong> Users</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.2.</strong> SQL</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../db/sql/mysql/index.html"><strong aria-hidden="true">2.2.1.</strong> MySQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../db/sql/mysql/debugging/index.html"><strong aria-hidden="true">2.2.1.1.</strong> Debugging</a></li><li class="chapter-item expanded "><a href="../../db/sql/mysql/engines/index.html"><strong aria-hidden="true">2.2.1.2.</strong> Engines</a></li><li class="chapter-item expanded "><a href="../../db/sql/mysql/foreign-keys/index.html"><strong aria-hidden="true">2.2.1.3.</strong> Foreign Keys</a></li><li class="chapter-item expanded "><a href="../../db/sql/mysql/profiling/index.html"><strong aria-hidden="true">2.2.1.4.</strong> Profiling</a></li><li class="chapter-item expanded "><a href="../../db/sql/mysql/users/index.html"><strong aria-hidden="true">2.2.1.5.</strong> Users</a></li></ol></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Devops</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">3.1.</strong> AWS</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">3.1.1.</strong> EC2</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../devops/aws/ec2/encrypting-ebs/index.html"><strong aria-hidden="true">3.1.1.1.</strong> Encrypting EBS</a></li><li class="chapter-item expanded "><a href="../../devops/aws/ec2/increasing-instance-size/index.html"><strong aria-hidden="true">3.1.1.2.</strong> Increasing instance size</a></li><li class="chapter-item expanded "><a href="../../devops/aws/ec2/increasing-volume-size/index.html"><strong aria-hidden="true">3.1.1.3.</strong> Increasing volume size</a></li><li class="chapter-item expanded "><a href="../../devops/aws/ec2/installing-ntp/index.html"><strong aria-hidden="true">3.1.1.4.</strong> Installing NTP</a></li><li class="chapter-item expanded "><a href="../../devops/aws/ec2/keys/index.html"><strong aria-hidden="true">3.1.1.5.</strong> Keys</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../devops/deployment/index.html"><strong aria-hidden="true">3.2.</strong> Deployment</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../devops/deployment/gitlab/index.html"><strong aria-hidden="true">3.2.1.</strong> Deploying a project with gitlab</a></li><li class="chapter-item expanded "><a href="../../devops/deployment/github/index.html"><strong aria-hidden="true">3.2.2.</strong> Deploying a project with github</a></li><li class="chapter-item expanded "><a href="../../devops/deployment/git/index.html"><strong aria-hidden="true">3.2.3.</strong> Deploying a project with git</a></li><li class="chapter-item expanded "><a href="../../devops/deployment/build/index.html"><strong aria-hidden="true">3.2.4.</strong> Deployment build script for static webpage</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.3.</strong> Scaffolding</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../devops/scaffolding/project-setup/index.html"><strong aria-hidden="true">3.3.1.</strong> Setting up a project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../devops/scaffolding/project-setup/architecture/index.html"><strong aria-hidden="true">3.3.1.1.</strong> Architecture</a></li><li class="chapter-item expanded "><a href="../../devops/scaffolding/project-setup/provisioning/index.html"><strong aria-hidden="true">3.3.1.2.</strong> Provisioning</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../devops/scaffolding/project-setup/provisioning/ansible/index.html"><strong aria-hidden="true">3.3.1.2.1.</strong> Ansible Intro</a></li><li class="chapter-item expanded "><a href="../../devops/scaffolding/project-setup/provisioning/ansible/playbooks/index.html"><strong aria-hidden="true">3.3.1.2.2.</strong> Ansible Playbooks</a></li><li class="chapter-item expanded "><a href="../../devops/scaffolding/project-setup/provisioning/ansible/roles/index.html"><strong aria-hidden="true">3.3.1.2.3.</strong> Creating Roles</a></li></ol></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../devops/vagrant/index.html"><strong aria-hidden="true">3.4.</strong> Vagrant</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Error</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../error-handling/exponential-backoff/index.html"><strong aria-hidden="true">4.1.</strong> Exponential Back Off</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> HTML</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.1.</strong> Forms</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../html/forms/file-upload/index.html"><strong aria-hidden="true">5.1.1.</strong> File Upload</a></li><li class="chapter-item expanded "><a href="../../html/forms/restrict-file-types/index.html"><strong aria-hidden="true">5.1.2.</strong> Restrict File Types</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../infusionsoft/index.html"><strong aria-hidden="true">6.</strong> Infusionsoft</a></li><li class="chapter-item expanded "><a href="../../javascript/index.html"><strong aria-hidden="true">7.</strong> JavaScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../javascript/error-handling/index.html"><strong aria-hidden="true">7.1.</strong> Error Handling</a></li><li class="chapter-item expanded "><a href="../../javascript/es6/index.html"><strong aria-hidden="true">7.2.</strong> es6</a></li><li class="chapter-item expanded "><a href="../../javascript/promises/index.html"><strong aria-hidden="true">7.3.</strong> Promises</a></li><li class="chapter-item expanded "><a href="../../javascript/node/index.html"><strong aria-hidden="true">7.4.</strong> Node</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../javascript/node/debugging/index.html"><strong aria-hidden="true">7.4.1.</strong> Debugging Node</a></li><li class="chapter-item expanded "><a href="../../javascript/node/npm/index.html"><strong aria-hidden="true">7.4.2.</strong> npm</a></li><li class="chapter-item expanded "><a href="../../javascript/node/pm2/index.html"><strong aria-hidden="true">7.4.3.</strong> pm2</a></li></ol></li><li class="chapter-item expanded "><a href="../../javascript/transpiling/index.html"><strong aria-hidden="true">7.5.</strong> Transpiling</a></li><li class="chapter-item expanded "><a href="../../javascript/vue/index.html"><strong aria-hidden="true">7.6.</strong> Vue</a></li><li class="chapter-item expanded "><a href="../../javascript/web/index.html"><strong aria-hidden="true">7.7.</strong> Web</a></li><li class="chapter-item expanded "><a href="../../javascript/typescript/index.html" class="active"><strong aria-hidden="true">7.8.</strong> Typescript</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Linux</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../linux/cli/index.html"><strong aria-hidden="true">8.1.</strong> CLI</a></li><li class="chapter-item expanded "><a href="../../linux/commands/index.html"><strong aria-hidden="true">8.2.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../linux/reboots/index.html"><strong aria-hidden="true">8.3.</strong> Reboot</a></li><li class="chapter-item expanded "><a href="../../linux/sftp/index.html"><strong aria-hidden="true">8.4.</strong> SFTP</a></li><li class="chapter-item expanded "><a href="../../linux/ufw/index.html"><strong aria-hidden="true">8.5.</strong> UFW</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Media</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../media-streaming/html5/index.html"><strong aria-hidden="true">9.1.</strong> HTML5</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> Mobile</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../mobile/cordova/index.html"><strong aria-hidden="true">10.1.</strong> Cordova</a></li><li class="chapter-item expanded "><a href="../../mobile/react-native/index.html"><strong aria-hidden="true">10.2.</strong> React native</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../mobile/react-native/libraries/index.html"><strong aria-hidden="true">10.2.1.</strong> Libraries</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> PHP</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../php/debugging/index.html"><strong aria-hidden="true">11.1.</strong> Debugging PHP</a></li><li class="chapter-item expanded "><a href="../../php/eloquent/index.html"><strong aria-hidden="true">11.2.</strong> Eloquent</a></li><li class="chapter-item expanded "><a href="../../php/laravel/index.html"><strong aria-hidden="true">11.3.</strong> Laravel</a></li><li class="chapter-item expanded "><a href="../../php/magento-2/index.html"><strong aria-hidden="true">11.4.</strong> Magento 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../php/magento-2/create-page/index.html"><strong aria-hidden="true">11.4.1.</strong> Create Page</a></li><li class="chapter-item expanded "><a href="../../php/magento-2/customizations/index.html"><strong aria-hidden="true">11.4.2.</strong> Customizations</a></li><li class="chapter-item expanded "><a href="../../php/magento-2/debugging/index.html"><strong aria-hidden="true">11.4.3.</strong> Debugging</a></li></ol></li><li class="chapter-item expanded "><a href="../../php/namespaces/index.html"><strong aria-hidden="true">11.5.</strong> Namespaces</a></li><li class="chapter-item expanded "><a href="../../php/wordpress/index.html"><strong aria-hidden="true">11.6.</strong> Wordpress</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../php/wordpress/elementor/index.html"><strong aria-hidden="true">11.6.1.</strong> Elementor</a></li><li class="chapter-item expanded "><a href="../../php/wordpress/i18n/index.html"><strong aria-hidden="true">11.6.2.</strong> i18n</a></li><li class="chapter-item expanded "><a href="../../php/wordpress/wp-engine/index.html"><strong aria-hidden="true">11.6.3.</strong> WP-Engine</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.</strong> Performance</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../profiling/index.html"><strong aria-hidden="true">12.1.</strong> Profiling</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../profiling/lighthouse/index.html"><strong aria-hidden="true">12.1.1.</strong> Lighthouse</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../security/index.html"><strong aria-hidden="true">13.</strong> Security</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../security/HTTPS/index.html"><strong aria-hidden="true">13.1.</strong> HTTPS</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">14.</strong> Servers</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../servers/apache/index.html"><strong aria-hidden="true">14.1.</strong> Apache</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../servers/apache/redirects/index.html"><strong aria-hidden="true">14.1.1.</strong> Apache Redirects</a></li></ol></li><li class="chapter-item expanded "><a href="../../servers/nginx/index.html"><strong aria-hidden="true">14.2.</strong> Nginx</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../servers/nginx/config/index.html"><strong aria-hidden="true">14.2.1.</strong> Config</a></li><li class="chapter-item expanded "><a href="../../servers/nginx/fastcgi/index.html"><strong aria-hidden="true">14.2.2.</strong> FastCgi</a></li><li class="chapter-item expanded "><a href="../../servers/nginx/redirects/index.html"><strong aria-hidden="true">14.2.3.</strong> Redirects</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../tv/index.html"><strong aria-hidden="true">15.</strong> TV</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tv/roku/index.html"><strong aria-hidden="true">15.1.</strong> Roku</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tv/roku/development/index.html"><strong aria-hidden="true">15.1.1.</strong> Development and Deploying</a></li><li class="chapter-item expanded "><a href="../../tv/roku/debugging/index.html"><strong aria-hidden="true">15.1.2.</strong> Debugging</a></li><li class="chapter-item expanded "><a href="../../tv/roku/events/index.html"><strong aria-hidden="true">15.1.3.</strong> Events</a></li><li class="chapter-item expanded "><a href="../../tv/roku/focus/index.html"><strong aria-hidden="true">15.1.4.</strong> Focus</a></li></ol></li><li class="chapter-item expanded "><a href="../../tv/samsung/index.html"><strong aria-hidden="true">15.2.</strong> Samsung</a></li><li class="chapter-item expanded "><a href="../../tv/vizio/index.html"><strong aria-hidden="true">15.3.</strong> Vizio</a></li><li class="chapter-item expanded "><a href="../../tv/yctv/index.html"><strong aria-hidden="true">15.4.</strong> Yahoo Connected TV</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">16.</strong> UWP</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../uwp/web-based/index.html"><strong aria-hidden="true">16.1.</strong> Web-based</a></li></ol></li><li class="chapter-item expanded "><a href="../../version-control/index.html"><strong aria-hidden="true">17.</strong> Version Control</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../version-control/git/index.html"><strong aria-hidden="true">17.1.</strong> Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../version-control/git/gitflow/index.html"><strong aria-hidden="true">17.1.1.</strong> Gitflow</a></li><li class="chapter-item expanded "><a href="../../version-control/git/hooks/index.html"><strong aria-hidden="true">17.1.2.</strong> Hooks</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Solid Book</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#typescript" id="typescript">Typescript</a></h1>
+<p>tags: typescript, javascript</p>
+<p>Typescript is a structurally-typed language: Along with typing values as primitive types (string, number, etc.), you can create interfaces that describe the structure of objects. Interfaces are declared in typescript itself.</p>
+<h2><a class="header" href="#type-declaration-files" id="type-declaration-files">Type declaration files</a></h2>
+<p>A common scenario for using type declaration files is importing an npm. Some npms include type declaration files for themselves, while others are installed from Definitely-typed, which are under the @types namespace on npm. These type definition files are just typescript files. The convention is to name the file ending in <code>.d.ts</code>.</p>
+<p>For example:</p>
+<pre><code class="language-js">import { baseN } from 'js-combinatorics';
+</code></pre>
+<p>Will throw a typescript compile error because the module does not include its own type declarations. However, if you hover over the module name in vscode, the editor will suggest:</p>
+<pre><code class="language-sh">npm install @types/js-combinatorics
+</code></pre>
+<p>It is a pretty popular module, so someone has actually created the type file for it. So with the types install, using <code>baseN</code> will compile.</p>
+<p>However <code>knuth-shuffle</code> isn't so convenient:</p>
+<pre><code class="language-js">import { knuthShuffle } from 'knuth-shuffle';
+</code></pre>
+<p>Typescript will complain about no types for this module, and unfortunately, <code>@types/knuth-shuffle</code> doesn't exist right now. We will have to write our own.</p>
+<p>Add a <code>.d.ts</code> file to your project in the path included in your typescript config, and add the missing typing:</p>
+<pre><code class="language-ts">declare module 'knuth-shuffle' {
+    export function knuthShuffle&lt;T&gt;(array: T[]): T[];
+}
+</code></pre>
+<p>Now you can use the function where you imported it, and typesscript will compile it.</p>
+<h2><a class="header" href="#generics" id="generics">Generics</a></h2>
+<p>Take this type declaration:</p>
+<pre><code class="language-ts">export function someArrayFunction&lt;T&gt;(argName: T[]): T[];
+</code></pre>
+<p>Notice the <code>&lt;T&gt;</code>? It allows you to type a function return value by the type of its arguments. This is saying, &quot;someArrayFunction takes an array of values and returns another array of the same type of values.&quot; This pattern is used all the time in typescript. See <a href="https://www.typescriptlang.org/docs/handbook/generics.html">docs</a>.</p>
+<h2><a class="header" href="#interfaces" id="interfaces">Interfaces</a></h2>
+<p>Say you want to define an object literal with property as an empty array:</p>
+<pre><code class="language-js">let obj = {
+    a: [],
+    b: 'text'
+}
+</code></pre>
+<p>Typescript will think <code>obj.a</code> is type <code>never[]</code>. To get the type you want, you can create an interface:</p>
+<pre><code class="language-ts">interface Obj {
+    a: number[],
+    b: string
+}
+
+let obj: Obj = {
+    a: [],
+    b: 'text
+}
+</code></pre>
+<h2><a class="header" href="#type-assertion" id="type-assertion">Type assertion</a></h2>
+<p>From the previous example, if you don't need to reuse the <code>Obj</code> interface anywhere else, you can simply annotate the obj literal properties by the using type assertion keyword <code>as</code>:</p>
+<pre><code class="language-ts">let obj: Obj = {
+    a: [] as number[],
+    b: 'text
+}
+</code></pre>
+<h2><a class="header" href="#configuration" id="configuration">Configuration</a></h2>
+<p>Typescript is usually configured with a <code>tsconfig.json</code> in the root of the project.</p>
+<pre><code class="language-json">{
+  &quot;compilerOptions&quot;: {
+    &quot;...&quot;: ...
+  },
+  &quot;include&quot;: [
+    &quot;...&quot;
+  ],
+  &quot;exclude&quot;: [
+    &quot;...&quot;
+  ]
+}
+</code></pre>
+<h2><a class="header" href="#standard-library" id="standard-library">Standard library</a></h2>
+<p>Typescript might complain about newer javascript methods like <code>Array.from</code> from es2015. Typescript will compile js based on the target set in <code>tsconfig.json</code>, e.g. if you target <code>es5</code>, typescript will not compile <code>es2015</code> or later. To make typescript compile this, you have several options:</p>
+<ol>
+<li>Change the target: <code>compilerOptions.target: &quot;es2015&quot;</code> - target es2015 if you want to to compile es2015; this might not be an option if your js needs to run in older browsers</li>
+<li>Include the lib: <code>compilerOptions.lib: [&quot;es2015&quot;]</code> - this will transpile to es2015 syntax to es5, with es2015 objects and methods intact. <strong>Note: transpilation does not polyfill objects and methods. See <a href="/js/transpiling">transpiling</a></strong>.</li>
+</ol>
+<p>Add <code>&quot;dom&quot;</code> to libs, for DOM api support.</p>
+<h2><a class="header" href="#vuejs" id="vuejs">Vue.js</a></h2>
+<p>Vue has pretty solid typescript support. Their cli has a project scaffolder built-in with typescript as a first class option. That said, the typescript experience with the vue, vuex, vue-router stack leaves much to be desired. It is challenging to achieve type safety when integrating Vuex. Maybe future releases will make it so dead-simple and helpful that it would be stupid not to use typescript. But right now there is a lot of overhead involved, and you really have to want it to make it work.</p>
+<h3><a class="header" href="#type-array-props" id="type-array-props">Type array props</a></h3>
+<p>Vue's api allows developers to type component props with the type constructor in native js, e.g.</p>
+<pre><code class="language-js">// in component definition
+props: {
+    id: Number,
+    selectedIds: Array,
+}
+</code></pre>
+<p>Typescript infers <code>this.id</code> as type <code>number</code>, but <code>this.selectedIds</code> is inferred as type <code>any[]</code>. This is not helpful; we need to know the type of the array items, e.g. <code>number[]</code>. This can be achieved by asserting the return type of the <code>Array</code> constructor:</p>
+<pre><code class="language-ts">props: {
+    selectedIds: Array as (() =&gt; number[])
+}
+</code></pre>
+<p>Now <code>this.selectedIds</code> will be correctly inferred as type <code>number[]</code>.</p>
+<h2><a class="header" href="#helpful-links" id="helpful-links">Helpful links</a></h2>
+<ul>
+<li><a href="https://basarat.gitbooks.io/typescript/content/docs/getting-started.html">Typescript Deep Dive</a> - awesome online book that is more readable than the typescript docs</li>
+<li><a href="https://www.typescriptlang.org/docs/handbook/compiler-options.html">Typescript compiler options</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../javascript/web/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../linux/cli/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../../javascript/web/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../../linux/cli/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
