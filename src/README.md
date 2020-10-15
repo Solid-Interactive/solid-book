@@ -28,3 +28,6 @@ mdbook serve
 To deploy push a commit to the `main` branch.
 
 For links PhpStorm has good auto-completion.
+
+---
+Maintained by [Solid Digital](https://www.soliddigital.com/)
