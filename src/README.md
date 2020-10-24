@@ -1,10 +1,10 @@
 # The Big Incomplete Book of Dev
 
-The latest "published" version can be accessed at http://soliddigital.github.io/solid-book/ .
+The latest "published" version can be accessed at [http://soliddigital.github.io/solid-book/](http://soliddigital.github.io/solid-book/).
 
 ## Contributing
 
-To edit the book go to https://github.com/soliddigital/solid-book and edit the markdown pages. CI will publish
+To edit the book go to [https://github.com/soliddigital/solid-book](https://github.com/soliddigital/solid-book) and edit the markdown pages. CI will publish
 the new version.
 
 ## Organization
